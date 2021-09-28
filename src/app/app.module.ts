@@ -10,6 +10,7 @@ import { LoginComponent } from './Components/login/login.component';
 import { RegistroComponent } from './Components/registro/registro.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { PerfilUserComponent } from './Components/perfil-user/perfil-user.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
 
 //Rutas en el navegador para cada componente
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'registro', component: RegistroComponent},
   {path: 'perfil', component: PerfilUserComponent},
+  {path: 'menu', component: MenuComponent},
   {path:'**', redirectTo: 'login', pathMatch: 'full'} //Si se ingresa un complemento de liga esta redirecciona a la indicada
 ];
 
@@ -26,7 +28,8 @@ const appRoutes: Routes = [
     LoginComponent,
     RegistroComponent,
     MenuComponent,
-    PerfilUserComponent
+    PerfilUserComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
