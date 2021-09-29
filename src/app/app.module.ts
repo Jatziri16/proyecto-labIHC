@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+// MODULOS
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // COMPONENTES
@@ -33,6 +37,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    ToastrModule.forRoot(),
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
