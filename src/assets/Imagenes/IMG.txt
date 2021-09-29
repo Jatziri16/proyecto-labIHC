@@ -1,0 +1,1 @@
+Dentro de esta carpeta irán todas las imagenes ocupadas en la aplicación.
