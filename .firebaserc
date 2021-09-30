@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "inglesapp-fc6b6": {
+      "hosting": {
+        "InglesApp": [
+          "inglesapp-fc6b6"
+        ]
+      }
+    }
+  }
+}
