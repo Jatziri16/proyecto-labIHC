@@ -12,13 +12,17 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-
 // COMPONENTES
 import { LoginComponent } from './Components/login/login.component';
 import { RegistroComponent } from './Components/registro/registro.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { PerfilUserComponent } from './Components/perfil-user/perfil-user.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
+
+// Angular Material 
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 //Rutas en el navegador para cada componente
 const appRoutes: Routes = [
@@ -48,6 +52,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+
+    MatFormFieldModule,
+    MatInputModule, 
+    MatSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
