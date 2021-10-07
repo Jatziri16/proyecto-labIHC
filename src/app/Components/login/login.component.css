@@ -9,3 +9,32 @@ body
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.margen-f{
+    padding-right: 20%;
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+
+#der{
+    background-color: #6A79FD;
+    /* align-items: center; */
+    /* display: flex; */
+    /* height: 100px; */
+    justify-content: center;
+    /* width: 200px; */
+}
+#izq{
+    background-color: #F5EFFB;
+    /* align-items: center; */
+    display: flex;
+    /* height: 100px; */
+    justify-content: center;
+    /* width: 200px; */}
+
+.img{
+    height:100px; 
+    width:100px;
+    float: unset;
+}
