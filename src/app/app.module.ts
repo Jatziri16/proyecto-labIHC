@@ -11,6 +11,7 @@ import { environment } from '../environments/environment';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // COMPONENTES
 import { LoginComponent } from './Components/login/login.component';
@@ -23,6 +24,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+
 
 //Rutas en el navegador para cada componente
 const appRoutes: Routes = [
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-
+    FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule, 
     MatSelectModule,
