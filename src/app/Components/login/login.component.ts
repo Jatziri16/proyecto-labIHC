@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
 export class LoginComponent implements OnInit 
 {
   login: FormGroup;
+  usuario: string;
+  contra: string;
   items: Observable<any[]>;
   constructor(firestore: AngularFirestore,
               private fb:FormBuilder,) 
@@ -20,6 +22,8 @@ export class LoginComponent implements OnInit
       Password: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9_.-]*$")]],
     });
     this.items = firestore.collection('Usuarios').valueChanges();
+    this.usuario = "";
+    this.contra = "";
   }
 
   ngOnInit(): void 
@@ -30,7 +34,11 @@ export class LoginComponent implements OnInit
   //Funcion inicial
   inicioSesion()
   {
+    this.usuario = this.login.value.User;
+    this.contra = this.login.value.Password;
     console.log("Está funcionando");
+    console.log("Usuario: "+this.usuario);
+    console.log("Contraseña: "+this.contra);
   }
 
 }
