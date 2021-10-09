@@ -1,1 +1,66 @@
-<p>registro works!</p>
+<!-- <p>registro works!</p> -->
+<body>
+    
+    <br><br>
+    <div class="container">
+      <div class="col-xs-12 col-sm-6 col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-body text-center">
+            <img src="../../../assets/Imagenes/loginLogo.png" style="float: unset; height:20%; width:20%">
+            <h1>Registro</h1>
+            <!-- <form [formGroup]="registro" (ngSubmit)="datosRegistro()"> -->
+
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="outline" class="ancho">
+                        <mat-label>Nombre</mat-label>
+                        <input matInput placeholder="Nombre">
+                    </mat-form-field>
+                </div>  
+                <div class="col">
+                    <mat-form-field appearance="outline" class="ancho">
+                        <mat-label>Apellido</mat-label>
+                        <input matInput placeholder="Apellido">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="outline" class="ancho">
+                        <mat-label>Correo</mat-label>
+                        <input matInput placeholder="ejemplo@gmail.com"> 
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field appearance="outline" class="ancho">
+                        <mat-label>Usuario</mat-label>
+                        <input matInput placeholder="Usuario"> 
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <mat-form-field appearance="outline" class="ancho">
+                        <mat-label>Contraseña</mat-label>
+                        <input matInput placeholder="*****" type="password">
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field appearance="outline" class="ancho">
+                        <mat-label>Confirmar contraseña</mat-label>
+                        <input matInput placeholder="*****" type="password">
+                    </mat-form-field>
+                </div>
+            </div>
+
+              <br>
+              <button type="submit" class="btn btn-primary btn-block"> Registrarse </button>&nbsp;&nbsp;
+              <button type="submit" class="btn btn-secondary btn-block" routerLink="/login"> Cancelar </button>
+            <!-- </form> -->
+          </div>
+        </div>
+      </div> 
+    </div>
+</body>

@@ -1,0 +1,17 @@
+body 
+{
+    background-image: url(../../../assets/Imagenes/registroBG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.img{
+    height:100px; 
+    width:100px;
+    float: unset;
+}
