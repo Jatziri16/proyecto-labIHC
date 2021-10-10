@@ -8,20 +8,20 @@
           <div class="card-body text-center">
             <img src="../../../assets/Imagenes/loginLogo.png" style="float: unset; height:20%; width:20%">
             <h1>Registro</h1>
-            <!-- <form [formGroup]="registro" (ngSubmit)="datosRegistro()"> -->
+            <form [formGroup]="datosRegistro" (ngSubmit)="registrarUser()">
 
 
             <div class="row">
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">
                         <mat-label>Nombre</mat-label>
-                        <input matInput placeholder="Nombre">
+                        <input matInput placeholder="Nombre" formControlName="name">
                     </mat-form-field>
                 </div>  
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">
                         <mat-label>Apellido</mat-label>
-                        <input matInput placeholder="Apellido">
+                        <input matInput placeholder="Apellido" formControlName="lastName">
                     </mat-form-field>
                 </div>
             </div>
@@ -29,13 +29,13 @@
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">
                         <mat-label>Correo</mat-label>
-                        <input matInput placeholder="ejemplo@gmail.com"> 
+                        <input matInput placeholder="ejemplo@gmail.com" formControlName="email"> 
                     </mat-form-field>
                 </div>
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">
                         <mat-label>Usuario</mat-label>
-                        <input matInput placeholder="Usuario"> 
+                        <input matInput placeholder="Usuario" formControlName="userName"> 
                     </mat-form-field>
                 </div>
             </div>
@@ -44,21 +44,21 @@
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">
                         <mat-label>Contraseña</mat-label>
-                        <input matInput placeholder="*****" type="password">
+                        <input matInput placeholder="*****" type="password" formControlName="psw1">
                     </mat-form-field>
                 </div>
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">
                         <mat-label>Confirmar contraseña</mat-label>
-                        <input matInput placeholder="*****" type="password">
+                        <input matInput placeholder="*****" type="password" formControlName="psw2">
                     </mat-form-field>
                 </div>
             </div>
 
               <br>
               <button type="submit" class="btn btn-primary btn-block"> Registrarse </button>&nbsp;&nbsp;
-              <button type="submit" class="btn btn-secondary btn-block" routerLink="/login"> Cancelar </button>
-            <!-- </form> -->
+              <button type="button" class="btn btn-secondary btn-block" routerLink="/login"> Cancelar </button>
+            </form>
           </div>
         </div>
       </div> 
