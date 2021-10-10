@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-registro',
@@ -16,7 +17,8 @@ export class RegistroComponent implements OnInit
   contra1: string = "";
   contra2!: string;
 
-  constructor(private fb:FormBuilder,) 
+  constructor(private fb:FormBuilder,
+              private toastr: ToastrService,) 
   { 
     this.datosRegistro = this.fb.group
     ({
@@ -34,18 +36,33 @@ export class RegistroComponent implements OnInit
 
   registrarUser()
   {
-    this.nombre = this.datosRegistro.value.name;
-    this.apellido = this.datosRegistro.value.lastName;
-    this.correo = this.datosRegistro.value.email;
-    this.usuario = this.datosRegistro.value.userName;
     this.contra1 = this.datosRegistro.value.psw1;
     this.contra2 = this.datosRegistro.value.psw2;
-    console.log("Nombre: " + this.nombre);
-    console.log("Apellido: " + this.apellido);
-    console.log("Correo: " + this.correo);
-    console.log("Usuario: " +this.usuario);
-    console.log("Contra1: " + this.contra1);
-    console.log("Contra2: " + this.contra2);
+    if(this.contra1 == this.contra2)
+    {
+      this.nombre = this.datosRegistro.value.name;
+      this.apellido = this.datosRegistro.value.lastName;
+      this.correo = this.datosRegistro.value.email;
+      this.usuario = this.datosRegistro.value.userName;
+      
+      console.log("Nombre: " + this.nombre);
+      console.log("Apellido: " + this.apellido);
+      console.log("Correo: " + this.correo);
+      console.log("Usuario: " +this.usuario);
+      console.log("Contra1: " + this.contra1);
+      console.log("Contra2: " + this.contra2);
+      this.toastr.success('El registro se realizo con exito', 'Acción exitosa',
+      {
+        positionClass: 'toast-bottom-right'
+      });
+    }
+    else
+    {
+      this.toastr.error('Las contraseñas no coinciden', 'ERROR',
+      {
+        positionClass: 'toast-bottom-right'
+      });
+    }
   }
 
 }
