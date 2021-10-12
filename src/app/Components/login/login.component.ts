@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit
   intentos: number = 0; // Lleva el conteo del numero de intentos al iniciar sesión, si junta 3 se bloquerá
   loading: boolean = false; // Controla si se muestra el spinner o no en el html
   bloqueo: boolean = false; // Controla el bloqueo del botón en caso de exceder el número de intentos
-  
+
   constructor(firestore: AngularFirestore,
               private fb:FormBuilder,
               private toastr: ToastrService,
@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit
       {
         this.toastr.success('Acceso concedido.', 'Éxito!');
         this.loading = false;
-        //this.router.navigate(['/home']);
+        this.router.navigate(['/menu']);
       }
       else
       {

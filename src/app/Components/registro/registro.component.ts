@@ -103,11 +103,10 @@ export class RegistroComponent implements OnInit
     const registroU: any =
     {
       //Se obtienen los valores de los campos del forms
-      Nombre: this.nombre,
-      Apellido: this.apellido,
+      Nombre: this.nombre + this.apellido,
       Usuario: this.usuario,
-      Email: this.correo,
-      Password: this.contra1
+      Correo: this.correo,
+      Contrasenia: this.contra1
     }
     
     this._userService.registarUsuario(registroU).then(() => 
