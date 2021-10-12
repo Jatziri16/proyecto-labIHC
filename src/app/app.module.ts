@@ -24,6 +24,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { Nivel1Component } from './Components/nivel1/nivel1.component';
 
 
 //Rutas en el navegador para cada componente
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     RegistroComponent,
     MenuComponent,
     PerfilUserComponent,
-    NavbarComponent
+    NavbarComponent,
+    Nivel1Component
   ],
   imports: [
     BrowserModule,
