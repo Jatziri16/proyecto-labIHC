@@ -111,12 +111,12 @@ export class RegistroComponent implements OnInit
     
     this._userService.registarUsuario(registroU).then(() => 
     {
-      this.Cargando = false;
-      this.loading = true;
       this.toastr.success('El usuario fue capturado correctamente', 'Acción exitosa',
       {
         positionClass: 'toast-bottom-right'
       }); 
+      this.Cargando = false;
+      this.loading = true;
     }).catch(error => 
     {
       // this.submitted = false;
