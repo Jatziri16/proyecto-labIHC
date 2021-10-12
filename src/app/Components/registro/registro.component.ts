@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 
 @Component({
@@ -24,7 +25,8 @@ export class RegistroComponent implements OnInit
 
   constructor(private fb:FormBuilder,
               private toastr: ToastrService,
-              private _userService: UsuarioService,) 
+              private _userService: UsuarioService,
+              private router: Router,) 
   { 
     this.datosRegistro = this.fb.group
     ({
@@ -57,12 +59,9 @@ export class RegistroComponent implements OnInit
               this.nombre = this.datosRegistro.value.name;
               this.apellido = this.datosRegistro.value.lastName;
               this.nuevoCajero();
-              this.toastr.success('El registro se realizo con exito', 'Acción exitosa',
-              {
-                positionClass: 'toast-bottom-right'
-              });
               this.Cargando = false;
               this.loading = true;
+              this.router.navigate(['/login']);
             }
             else
             {
