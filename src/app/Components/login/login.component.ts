@@ -15,11 +15,11 @@ export class LoginComponent implements OnInit
 {
   datosLogin: FormGroup;
   usuarioFirebase: any;
-  intentos: number = 0;
-  usuario: string;
-  contra: string;
-  loading: boolean = false;
-  bloqueo: boolean = false;
+  usuario!: string;
+  contra!: string;
+  intentos: number = 0; // Lleva el conteo del numero de intentos al iniciar sesión, si junta 3 se bloquerá
+  loading: boolean = false; // Controla si se muestra el spinner o no en el html
+  bloqueo: boolean = false; // Controla el bloqueo del botón en caso de exceder el número de intentos
   items: Observable<any[]>;
   constructor(firestore: AngularFirestore,
               private fb:FormBuilder,
@@ -32,8 +32,6 @@ export class LoginComponent implements OnInit
       Password: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9_.-]*$")]],
     });
     this.items = firestore.collection('Usuarios').valueChanges();
-    this.usuario = "";
-    this.contra = "";
   }
 
   ngOnInit(): void 
@@ -77,6 +75,7 @@ export class LoginComponent implements OnInit
       if(info.Contrasenia == this.datosLogin.value.Password)
       {
         this.toastr.success('Acceso concedido.', 'Éxito!');
+        this.loading = false;
         //this.router.navigate(['/home']);
       }
       else

@@ -15,6 +15,11 @@
         <div class="card-body text-center">
           <img src="../../../assets/Imagenes/loginLogo.png" style="float: unset; height:25%; width:25%">
           <h1>Acceder</h1>
+          <div *ngIf="loading">
+            <div class="spinner-border text-secondary" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
           <form [formGroup]="datosLogin" (ngSubmit)="inicioSesion()">
             <mat-form-field class="ancho" appearance="outline">
               <mat-label>Usuario</mat-label>
