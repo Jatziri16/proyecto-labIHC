@@ -15,7 +15,7 @@
         <div class="card-body text-center">
           <img src="../../../assets/Imagenes/loginLogo.png" style="float: unset; height:25%; width:25%">
           <h1>Acceder</h1>
-          <form [formGroup]="login" (ngSubmit)="inicioSesion()">
+          <form [formGroup]="datosLogin" (ngSubmit)="inicioSesion()">
             <mat-form-field class="ancho" appearance="outline">
               <mat-label>Usuario</mat-label>
               <input formControlName="User" matInput autocomplete="off">
@@ -26,7 +26,12 @@
               <input formControlName="Password" matInput type="password" autocomplete="off">
             </mat-form-field>
             <br>
-            <button type="submit" class="btn btn-primary btn-block"> Iniciar Sesión </button>
+            <div *ngIf="!bloqueo">
+              <button type="submit" class="btn btn-primary btn-block"> Iniciar Sesión </button>
+            </div>
+            <div *ngIf="bloqueo">
+              <button type="button" class="btn btn-primary btn-block" disabled> Iniciar Sesión </button>
+            </div>
           </form>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
@@ -6,8 +7,12 @@ import { Injectable } from '@angular/core';
 export class UsuarioService 
 {
   // 
-  constructor() 
+  constructor(private firestore: AngularFirestore) 
   { 
     // 
+  }
+  Login(usuario: string)
+  {
+    return this.firestore.collection('Usuarios', ref => ref.where('Usuario', '==', usuario)).get().toPromise();
   }
 }
