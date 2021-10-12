@@ -11,6 +11,7 @@ export class UsuarioService
   { 
     // 
   }
+  
   Login(usuario: string)
   {
     return this.firestore.collection('Usuarios', ref => ref.where('Usuario', '==', usuario)).get().toPromise();
