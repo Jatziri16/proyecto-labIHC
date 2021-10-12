@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit
   intentos: number = 0; // Lleva el conteo del numero de intentos al iniciar sesión, si junta 3 se bloquerá
   loading: boolean = false; // Controla si se muestra el spinner o no en el html
   bloqueo: boolean = false; // Controla el bloqueo del botón en caso de exceder el número de intentos
-  items: Observable<any[]>;
+  
   constructor(firestore: AngularFirestore,
               private fb:FormBuilder,
               private toastr: ToastrService,
@@ -31,7 +31,6 @@ export class LoginComponent implements OnInit
       User: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9_.-]*$")]],
       Password: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9_.-]*$")]],
     });
-    this.items = firestore.collection('Usuarios').valueChanges();
   }
 
   ngOnInit(): void 

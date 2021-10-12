@@ -15,4 +15,19 @@ export class UsuarioService
   {
     return this.firestore.collection('Usuarios', ref => ref.where('Usuario', '==', usuario)).get().toPromise();
   }
+
+  EmailUser(correo: string)
+  {
+    return this.firestore.collection('Usuario', ref => ref.where('Correo', '==', correo)).get().toPromise();
+  }
+
+  NomUser(usuario: string)
+  {
+    return this.firestore.collection('Usuario', ref => ref.where('Usuario', '==', usuario)).get().toPromise();
+  }
+
+  registarUsuario(usuario: any): Promise<any>
+  {
+    return this.firestore.collection('Usuario').add(usuario);
+  }
 }
