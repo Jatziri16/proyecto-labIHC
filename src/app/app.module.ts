@@ -25,6 +25,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { Nivel1Component } from './Components/nivel1/nivel1.component';
+import { Nivel2Component } from './Components/nivel2/nivel2.component';
+import { Nivel3Component } from './Components/nivel3/nivel3.component';
 
 
 //Rutas en el navegador para cada componente
@@ -35,6 +37,8 @@ const appRoutes: Routes = [
   {path: 'perfil', component: PerfilUserComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'level1', component: Nivel1Component},
+  {path: 'level2', component: Nivel2Component},
+  {path: 'level3', component: Nivel3Component},
   {path:'**', redirectTo: 'login', pathMatch: 'full'} //Si se ingresa un complemento de liga esta redirecciona a la indicada
 ];
 
@@ -46,7 +50,9 @@ const appRoutes: Routes = [
     MenuComponent,
     PerfilUserComponent,
     NavbarComponent,
-    Nivel1Component
+    Nivel1Component,
+    Nivel2Component,
+    Nivel3Component
   ],
   imports: [
     BrowserModule,
