@@ -34,6 +34,7 @@ const appRoutes: Routes = [
   {path: 'registro', component: RegistroComponent},
   {path: 'perfil', component: PerfilUserComponent},
   {path: 'menu', component: MenuComponent},
+  {path: 'level1', component: Nivel1Component},
   {path:'**', redirectTo: 'login', pathMatch: 'full'} //Si se ingresa un complemento de liga esta redirecciona a la indicada
 ];
 
