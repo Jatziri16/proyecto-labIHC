@@ -42,8 +42,6 @@ export class LoginComponent implements OnInit
   inicioSesion()
   {
     this.loading = true;
-    console.log("Usuario: " +this.datosLogin.value.User);
-    console.log("Contraseña: " +this.datosLogin.value.Password);
 
     if(this.datosLoginControl.Password.invalid || this.datosLoginControl.User.invalid)
     {
