@@ -10,394 +10,442 @@
     <!-- AQUI VA EL CUERPO -->
     <br>
     <main>
-        <div class="container">
-            <div class="card-body"> <!--text-center -->
-                <div class="row justify-content-center">
-                    <div class="col-8">
+        <!-- * * * * * * * * T E O R I A  * * * * * * * * * * -->
+        <div *ngIf="showTeoria"> <!--Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio-->
+            <div class="container">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <h1>To be</h1>
+                            <h2>verbo 'ser/estar'</h2>
+                            <h3>Descripción</h3>
+                            <p>Es uno de los verbos más importantes en inglés. Se utiliza para hablár de la edad, nombres, emociones, nacionalidades o profesiones.</p>
+                            
+                            <h3>Conjugación</h3>
+                            <p>
+                                La conjugación del verbo 'ser/estar' (to be) en presente simples (Present Simple).
+                                <br><b>*NOTA*</b>. 'I' - yo, siempre se escribe con mayúcula.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-4">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>To be</th>
+                                        <th>Versión corta</th>
+                                        <th>Traducción</th>
+                                    </tr>
+                                    <tr>
+                                        <td>I am</td>
+                                        <td>I'm</td>
+                                        <td>Yo soy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>You are</td>
+                                        <td>You're</td>
+                                        <td>Tú eres</td>
+                                    </tr>
+                                    <tr>
+                                        <td>He is</td>
+                                        <td>He's</td>
+                                        <td>Él es</td>
+                                    </tr>
+                                    <tr>
+                                        <td>She is</td>
+                                        <td>She's</td>
+                                        <td>Ella es</td>
+                                    </tr>
+                                    <tr>
+                                        <td>It is</td>
+                                        <td>It's</td>
+                                        <td>Ello es</td>
+                                    </tr>
+                                    <tr>
+                                        <td>We are</td>
+                                        <td>We're</td>
+                                        <td>Yo soy</td>
+                                    </tr>
+                                    <tr>
+                                        <td>You are</td>
+                                        <td>You're</td>
+                                        <td>Ustedes son</td>
+                                    </tr>
+                                    <tr>
+                                        <td>They are</td>
+                                        <td>They're</td>
+                                        <td>Ellos son</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> 
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <h3>Negaciones</h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <table class="table table-striped">
+                                <tbody>
+                                    <tr>
+                                        <th>To be</th>
+                                        <th>Versión corta</th>
+                                    </tr>
+                                    <tr>
+                                        <td>I am not</td>
+                                        <td>I'm not</td>
+                                    </tr>
+                                    <tr>
+                                        <td>You are not</td>
+                                        <td>You aren't</td>
+                                    </tr>
+                                    <tr>
+                                        <td>He is not</td>
+                                        <td>He isn't</td>
+                                    </tr>
+                                    <tr>
+                                        <td>She is not</td>
+                                        <td>She isn't</td>
+                                    </tr>
+                                    <tr>
+                                        <td>It is not</td>
+                                        <td>It isn't</td>
+                                    </tr>
+                                    <tr>
+                                        <td>We are not</td>
+                                        <td>We aren't</td>
+                                    </tr>
+                                    <tr>
+                                        <td>You are not</td>
+                                        <td>You aren't</td>
+                                    </tr>
+                                    <tr>
+                                        <td>They are not</td>
+                                        <td>They aren't</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+                    <br>
+                    <div class="row justify-content-center">
+                        <div class="col-3 text-center">
+                            <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
+                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button> <!--Va a la función para validar que se debe de mostrar el primer ejercicio-->
+                        </div>
+                    </div>  
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- * * * * * * * * E J E R C I C I O S -- PARTE 1  * * * * * * * * * * -->
+        <div *ngIf="showEx1"> <!--Se muestra esta parte cuando el parámetro ejercicio1 = true-->
+            <div class="container">
+                <div class="card-body"> 
+                    <!-- * * * * * * PRIMERA FILA * * * * * * -->
+                    <div class="row justify-content-center">
                         <h1>To be</h1>
                         <h2>verbo 'ser/estar'</h2>
-                        <h3>Descripción</h3>
-                        <p>Es uno de los verbos más importantes en inglés. Se utiliza para hablár de la edad, nombres, emociones, nacionalidades o profesiones.</p>
-                        
-                        <h3>Conjugación</h3>
-                        <p>
-                            La conjugación del verbo 'ser/estar' (to be) en presente simples (Present Simple).
-                            <br><b>*NOTA*</b>. 'I' - yo, siempre se escribe con mayúcula.
-                        </p>
+                        <h3>Ejercicios</h3>
+                        <div class="col-3">
+                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                            <p><b>1. </b>Alex ____ my new friend.</p>
+                            <!-- Opciones con radio buttons -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio1" id="ex1" value="is">
+                                <label class="form-check-label" for="ex1">
+                                    is
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio1" id="ex1" value="am">
+                                <label class="form-check-label" for="ex1">
+                                    am
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio1" id="ex1" value="are">
+                                <label class="form-check-label" for="ex1">
+                                    are
+                                </label>
+                            </div>
+                        </div>
+                        <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                        <div class="col-3">
+                            <p><b>2. </b>I ____ a very good driver.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio2" id="ex2" value="are">
+                                <label class="form-check-label" for="ex2">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio2" id="ex2" value="is">
+                                <label class="form-check-label" for="ex2">
+                                    is
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio2" id="ex2" value="am">
+                                <label class="form-check-label" for="ex2">
+                                    am
+                                </label>
+                            </div>
+                        </div>
+                        <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                        <div class="col-3">
+                            <p><b>3. </b>My neighbours ____ very noisy.</p>
+                            <!-- Opciones con radio buttons -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio3" id="ex3" value="am">
+                                <label class="form-check-label" for="ex3">
+                                    am
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio3" id="ex3" value="are">
+                                <label class="form-check-label" for="ex3">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio3" id="ex3" value="is">
+                                <label class="form-check-label" for="ex3">
+                                    is
+                                </label>
+                            </div>
+                        </div>
                     </div>
+                    <br>
+    
+                    <!-- * * * * * * SEGUNDA FILA * * * * * * -->
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <!-- ~ ~ ~ ~ -->
+                            <p><b>4. </b>Your black cat ____ in the garden.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio4" id="ex4" value="am">
+                                <label class="form-check-label" for="ex4">
+                                    am
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio4" id="ex4" value="are">
+                                <label class="form-check-label" for="ex4">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio4" id="ex4" value="is">
+                                <label class="form-check-label" for="ex4">
+                                    is
+                                </label>
+                            </div>
+                        </div>
+                        <!-- ~ ~ ~ ~  -->
+                        <div class="col-3">
+                            <p><b>5. </b>Susan and Mike ____ my parents.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio5" id="ex5" value="are">
+                                <label class="form-check-label" for="ex5">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio5" id="ex5" value="is">
+                                <label class="form-check-label" for="ex5">
+                                    is
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio5" id="ex5" value="am">
+                                <label class="form-check-label" for="ex5">
+                                    am
+                                </label>
+                            </div>
+                        </div>
+                        <!-- ~ ~ ~ ~  -->
+                        <div class="col-3">
+                            <p><b>6. </b>They ____ my best friends.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio6" id="ex6" value="are">
+                                <label class="form-check-label" for="ex6">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio6" id="ex6" value="am">
+                                <label class="form-check-label" for="ex6">
+                                    am
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio6" id="ex6" value="is">
+                                <label class="form-check-label" for="ex6">
+                                    is
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+    
+                    <!-- * * * * * * TERCERA FILA * * * * * * -->
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <!-- ~ ~ ~ ~ -->
+                            <p><b>7. </b>I ____ sure.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio7" id="ex7" value="am">
+                                <label class="form-check-label" for="ex7">
+                                    am
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio7" id="ex7" value="are">
+                                <label class="form-check-label" for="ex7">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio7" id="ex7" value="is">
+                                <label class="form-check-label" for="ex7">
+                                    is
+                                </label>
+                            </div>
+                        </div>
+                        <!-- ~ ~ ~ ~  -->
+                        <div class="col-3">
+                            <p><b>8. </b>Your best friend ____ at home.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio8" id="ex8" value="are">
+                                <label class="form-check-label" for="ex8">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio8" id="ex8" value="is">
+                                <label class="form-check-label" for="ex8">
+                                    is
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio8" id="ex8" value="am">
+                                <label class="form-check-label" for="ex8">
+                                    am
+                                </label>
+                            </div>
+                        </div>
+                        <!-- ~ ~ ~ ~  -->
+                        <div class="col-3">
+                            <p><b>9. </b>We ____ from Spain.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio9" id="ex9" value="is">
+                                <label class="form-check-label" for="ex9">
+                                    is
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio9" id="ex9" value="are">
+                                <label class="form-check-label" for="ex9">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio9" id="ex9" value="am">
+                                <label class="form-check-label" for="ex9">
+                                    am
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+    
+                    <!-- * * * * * * CUARTA FILA * * * * * * -->
+                    <div class="row justify-content-center">
+                        <div class="col-3">
+                            <p><b>10. </b>Luke and Tom ____ actors.</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio10" id="ex10" value="are">
+                                <label class="form-check-label" for="ex10">
+                                    are
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio10" id="ex10" value="am">
+                                <label class="form-check-label" for="ex10">
+                                    am
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ejercicio10" id="ex10" value="is">
+                                <label class="form-check-label" for="ex10">
+                                    is
+                                </label>
+                            </div>
+                        </div>
+                    </div> 
+                    <br>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-3 text-center">
+                            <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                            <button type="button" class="btn" id="next" (click)="checkResp1()">Continuar</button> <!--Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                        </div>
+                    </div>  
+                    <br>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-4">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th>To be</th>
-                                    <th>Versión corta</th>
-                                    <th>Traducción</th>
-                                </tr>
-                                <tr>
-                                    <td>I am</td>
-                                    <td>I'm</td>
-                                    <td>Yo soy</td>
-                                </tr>
-                                <tr>
-                                    <td>You are</td>
-                                    <td>You're</td>
-                                    <td>Tú eres</td>
-                                </tr>
-                                <tr>
-                                    <td>He is</td>
-                                    <td>He's</td>
-                                    <td>Él es</td>
-                                </tr>
-                                <tr>
-                                    <td>She is</td>
-                                    <td>She's</td>
-                                    <td>Ella es</td>
-                                </tr>
-                                <tr>
-                                    <td>It is</td>
-                                    <td>It's</td>
-                                    <td>Ello es</td>
-                                </tr>
-                                <tr>
-                                    <td>We are</td>
-                                    <td>We're</td>
-                                    <td>Yo soy</td>
-                                </tr>
-                                <tr>
-                                    <td>You are</td>
-                                    <td>You're</td>
-                                    <td>Ustedes son</td>
-                                </tr>
-                                <tr>
-                                    <td>They are</td>
-                                    <td>They're</td>
-                                    <td>Ellos son</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div> 
-                <div class="row justify-content-center">
-                    <div class="col-8">
-                        <h3>Negaciones</h3>
-                    </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="col-3">
-                        <table class="table table-striped">
-                            <tbody>
-                                <tr>
-                                    <th>To be</th>
-                                    <th>Versión corta</th>
-                                </tr>
-                                <tr>
-                                    <td>I am not</td>
-                                    <td>I'm not</td>
-                                </tr>
-                                <tr>
-                                    <td>You are not</td>
-                                    <td>You aren't</td>
-                                </tr>
-                                <tr>
-                                    <td>He is not</td>
-                                    <td>He isn't</td>
-                                </tr>
-                                <tr>
-                                    <td>She is not</td>
-                                    <td>She isn't</td>
-                                </tr>
-                                <tr>
-                                    <td>It is not</td>
-                                    <td>It isn't</td>
-                                </tr>
-                                <tr>
-                                    <td>We are not</td>
-                                    <td>We aren't</td>
-                                </tr>
-                                <tr>
-                                    <td>You are not</td>
-                                    <td>You aren't</td>
-                                </tr>
-                                <tr>
-                                    <td>They are not</td>
-                                    <td>They aren't</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>  
-                <br>
-                <div class="row justify-content-center">
-                    <div class="col-3 text-center">
-                        <button type="button" class="btn" id="back">Regresar </button>&nbsp;&nbsp;
-                        <button type="button" class="btn" id="next">Comenzar</button>
-                    </div>
-                </div>  
-                <br>
             </div>
         </div>
 
 
-
-        <!-- * * * * * * * * E J E R C I C I O S  * * * * * * * * * * -->
-        <div class="container">
-            <div class="card-body"> 
-                <!-- * * * * * * PRIMERA FILA * * * * * * -->
-                <div class="row justify-content-center">
-                    <h1>To be</h1>
-                    <h2>verbo 'ser/estar'</h2>
-                    <h3>Ejercicios</h3>
-                    <div class="col-3">
-                        <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
-                        <p><b>1. </b>Alex ____ my new friend.</p>
-                        <!-- Opciones con radio buttons -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="ejercicio1" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
-                    <div class="col-3">
-                        <p><b>2. </b>I ____ a very good driver.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
-                    <div class="col-3">
-                        <p><b>3. </b>My neighbours ____ very noisy.</p>
-                        <!-- Opciones con radio buttons -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                    </div>
+        <!-- * * * * * * * * E J E R C I C I O S -- PARTE 2  * * * * * * * * * * -->
+        <div *ngIf="showEx2">
+            <div class="row justify-content-center">
+                <div class="col-5">
+                    <h4>Complete the nex paragraphs with <b>am/is/are</b>.</h4><br>
+                    <p>
+                        <b>1. </b>Hello, my name <input type="text" class="txtField"> Kim. I <input type="text" class="txtField"> twelve years old and I <input type="text" class="txtField"> from China.
+                        I <input type="text" class="txtField"> a student at Centennial Secondary School. My favourite subjects <input type="text" class="txtField"> Maths and Art.
+                        My favourite sport <input type="text" class="txtField"> baseball and my favourite colours <input type="text" class="txtField"> blue and purple. 
+                        May and Joe <input type="text" class="txtField"> my best friends. They <input type="text" class="txtField"> great.
+                    </p><br>
                 </div>
-                <br>
-
-                <!-- * * * * * * SEGUNDA FILA * * * * * * -->
-                <div class="row justify-content-center">
-                    <div class="col-3">
-                        <!-- ~ ~ ~ ~ -->
-                        <p><b>4. </b>Your black cat ____ in the garden.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ~ ~ ~ ~  -->
-                    <div class="col-3">
-                        <p><b>5. </b>Susan and Mike ____ my parents.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ~ ~ ~ ~  -->
-                    <div class="col-3">
-                        <p><b>6. </b>They ____ my best friends.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                    </div>
+                <div class="col-3">
+                    <img src="../../../assets/Imagenes/N1P2-china.png" class="img-fluid">
                 </div>
-                <br>
-
-                <!-- * * * * * * TERCERA FILA * * * * * * -->
-                <div class="row justify-content-center">
-                    <div class="col-3">
-                        <!-- ~ ~ ~ ~ -->
-                        <p><b>7. </b>I ____ sure.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ~ ~ ~ ~  -->
-                    <div class="col-3">
-                        <p><b>8. </b>Your best friend ____ at home.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                    </div>
-                    <!-- ~ ~ ~ ~  -->
-                    <div class="col-3">
-                        <p><b>9. </b>We ____ from Spain.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <!-- * * * * * * CUARTA FILA * * * * * * -->
-                <div class="row justify-content-center">
-                    <div class="col-3">
-                        <p><b>10. </b>Luke and Tom ____ actors.</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="are">
-                            <label class="form-check-label" for="exampleRadios2">
-                                are
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="am">
-                            <label class="form-check-label" for="exampleRadios2">
-                                am
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="is">
-                            <label class="form-check-label" for="exampleRadios2">
-                                is
-                            </label>
-                        </div>
-                    </div>
-                </div> 
-                
-                
-                <div class="row justify-content-center">
-                    <div class="col-3 text-center">
-                        <button type="button" class="btn" id="back">Regresar </button>&nbsp;&nbsp;
-                        <button type="button" class="btn" id="next">Comenzar</button>
-                    </div>
-                </div>  
-                <br>
             </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-3">
+                    <img src="../../../assets/Imagenes/N1P2-friends.png" class="img-fluid">
+                </div>
+                <div class="col-5">
+                    <p>
+                        <b>2. </b>Peter Baker <input type="text" class="txtField"> form Mancester, but Paul and John <input type="text" class="txtField"> from London. 
+                        Manchester and London <input type="text" class="txtField"> cities in England. Hamburg <input type="text" class="txtField"> a city in Germany. 
+                        Sandra <input type="text" class="txtField"> at school today. Jack and Peter <input type="text" class="txtField"> her friends. 
+                        They <input type="text" class="txtField"> in the same class. Mr and Mrs Baker <input type="text" class="txtField"> on a trip to the USA to visit their cousin Anne.
+                        She <input type="text" class="txtField"> a nice girl. Peter says: "My grandfather <input type="text" class="txtField"> in the hospital. 
+                        I <input type="text" class="txtField"> at home with my grandmother". What time <input type="text" class="txtField"> it?. It <input type="text" class="txtField"> 8 o'clock. 
+                        <input type="text" class="txtField"> you tired? No I <input type="text" class="txtField"> not.
+                    </p>
+                </div>
+                
+            </div>
+            <br>
+            <div class="row justify-content-center">
+                <div class="col-3 text-center">
+                    <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                    <button type="button" class="btn" id="next" (click)="checkResp2()">Continuar</button> <!--Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                </div>
+            </div>  
         </div>
-
         <!-- PIE DE LA PÁGINA -->
         <footer>
             <!--  -->

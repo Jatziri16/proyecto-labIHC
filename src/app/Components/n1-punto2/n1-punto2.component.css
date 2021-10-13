@@ -24,6 +24,11 @@ td,th{
     padding-left: 20px;
     padding-right: 20px
 }
+.txtField
+{
+    width: 50px;
+    margin-top: 5px;
+}
 #next
 {
     background-color: rgb(63, 155, 101);
@@ -31,4 +36,10 @@ td,th{
 #back
 {
     background-color: rgb(177, 114, 55);
+}
+#img
+{
+    float: unset;
+    height:25%; 
+    width:25%
 }
