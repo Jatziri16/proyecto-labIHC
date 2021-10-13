@@ -1,0 +1,53 @@
+h1
+{
+    text-align: center;
+    font-size: 180%;
+}
+h2
+{
+    text-align: center;
+    font-size: 130%;
+}
+h3
+{
+    font-size: 120%
+}
+table{
+    margin: auto;
+    text-align: center;
+    background-color: #89949e3f;
+    border-radius: 10px;
+}
+td,th{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px
+}
+.dashed {
+    border-style: dashed;
+    padding-left: 35px;
+    padding-right: 25px;
+    padding-top: 15px;
+    margin-left: 85px;
+    margin-right: 85px;
+}
+.txtField
+{
+    width: 50px;
+    margin-top: 5px;
+}
+#next
+{
+    background-color: rgb(63, 155, 101);
+}
+#back
+{
+    background-color: rgb(177, 114, 55);
+}
+#img
+{
+    float: unset;
+    height:25%; 
+    width:25%
+}

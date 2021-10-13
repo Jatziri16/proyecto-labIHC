@@ -1,0 +1,109 @@
+<!-- <body> -->
+    <header>
+        <div class="container">
+            <div>
+                <app-navbar></app-navbar>
+            </div>
+        </div>
+    </header>
+
+    <!-- AQUI VA EL CUERPO -->
+    <br>
+    <main>
+        <!-- * * * * * * * * T E O R I A  - A R T I C L E S * * * * * * * * * * -->
+        <div *ngIf="showTeoria"> <!--Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio-->
+            <div class="container">
+                <div class="card-body">
+                    <!-- Descripción del verb to be -->
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <h1>Articles</h1>
+                            <h2><i>A, An, The</i></h2>
+                            
+                            <p>
+                                The articles are the words "a," "an," and "the." They define whether something is specific or unspecific. There are two types of article:
+                            </p>
+                            <ul>
+                                <li class="mb-3">
+                                    <b>The Definite Article (The). </b> 
+                                    "The" is called the definite article. It defines its noun as something specific (e.g., something previously mentioned or known, something unique, 
+                                    something being identified by the speaker).<br>
+                                    Example: <i>This is the lake.</i> (This is a previously specified lake, i.e., one already known to the readers.)
+                                </li>
+                                <li class="mb-3">
+                                    <b>The Indefinite Article (A, An).</b>
+                                    "A" and "an" are called the indefinite articles. They define their noun as something unspecific (e.g., something generic, something mentioned for the first time).<br>
+                                    Example: <i>This is a lake.</i> (This is a previously unspecified lake.)
+                                </li>
+                            </ul>
+                            <div class="dashed">
+                                <h2>Key Takeaway</h2>
+                                <p>
+                                    <b>"The"</b> is called the definite article because it is used to indicate something specific.<br>
+                                    <b>"A"</b> and <b>"an"</b> are called the indefinite articles because they are used to indicate something unspecific.<br>
+                                </p>
+                            </div>
+
+                            <h2 class="mt-4">A vs AN</h2>
+                            <p>The article "a" is used before a noun that begins with a consonant sound, "an" is used when the noun begins with a vowel sound (a, e, i, o, u). </p>
+
+                            <h2 class="mt-4">Examples of the Definite and Indefinite Articles</h2>
+                            <ul>
+                                <li><i>Can you pass me <b>a</b> chair?</i></li>  (This means an unspecific chair, any chair). 
+                                <li><i>Ben has <b>an</b> apple.</i></li> (This means an unspecific apple, any apple).
+                                <li><i>Tom has a bike. <b>The</b> bike is blue.</i></li> (This refers to Tom's bike).
+                            </ul>
+                            
+                            <h2 class="mt-4">Indefinite Articles Are Used with Singular Nouns</h2>
+                            <h3>The indefinite article ("a," "an") is only for singular nouns. It is not used for plural nouns.</h3>
+                            <p>As the indefinite article specifies one thing ("a cup" means "one cup"), it is not used with non-countable nouns ("water," "air"). For example:</p>
+                            <ul>
+                                <li>I need an air.</li>
+                                <li>Play me a music.</li>
+                            </ul>
+                            <p class="mb-4">Most commonly, the indefinite determiner "some" is used instead.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones -->
+                    <div class="row justify-content-center">
+                        <div class="col-3 text-center">
+                            <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
+                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button> <!--  Va a la función para validar que se debe de mostrar el primer ejercicio-->
+                        </div>
+                    </div>  
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div *ngIf="showTeoria"> Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio -->
+            <div class="container">
+                <div class="card-body">
+                    <!-- Descripción del verb to be -->
+                    <div class="row justify-content-center">
+                        <div class="col-8">
+                            <h1>Articles</h1>
+                            <h2>Excercise 1</h2>
+                        </div>
+                    </div>
+                    
+                    <!-- Botones -->
+                    <div class="row justify-content-center">
+                        <div class="col-3 text-center">
+                            <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
+                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button> <!--  Va a la función para validar que se debe de mostrar el primer ejercicio-->
+                        </div>
+                    </div>  
+                    <br>
+                </div>
+            </div>
+        <!-- </div> -->
+
+        
+        <!-- PIE DE LA PÁGINA -->
+        <footer>
+            <!--  -->
+        </footer>
+    </main>
+<!-- </body> -->
