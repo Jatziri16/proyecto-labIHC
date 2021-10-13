@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './nivel1.component.html',
   styleUrls: ['./nivel1.component.css']
 })
-export class Nivel1Component implements OnInit {
+export class Nivel1Component implements OnInit 
+{
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void 
+  {}
 
 }

@@ -27,6 +27,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { Nivel1Component } from './Components/nivel1/nivel1.component';
 import { Nivel2Component } from './Components/nivel2/nivel2.component';
 import { Nivel3Component } from './Components/nivel3/nivel3.component';
+import { N1Punto2Component } from './Components/n1-punto2/n1-punto2.component';
 
 
 //Rutas en el navegador para cada componente
@@ -39,6 +40,7 @@ const appRoutes: Routes = [
   {path: 'level1', component: Nivel1Component},
   {path: 'level2', component: Nivel2Component},
   {path: 'level3', component: Nivel3Component},
+  {path: 'L1P2', component: N1Punto2Component},
   {path:'**', redirectTo: 'login', pathMatch: 'full'} //Si se ingresa un complemento de liga esta redirecciona a la indicada
 ];
 
@@ -52,7 +54,8 @@ const appRoutes: Routes = [
     NavbarComponent,
     Nivel1Component,
     Nivel2Component,
-    Nivel3Component
+    Nivel3Component,
+    N1Punto2Component
   ],
   imports: [
     BrowserModule,
