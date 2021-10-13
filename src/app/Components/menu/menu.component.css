@@ -1,0 +1,24 @@
+.centrado
+{
+    margin: 0 auto;
+    /* align-items: center;
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    width: 200px; */
+}
+.izq
+{
+    background-color: #99DD7C;
+}
+.der
+{
+    background-color: #F4D75E;
+}
+#bg-white
+{
+    background-color: white;
+}
+main, h1, h2, h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
