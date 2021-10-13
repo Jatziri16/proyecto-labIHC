@@ -1,0 +1,65 @@
+body 
+{
+    background-image: url(../../../assets/Imagenes/level1BG.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+table{
+    background-color: #89949e3f;
+    border-radius: 20px;
+}
+td{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 50px;
+}
+h1{
+    text-align: center;
+}
+.col-4
+{
+    border-collapse: collapse;
+}
+.btn1
+{
+    border-radius: 50px;
+    background-color: #E7DD4B;
+}
+.btn5
+{
+    border-radius: 50px;
+    background-color: #99DD7C;
+}
+.btn2
+{
+    border-radius: 50px;
+    background-color: #E99069;
+}
+.btn6
+{
+    border-radius: 50px;
+    background-color: #7295B5
+}
+.btn3
+{
+    border-radius: 50px;
+    background-color: #4399BB
+}
+.btn7
+{
+    border-radius: 50px;
+    background-color: #E7DD4B
+}
+.btn4
+{
+    border-radius: 50px;
+    background-color: #B1A8B1
+}
+.btn8
+{
+    border-radius: 50px;
+    background-color: #D38BE7
+}
