@@ -14,28 +14,29 @@
         <div *ngIf="showTeoria"> <!--Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio-->
             <div class="container">
                 <div class="card-body">
+                    <!-- Descripción del verb to be -->
                     <div class="row justify-content-center">
                         <div class="col-8">
                             <h1>To be</h1>
-                            <h2>verbo 'ser/estar'</h2>
-                            <h3>Descripción</h3>
-                            <p>Es uno de los verbos más importantes en inglés. Se utiliza para hablár de la edad, nombres, emociones, nacionalidades o profesiones.</p>
+                            <h3>Description</h3>
+                            <p>It is one of the most important verbs in English. It is used to talk about age, names, emotions, nationalities or professions. </p>
                             
-                            <h3>Conjugación</h3>
+                            <h3>Conjugation</h3>
                             <p>
-                                La conjugación del verbo 'ser/estar' (to be) en presente simples (Present Simple).
-                                <br><b>*NOTA*</b>. 'I' - yo, siempre se escribe con mayúcula.
+                                The conjugation of the verb 'to be' in Present Simple. 
+                                <br><b>*NOTA*</b>. 'I' - is always capitalized.
                             </p>
                         </div>
                     </div>
+                    <!-- Tabla del verb to be en afirmación -->
                     <div class="row justify-content-center">
-                        <div class="col-4">
+                        <div class="col-5">
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                        <th>To be</th>
-                                        <th>Versión corta</th>
-                                        <th>Traducción</th>
+                                        <th>Long form</th>
+                                        <th>Short form</th>
+                                        <th>Traduction</th>
                                     </tr>
                                     <tr>
                                         <td>I am</td>
@@ -81,18 +82,14 @@
                             </table>
                         </div>
                     </div> 
+                    <!-- Tabla de verb to be en negacion -->
                     <div class="row justify-content-center">
-                        <div class="col-8">
-                            <h3>Negaciones</h3>
-                        </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-3">
+                        <div class="col-4">
                             <table class="table table-striped">
                                 <tbody>
                                     <tr>
-                                        <th>To be</th>
-                                        <th>Versión corta</th>
+                                        <th>Negation</th>
+                                        <th>Negation short form</th>
                                     </tr>
                                     <tr>
                                         <td>I am not</td>
@@ -131,6 +128,7 @@
                         </div>
                     </div>  
                     <br>
+                    <!-- Botones -->
                     <div class="row justify-content-center">
                         <div class="col-3 text-center">
                             <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
@@ -143,16 +141,15 @@
         </div>
 
         <!-- * * * * * * * * E J E R C I C I O S -- PARTE 1  * * * * * * * * * * -->
-        <div *ngIf="showEx1"> <!--Se muestra esta parte cuando el parámetro ejercicio1 = true-->
+        <div *ngIf="showEx1"> <!--Se muestra esta parte cuando el parámetro showEx1 = true-->
             <div class="container">
                 <div class="card-body"> 
                     <!-- * * * * * * PRIMERA FILA * * * * * * -->
                     <div class="row justify-content-center">
                         <h1>To be</h1>
-                        <h2>verbo 'ser/estar'</h2>
-                        <h3>Ejercicios</h3>
+                        <h2>Excercise 1</h2>
+                        <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
                         <div class="col-3">
-                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
                             <p><b>1. </b>Alex ____ my new friend.</p>
                             <!-- Opciones con radio buttons -->
                             <div class="form-check">
@@ -224,8 +221,8 @@
     
                     <!-- * * * * * * SEGUNDA FILA * * * * * * -->
                     <div class="row justify-content-center">
+                        <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
                         <div class="col-3">
-                            <!-- ~ ~ ~ ~ -->
                             <p><b>4. </b>Your black cat ____ in the garden.</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="ejercicio4" id="ex4" value="am">
@@ -246,7 +243,7 @@
                                 </label>
                             </div>
                         </div>
-                        <!-- ~ ~ ~ ~  -->
+                        <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->>
                         <div class="col-3">
                             <p><b>5. </b>Susan and Mike ____ my parents.</p>
                             <div class="form-check">
@@ -268,7 +265,7 @@
                                 </label>
                             </div>
                         </div>
-                        <!-- ~ ~ ~ ~  -->
+                        <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
                         <div class="col-3">
                             <p><b>6. </b>They ____ my best friends.</p>
                             <div class="form-check">
@@ -295,8 +292,8 @@
     
                     <!-- * * * * * * TERCERA FILA * * * * * * -->
                     <div class="row justify-content-center">
+                        <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
                         <div class="col-3">
-                            <!-- ~ ~ ~ ~ -->
                             <p><b>7. </b>I ____ sure.</p>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="ejercicio7" id="ex7" value="am">
@@ -317,7 +314,7 @@
                                 </label>
                             </div>
                         </div>
-                        <!-- ~ ~ ~ ~  -->
+                        <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
                         <div class="col-3">
                             <p><b>8. </b>Your best friend ____ at home.</p>
                             <div class="form-check">
@@ -339,7 +336,7 @@
                                 </label>
                             </div>
                         </div>
-                        <!-- ~ ~ ~ ~  -->
+                        <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
                         <div class="col-3">
                             <p><b>9. </b>We ____ from Spain.</p>
                             <div class="form-check">
@@ -366,6 +363,7 @@
     
                     <!-- * * * * * * CUARTA FILA * * * * * * -->
                     <div class="row justify-content-center">
+                        <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
                         <div class="col-3">
                             <p><b>10. </b>Luke and Tom ____ actors.</p>
                             <div class="form-check">
@@ -389,6 +387,7 @@
                         </div>
                     </div> 
                     <br>
+                    <!-- Botones -->
                     <div class="row justify-content-center">
                         <div class="col-3 text-center">
                             <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
@@ -401,8 +400,11 @@
         </div>
 
         <!-- * * * * * * * * E J E R C I C I O S -- PARTE 2  * * * * * * * * * * -->
-        <div *ngIf="showEx2">
+        <div *ngIf="showEx2"> <!--Se muestra esta parte cuando el parámetro showEx1 = true-->
             <div class="row justify-content-center">
+                <h1>To be</h1>
+                <h2>Excercise 2</h2>
+                <!-- ~ ~ ~ ~ Primer párrafo  ~ ~ ~ ~ -->
                 <div class="col-5">
                     <h4>Complete the next paragraphs with <b>am/is/are</b>.</h4><br>
                     <p>
@@ -421,6 +423,7 @@
                 <div class="col-3">
                     <img src="../../../assets/Imagenes/N1P2-friends.png" class="img-fluid">
                 </div>
+                <!-- ~ ~ ~ ~ Segundo párrafo  ~ ~ ~ ~ -->
                 <div class="col-5">
                     <p>
                         <b>2. </b>Peter Baker <input type="text" class="txtField"> form Mancester, but Paul and John <input type="text" class="txtField"> from London. 
@@ -435,6 +438,7 @@
                 
             </div>
             <br>
+            <!-- Botones -->
             <div class="row justify-content-center">
                 <div class="col-3 text-center">
                     <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
