@@ -31,6 +31,9 @@ import { N1Punto1Component } from './Components/n1-punto1/n1-punto1.component';
 import { N1Punto2Component } from './Components/n1-punto2/n1-punto2.component';
 import { N1Punto3Component } from './Components/n1-punto3/n1-punto3.component';
 
+//COOKIES
+import { CookieService } from 'ngx-cookie-service';
+
 //Rutas en el navegador para cada componente
 const appRoutes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'}, //Esto va a ser lo primero que se mostrará cuando no haya nada cargado
@@ -77,7 +80,7 @@ const appRoutes: Routes = [
     MatInputModule, 
     MatSelectModule,
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
