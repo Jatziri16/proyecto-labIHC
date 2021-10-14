@@ -20,12 +20,18 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <button type="button" class="btn btn1">1</button>&nbsp;
+                                        <button type="button" class="btn btn1" routerLink="/L1P1">1</button>&nbsp;
                                         <a routerLink="/L1P1">Vocabulary</a>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn5">5</button>&nbsp;
-                                        <a routerLink="/#">Vocabulary</a>
+                                        <div *ngIf="puntajeTotal >= 30; else desactivar5">
+                                            <button type="button" class="btn btn5">5</button>&nbsp;
+                                            <a routerLink="/#">Vocabulary</a>
+                                        </div>
+                                        <ng-template #desactivar5>
+                                            <button type="button" class="btn btn5" disabled>5</button>&nbsp;
+                                            Vocabulary
+                                        </ng-template>
                                     </td>
                                 </tr>
                                 <tr>
@@ -34,28 +40,63 @@
                                         <a routerLink="/L1P2">Verb to be</a>
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn6">6</button>&nbsp;
-                                        <a routerLink="/#">Plural</a>
+                                        <div *ngIf="puntajeTotal >= 30; else desactivar6">
+                                            <button type="button" class="btn btn6">6</button>&nbsp;
+                                            Plural
+                                        </div>
+                                        <ng-template #desactivar6>
+                                            <button type="button" class="btn btn6" disabled>6</button>&nbsp;
+                                            Plural
+                                        </ng-template>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button type="button" class="btn btn3">3</button>&nbsp;
-                                        <a routerLink="/L1P3">Articles</a>
+                                        <div *ngIf="puntajeTotal >= 10; else desactivar3">
+                                            <button type="button" class="btn btn3" routerLink="/L1P3">3</button>&nbsp;
+                                            <a routerLink="/L1P3">Articles</a>
+                                        </div>
+                                        <ng-template #desactivar3>
+                                            <button type="button" class="btn btn3" disabled>3</button>&nbsp;
+                                            Articles
+                                        </ng-template>
+                                        
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn7">7</button>&nbsp;
-                                        <a routerLink="/#">Much vs Many</a>
+                                        <div *ngIf="puntajeTotal >= 40; else desactivar7">
+                                            <button type="button" class="btn btn7">7</button>&nbsp;
+                                            <a routerLink="/#">Much vs Many</a>
+                                        </div>
+                                        <ng-template #desactivar7>
+                                            <button type="button" class="btn btn7" disabled>7</button>&nbsp;
+                                            Much vs Many
+                                        </ng-template>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <button type="button" class="btn btn4">4</button>&nbsp;
+                                        <!-- Por el momento esta parte no se activará ya que no está lista por ahora -->
+                                        
+                                        <!-- <div *ngIf="puntajeTotal >= 20; else desactivar4">
+                                            <button type="button" class="btn btn4">4</button>&nbsp;
                                         <a routerLink="/#">Articles</a>
+                                        </div>
+                                        <ng-template #desactivar4> -->
+                                            <button type="button" class="btn btn4" disabled>4</button>&nbsp;
+                                            Articles
+                                        <!-- </ng-template> -->
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn8">8</button>&nbsp;
-                                        <a routerLink="/#">Present Simple</a>
+                                        
+
+                                        <div *ngIf="puntajeTotal >= 50; else desactivar8">
+                                            <button type="button" class="btn btn8">8</button>&nbsp;
+                                            <a routerLink="/#">Present Simple</a>
+                                        </div>
+                                        <ng-template #desactivar8>
+                                            <button type="button" class="btn btn8" disabled>8</button>&nbsp;
+                                            Present Simple
+                                        </ng-template>
                                     </td>
                                 </tr>
                             </tbody>

@@ -8,9 +8,12 @@
           <div class="card-body text-center">
             <img src="../../../assets/Imagenes/loginLogo.png" style="float: unset; height:20%; width:20%">
             <h1>Registro</h1>
+            <div *ngIf="Cargando">
+                <div class="spinner-border text-secondary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
             <form [formGroup]="datosRegistro" (ngSubmit)="registrarUser()">
-
-
             <div class="row">
                 <div class="col">
                     <mat-form-field appearance="outline" class="ancho">

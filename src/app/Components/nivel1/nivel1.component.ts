@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { NivelesService } from 'src/app/Services/niveles.service';
+import { UsuarioService } from 'src/app/Services/usuario.service';
 
 @Component({
   selector: 'app-nivel1',
@@ -7,10 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Nivel1Component implements OnInit 
 {
-
-  constructor() { }
+  usuarioFirebase: any;
+  puntajeTotal: number = 0;
+  constructor(private _userService: UsuarioService,
+              private _nivelesService: NivelesService,
+              private toastr: ToastrService,) { }
 
   ngOnInit(): void 
-  {}
+  {
+    this.habilitarTemas();
+  }
 
+  habilitarTemas()
+  {
+    this._userService.USER;
+    this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
+      {
+        if(snapshot.empty) 
+        {
+          this.toastr.error('No se encontro registro, vuelva a iniciar sesión.', 'Error');
+          return;
+        }
+        this.getPuntaje(snapshot.docs);
+      })
+  }
+
+  getPuntaje(data: any)
+  {
+    data.forEach((doc: { data: () => any; }) =>
+    {
+      let info = doc.data();
+      this.puntajeTotal = info.Puntaje;
+      console.log("Puntaje total: "+this.puntajeTotal);
+    });
+  }
 }

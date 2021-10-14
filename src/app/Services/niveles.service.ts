@@ -21,14 +21,14 @@ export class NivelesService
     // 
   }
 
-  accesoID(acceso: string)
+  accesoDatos(acceso: string)
   {
     return this.firestore.collection('Usuarios', ref => ref.where('Usuario', '==', acceso)).get().toPromise();
     // console.log(this._userServices.id);
   }
   actualizacionPuntaje(id: string, puntos: number)
   {
-    this.firestore.collection('Usuarios').doc(id).update({
+      this.firestore.collection('Usuarios').doc(id).update({
       Puntaje: puntos,
     });
   }

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { NivelesService } from 'src/app/Services/niveles.service';
+import { UsuarioService } from 'src/app/Services/usuario.service';
 
 @Component({
   selector: 'app-n1-punto3',
@@ -9,8 +12,10 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class N1Punto3Component implements OnInit 
 {
+  usuarioFirebase: any;
   ejercicio1: FormGroup;
   ejercicio2: FormGroup;
+  puntaje: number = 0;
   showTeoria: boolean = true;
   showEx1: boolean = false;
   showEx2: boolean = false;
@@ -21,7 +26,10 @@ export class N1Punto3Component implements OnInit
   pregunta10!: string; pregunta1_1!: string;
 
   constructor(private fb:FormBuilder,
-              private toastr: ToastrService,) 
+              private toastr: ToastrService,
+              private _userService: UsuarioService,
+              private _nivelesService: NivelesService,
+              private router: Router,) 
   { 
     this.ejercicio1 = this.fb.group({
       pregunta1: ['', Validators.required],
@@ -81,114 +89,125 @@ export class N1Punto3Component implements OnInit
     this.pregunta10 = this.ejercicio1.value.pregunta10;
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 1
-    if(this.pregunta1 == "the")
+    if(this.ejercicio1.value.pregunta1 == "the")
     {
       buenas++;
     }
     else
     {
-      errores = "question 1, ";
+      errores = "1, ";
     }
-    if(this.pregunta1_1 == "the")
+    if(this.ejercicio1.value.pregunta1_1 == "the")
     {
       buenas++;
     }
     else
     {
-      errores = "question 1.1, ";
+      errores = "1.1, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
-    if(this.pregunta2 == "an")
+    if(this.ejercicio1.value.pregunta2 == "an")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 2, ";
+      errores = errores + "2, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
-    if(this.pregunta3 == "the")
+    if(this.ejercicio1.value.pregunta3 == "the")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 3, ";
+      errores = errores + "3, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
-    if(this.pregunta4 == "x")
+    if(this.ejercicio1.value.pregunta4 == "x")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 4, ";
+      errores = errores + "4, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
-    if(this.pregunta5 == "an")
+    if(this.ejercicio1.value.pregunta5 == "an")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 5, ";
+      errores = errores + "5, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
-    if(this.pregunta6 == "an")
+    if(this.ejercicio1.value.pregunta6 == "an")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 6, ";
+      errores = errores + "6, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
-    if(this.pregunta7 == "a")
+    if(this.ejercicio1.value.pregunta7 == "a")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 7, ";
+      errores = errores + "7, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
-    if(this.pregunta8 == "x")
+    if(this.ejercicio1.value.pregunta8 == "x")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 8, ";
+      errores = errores + "8, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
-    if(this.pregunta9 == "a")
+    if(this.ejercicio1.value.pregunta9 == "a")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 9, ";
+      errores = errores + "9, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
-    if(this.pregunta10 == "the")
+    if(this.ejercicio1.value.pregunta10 == "the")
     {
       buenas++;
     }
     else
     {
-      errores = errores + "question 10";
+      errores = errores + "10";
     }
-    if(buenas == 10)
+    if(buenas == 11)
     {
+      this.puntaje = 15;
+      this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
+        {
+          if(snapshot.empty) 
+          {
+            this.toastr.error('No se encontro registro', 'Error');
+            return;
+          }
+          this.getID(snapshot.docs);
+        })
+
       this.toastr.success('You are progressing very well', 'Very well!',
       {
         positionClass: 'toast-bottom-right',
@@ -199,7 +218,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      this.toastr.warning('You have some mistakes in: '+errores, 'Very well!',
+      this.toastr.warning('You have some mistakes in the question: '+errores, 'Oh no!',
       {
         positionClass: 'toast-bottom-right',
       });
@@ -227,7 +246,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = "question 1, ";
+      errores = "1, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
@@ -237,7 +256,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 2, ";
+      errores = errores + "2, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
@@ -247,7 +266,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 3, ";
+      errores = errores + "3, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
@@ -257,7 +276,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 4, ";
+      errores = errores + "4, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
@@ -267,7 +286,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 5, ";
+      errores = errores + "5, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
@@ -277,7 +296,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 6, ";
+      errores = errores + "6, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
@@ -287,7 +306,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 7, ";
+      errores = errores + "7, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
@@ -297,7 +316,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 8, ";
+      errores = errores + "8, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
@@ -307,7 +326,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 9, ";
+      errores = errores + "9, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
@@ -317,10 +336,21 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "question 10";
+      errores = errores + "10";
     }
     if(buenas == 10)
     {
+      this.puntaje = 20;
+      this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
+        {
+          if(snapshot.empty) 
+          {
+            this.toastr.error('No se encontro registro', 'Error');
+            return;
+          }
+          this.getID(snapshot.docs);
+        })
+
       this.toastr.success('You are progressing very well', 'Very well!',
       {
         positionClass: 'toast-bottom-right',
@@ -331,10 +361,25 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      this.toastr.warning('You have some mistakes in: '+errores, 'Be carfull!',
+      this.toastr.warning('You have some mistakes in the question: '+errores, 'Be carfull!',
       {
         positionClass: 'toast-bottom-right',
       });
     }
+  }
+
+  getID(data: any)
+  {
+    data.forEach((doc: { data: () => any; }) =>
+    {
+      let info = doc.data();
+      this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
+
+      if(this.puntaje==20)
+      {
+        this.router.navigate(['/level1']);
+      }
+      
+    });
   }
 }

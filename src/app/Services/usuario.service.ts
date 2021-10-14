@@ -37,6 +37,7 @@ export class UsuarioService
 
   registarUsuario(nombre:string, apellido:string, usuario:string, correo:string, contra:string): Promise<any>
   {
+    this.USER = usuario;
     this.registro = this.firestore.collection('Usuarios').add({
       Nombre: nombre,
       Apellido: apellido,

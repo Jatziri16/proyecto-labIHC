@@ -79,11 +79,12 @@ export class LoginComponent implements OnInit
       }
       else
       {
-        console.log('Acceso rechazado');
-
+        // console.log('Acceso rechazado');
+        this.toastr.warning('Acceso Rechazado.', 'Error!');
+        this.loading = false;
         // A partir de aqui cuenta los intentos, si excedes de 3 intentos para ingresar tendrá que esperar 3min para volver a intentarlo
         this.intentos += 1;
-        console.log("Numero de intentos: " + this.intentos);
+        // console.log("Numero de intentos: " + this.intentos);
         if (this.intentos == 3)
         {
           this.bloqueo = true;
@@ -91,7 +92,8 @@ export class LoginComponent implements OnInit
 
           setTimeout(()=>{            
             this.bloqueo = false;
-            console.log("Listo, puedes seguir jeje")
+            // console.log("Listo, puedes seguir jeje")
+            this.toastr.info('Listo, puede continuar.', 'Info!');
           }, 3000); // 180000 milisegundos = 3min
           this.intentos = 0;
         }

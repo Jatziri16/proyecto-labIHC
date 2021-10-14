@@ -1,6 +1,7 @@
 // import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { NivelesService } from 'src/app/Services/niveles.service';
 import { UsuarioService } from 'src/app/Services/usuario.service';
@@ -23,16 +24,18 @@ export class N1Punto2Component implements OnInit
   pregunta1!: string; pregunta2!: string; pregunta3!: string;
   pregunta4!: string; pregunta5!: string; pregunta6!: string; 
   pregunta7!: string; pregunta8!: string; pregunta9!: string;
-  pregunta10!: string; pregunta11!: string; pregunta12!: string;
-  pregunta13!: string; pregunta14!: string; pregunta15!: string;
-  pregunta16!: string; pregunta17!: string; pregunta18!: string; 
-  pregunta19!: string; pregunta20!: string; pregunta21!: string; 
-  pregunta22!: string; pregunta23!: string; pregunta24!: string;
+  pregunta10!: string; 
+  // pregunta11!: string; pregunta12!: string;
+  // pregunta13!: string; pregunta14!: string; pregunta15!: string;
+  // pregunta16!: string; pregunta17!: string; pregunta18!: string; 
+  // pregunta19!: string; pregunta20!: string; pregunta21!: string; 
+  // pregunta22!: string; pregunta23!: string; pregunta24!: string;
 
   constructor(private fb:FormBuilder,
               private toastr: ToastrService,
               private _nivelesService: NivelesService,
-              private _userService: UsuarioService) 
+              private _userService: UsuarioService,
+              private router: Router,) 
   {
     this.ejercicio1 = this.fb.group({
       pregunta1P1: ['', Validators.required],
@@ -210,16 +213,16 @@ export class N1Punto2Component implements OnInit
       });
       // console.log(this._userService.USER);
       this.puntaje = 5;
-      this._nivelesService.accesoID(this._userService.USER);
-      this.usuarioFirebase = this._nivelesService.accesoID(this._userService.USER).then(snapshot =>
+      this._nivelesService.accesoDatos(this._userService.USER);
+      this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
+      {
+        if(snapshot.empty) 
         {
-          if(snapshot.empty) 
-          {
-            this.toastr.error('No se encontro registro', 'Error');
-            return;
-          }
-          this.getID(snapshot.docs);
-        })
+          this.toastr.error('No se encontro registro', 'Error');
+          return;
+        }
+        this.getID(snapshot.docs);
+      })
       this.showTeoria = false;
       this.showEx1 = false;
       this.showEx2 = true;
@@ -246,21 +249,21 @@ export class N1Punto2Component implements OnInit
     this.pregunta7 = this.ejercicio2.value.pregunta7P2;
     this.pregunta8 = this.ejercicio2.value.pregunta8P2;
     this.pregunta9 = this.ejercicio2.value.pregunta9P2;
-    this.pregunta10 = this.ejercicio2_2.value.pregunta10P2;
-    this.pregunta11 = this.ejercicio2_2.value.pregunta11P2;
-    this.pregunta12 = this.ejercicio2_2.value.pregunta12P2;
-    this.pregunta13 = this.ejercicio2_2.value.pregunta13P2;
-    this.pregunta14 = this.ejercicio2_2.value.pregunta14P2;
-    this.pregunta15 = this.ejercicio2_2.value.pregunta15P2;
-    this.pregunta16 = this.ejercicio2_2.value.pregunta16P2;
-    this.pregunta17 = this.ejercicio2_2.value.pregunta17P2;
-    this.pregunta18 = this.ejercicio2_2.value.pregunta18P2;
-    this.pregunta19 = this.ejercicio2_2.value.pregunta19P2;
-    this.pregunta20 = this.ejercicio2_2.value.pregunta20P2;
-    this.pregunta21 = this.ejercicio2_2.value.pregunta21P2;
-    this.pregunta22 = this.ejercicio2_2.value.pregunta22P2;
-    this.pregunta23 = this.ejercicio2_2.value.pregunta23P2;
-    this.pregunta24 = this.ejercicio2_2.value.pregunta24P2;
+    // this.pregunta10 = this.ejercicio2_2.value.pregunta10P2;
+    // this.pregunta11 = this.ejercicio2_2.value.pregunta11P2;
+    // this.pregunta12 = this.ejercicio2_2.value.pregunta12P2;
+    // this.pregunta13 = this.ejercicio2_2.value.pregunta13P2;
+    // this.pregunta14 = this.ejercicio2_2.value.pregunta14P2;
+    // this.pregunta15 = this.ejercicio2_2.value.pregunta15P2;
+    // this.pregunta16 = this.ejercicio2_2.value.pregunta16P2;
+    // this.pregunta17 = this.ejercicio2_2.value.pregunta17P2;
+    // this.pregunta18 = this.ejercicio2_2.value.pregunta18P2;
+    // this.pregunta19 = this.ejercicio2_2.value.pregunta19P2;
+    // this.pregunta20 = this.ejercicio2_2.value.pregunta20P2;
+    // this.pregunta21 = this.ejercicio2_2.value.pregunta21P2;
+    // this.pregunta22 = this.ejercicio2_2.value.pregunta22P2;
+    // this.pregunta23 = this.ejercicio2_2.value.pregunta23P2;
+    // this.pregunta24 = this.ejercicio2_2.value.pregunta24P2;
 
     // SE CHECAN LAS RESPUESTAS DE AMBOS TEXTOS
     if(this.pregunta1 == "is")
@@ -305,63 +308,63 @@ export class N1Punto2Component implements OnInit
     }
 
     // SEGUNDO PARRAFO
-    if(this.pregunta10 == "is")
+    if(this.ejercicio2_2.value.pregunta10P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta11 == "are")
+    if(this.ejercicio2_2.value.pregunta11P2 == "are")
     {
       buenas++;
     }
-    if(this.pregunta12 == "are")
+    if(this.ejercicio2_2.value.pregunta12P2 == "are")
     {
       buenas++;
     }
-    if(this.pregunta13 == "is")
+    if(this.ejercicio2_2.value.pregunta13P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta14 == "is")
+    if(this.ejercicio2_2.value.pregunta14P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta15 == "are")
+    if(this.ejercicio2_2.value.pregunta15P2 == "are")
     {
       buenas++;
     }
-    if(this.pregunta16 == "are")
+    if(this.ejercicio2_2.value.pregunta16P2 == "are")
     {
       buenas++;
     }
-    if(this.pregunta17 == "are")
+    if(this.ejercicio2_2.value.pregunta17P2 == "are")
     {
       buenas++;
     }
-    if(this.pregunta18 == "is")
+    if(this.ejercicio2_2.value.pregunta18P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta19 == "is")
+    if(this.ejercicio2_2.value.pregunta19P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta20 == "am")
+    if(this.ejercicio2_2.value.pregunta20P2 == "am")
     {
       buenas++;
     }
-    if(this.pregunta21 == "is")
+    if(this.ejercicio2_2.value.pregunta21P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta22 == "is")
+    if(this.ejercicio2_2.value.pregunta22P2 == "is")
     {
       buenas++;
     }
-    if(this.pregunta23 == "are")
+    if(this.ejercicio2_2.value.pregunta23P2 == "are")
     {
       buenas++;
     }
-    if(this.pregunta24 == "am")
+    if(this.ejercicio2_2.value.pregunta24P2 == "am")
     {
       buenas++;
     }
@@ -369,12 +372,12 @@ export class N1Punto2Component implements OnInit
     if(buenas == 24)
     {
       this.toastr.success('You are progressing very well', 'Very well!',
-      {
-        positionClass: 'toast-bottom-right',
-      });
+        {
+          positionClass: 'toast-bottom-right',
+        });
+
       this.puntaje = 10;
-      this._nivelesService.accesoID(this._userService.USER);
-      this.usuarioFirebase = this._nivelesService.accesoID(this._userService.USER).then(snapshot =>
+      this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
         {
           if(snapshot.empty) 
           {
@@ -383,9 +386,15 @@ export class N1Punto2Component implements OnInit
           }
           this.getID(snapshot.docs);
         })
-      this.showTeoria = false;
-      this.showEx1 = false;
-      this.showEx2 = true;
+        // this.toastr.success('You are progressing very well', 'Very well!',
+        // {
+        //   positionClass: 'toast-bottom-right',
+        // });
+
+      // this.router.navigate(['/level1']);
+      // this.showTeoria = false;
+      // this.showEx1 = false;
+      // this.showEx2 = true;
     }
     else
     {
@@ -403,6 +412,11 @@ export class N1Punto2Component implements OnInit
     {
       let info = doc.data();
       this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
+
+      if(this.puntaje==10)
+      {
+        this.router.navigate(['/level1']);
+      }
       
     });
   }

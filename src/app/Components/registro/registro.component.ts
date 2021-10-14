@@ -44,6 +44,7 @@ export class RegistroComponent implements OnInit
 
   registrarUser()
   {
+    this.Cargando = true;
     this.contra1 = this.datosRegistro.value.psw1;
     this.contra2 = this.datosRegistro.value.psw2;
     if(this.contra1 == this.contra2)
@@ -59,9 +60,9 @@ export class RegistroComponent implements OnInit
               this.nombre = this.datosRegistro.value.name;
               this.apellido = this.datosRegistro.value.lastName;
               this.nuevoCajero();
-              this.Cargando = false;
-              this.loading = true;
-              this.router.navigate(['/login']);
+              // this.Cargando = false;
+              // this.loading = true;
+              this.router.navigate(['/menu']);
             }
             else
             {
