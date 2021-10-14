@@ -143,7 +143,7 @@
 
         <!-- * * * * * * * * E J E R C I C I O S -- PARTE 1  * * * * * * * * * * -->
         <div *ngIf="showEx1"> <!--Se muestra esta parte cuando el parámetro showEx1 = true-->
-            <form [formGroup]="ejercicio1"> <!--(ngSubmit)="inicioSesion()"-->
+            <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
                 <div class="container">
                     <div class="card-body"> 
                         <!-- * * * * * * PRIMERA FILA * * * * * * -->
@@ -151,10 +151,10 @@
                             <h1>To be</h1>
                             <h2>Excercise 1</h2>
                             <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
-                            <div class="col-3"> <!--formControlName="pregunta1"-->
+                            <div class="col-3">
                                 <p><b>1. </b>Alex 
                                 <!-- Opciones -->
-                                <select>
+                                <select formControlName="pregunta1P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -165,7 +165,7 @@
                             <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>2. </b>I 
-                                <select>
+                                <select formControlName="pregunta2P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -176,7 +176,7 @@
                             <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>3. </b>My neighbours 
-                                <select>
+                                <select formControlName="pregunta3P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -192,7 +192,7 @@
                             <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>4. </b>Your black cat 
-                                <select>
+                                <select formControlName="pregunta4P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -203,7 +203,7 @@
                             <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>5. </b>Susan and Mike 
-                                <select>
+                                <select formControlName="pregunta5P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -214,7 +214,7 @@
                             <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>6. </b>They 
-                                <select>
+                                <select formControlName="pregunta6P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -230,7 +230,7 @@
                             <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>7. </b>I 
-                                <select>
+                                <select formControlName="pregunta7P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -242,7 +242,7 @@
                             <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>8. </b>Your best friend 
-                                <select>
+                                <select formControlName="pregunta8P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -253,7 +253,7 @@
                             <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>9. </b>We 
-                                <select>
+                                <select formControlName="pregunta9P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -269,7 +269,7 @@
                             <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
                             <div class="col-3">
                                 <p><b>10. </b>Luke and Tom 
-                                <select>
+                                <select formControlName="pregunta10P1">
                                     <option selected> </option>
                                     <option value="am">am</option>
                                     <option value="is">is</option>
@@ -288,7 +288,7 @@
                                 <img src="../../../assets/Imagenes/N1P2-conv.png" class="img-fluid">
                             </div>
                             <div class="col-3 text-center">
-                                <button type="button" class="btn" id="next" (click)="checkResp1()">Continuar</button> <!--Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                                <button type="submit" class="btn" id="next">Continuar</button> <!--Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                             </div>
                         </div>  
                         <br>
@@ -305,12 +305,12 @@
                 <!-- ~ ~ ~ ~ Primer párrafo  ~ ~ ~ ~ -->
                 <div class="col-5">
                     <h4>Complete the next paragraphs with <b>am/is/are</b>.</h4><br>
-                    <form>
+                    <form [formGroup]="ejercicio2">
                         <p>
-                            <b>1. </b>Hello, my name <input type="text" class="txtField"> Kim. I <input type="text" class="txtField"> twelve years old and I <input type="text" class="txtField"> from China.
-                            I <input type="text" class="txtField"> a student at Centennial Secondary School. My favourite subjects <input type="text" class="txtField"> Maths and Art.
-                            My favorite sport <input type="text" class="txtField"> baseball and my favorite colors <input type="text" class="txtField"> blue and purple. 
-                            May and Joe <input type="text" class="txtField"> my best friends. They <input type="text" class="txtField"> great.
+                            <b>1. </b>Hello, my name <input type="text" class="txtField" formControlName="pregunta1P2" style="text-transform:lowercase;"> Kim. I <input type="text" class="txtField" formControlName="pregunta2P2"style="text-transform:lowercase;"> twelve years old and I <input type="text" class="txtField" formControlName="pregunta3P2" style="text-transform:lowercase;"> from China.
+                            I <input type="text" class="txtField" formControlName="pregunta4P2" style="text-transform:lowercase;"> a student at Centennial Secondary School. My favourite subjects <input type="text" class="txtField" formControlName="pregunta5P2" style="text-transform:lowercase;"> Maths and Art.
+                            My favorite sport <input type="text" class="txtField" formControlName="pregunta6P2" style="text-transform:lowercase;"> baseball and my favorite colors <input type="text" class="txtField" formControlName="pregunta7P2" style="text-transform:lowercase;"> blue and purple. 
+                            May and Joe <input type="text" class="txtField" formControlName="pregunta8P2" style="text-transform:lowercase;"> my best friends. They <input type="text" class="txtField" formControlName="pregunta9P2" style="text-transform:lowercase;"> great.
                         </p>
                     </form>
                     <br>
@@ -326,15 +326,17 @@
                 </div>
                 <!-- ~ ~ ~ ~ Segundo párrafo  ~ ~ ~ ~ -->
                 <div class="col-5">
-                    <p>
-                        <b>2. </b>Peter Baker <input type="text" class="txtField"> form Mancester, but Paul and John <input type="text" class="txtField"> from London. 
-                        Manchester and London <input type="text" class="txtField"> cities in England. Hamburg <input type="text" class="txtField"> a city in Germany. 
-                        Sandra <input type="text" class="txtField"> at school today. Jack and Peter <input type="text" class="txtField"> her friends. 
-                        They <input type="text" class="txtField"> in the same class. Mr and Mrs Baker <input type="text" class="txtField"> on a trip to the USA to visit their cousin Anne.
-                        She <input type="text" class="txtField"> a nice girl. Peter says: "My grandfather <input type="text" class="txtField"> in the hospital. 
-                        I <input type="text" class="txtField"> at home with my grandmother". What time <input type="text" class="txtField"> it?. It <input type="text" class="txtField"> 8 o'clock. 
-                        <input type="text" class="txtField"> you tired? No I <input type="text" class="txtField"> not.
-                    </p>
+                    <form [formGroup]="ejercicio2_2">
+                        <p>
+                            <b>2. </b>Peter Baker <input type="text" class="txtField" formControlName="pregunta10P2" style="text-transform:lowercase;"> form Mancester, but Paul and John <input type="text" class="txtField" formControlName="pregunta11P2" style="text-transform:lowercase;"> from London. 
+                            Manchester and London <input type="text" class="txtField" formControlName="pregunta12P2" style="text-transform:lowercase;"> cities in England. Hamburg <input type="text" class="txtField" formControlName="pregunta13P2" style="text-transform:lowercase;"> a city in Germany. 
+                            Sandra <input type="text" class="txtField" formControlName="pregunta14P2" style="text-transform:lowercase;"> at school today. Jack and Peter <input type="text" class="txtField" formControlName="pregunta15P2" style="text-transform:lowercase;"> her friends. 
+                            They <input type="text" class="txtField" formControlName="pregunta16P2" style="text-transform:lowercase;"> in the same class. Mr and Mrs Baker <input type="text" class="txtField" formControlName="pregunta17P2" style="text-transform:lowercase;"> on a trip to the USA to visit their cousin Anne.
+                            She <input type="text" class="txtField" formControlName="pregunta18P2" style="text-transform:lowercase;"> a nice girl. Peter says: "My grandfather <input type="text" class="txtField" formControlName="pregunta19P2" style="text-transform:lowercase;"> in the hospital. 
+                            I <input type="text" class="txtField" formControlName="pregunta20P2" style="text-transform:lowercase;"> at home with my grandmother". What time <input type="text" class="txtField" formControlName="pregunta21P2" style="text-transform:lowercase;"> it?. It <input type="text" class="txtField" formControlName="pregunta22P2" style="text-transform:lowercase;"> 8 o'clock. 
+                            <input type="text" class="txtField" formControlName="pregunta23P2" style="text-transform:lowercase;"> you tired? No I <input type="text" class="txtField" formControlName="pregunta24P2" style="text-transform:lowercase;"> not.
+                        </p>
+                    </form>
                 </div>
                 
             </div>
