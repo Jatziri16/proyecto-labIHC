@@ -65,7 +65,7 @@ export class CookiesServicesService
     }
     else
     {
-      this.setToken(this.getToken(), this.nuevaExpiracion(2));
+      this.setToken(this.getToken(), this.nuevaExpiracion(5));
       this.existenciaCookie = true;
     }
     return cookie;
