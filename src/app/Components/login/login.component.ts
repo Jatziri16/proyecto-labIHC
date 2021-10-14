@@ -75,6 +75,8 @@ export class LoginComponent implements OnInit
       
       if(info.Contrasenia == this.datosLogin.value.Password)
       {
+        // Se genera la cookie
+        this._cookiesService.setToken(this._cookiesService.getRandomToken(16), this._cookiesService.nuevaExpiracion(1));
         this.toastr.success('Acceso concedido.', 'Éxito!');
         this.loading = false;
         this.router.navigate(['/menu']);
