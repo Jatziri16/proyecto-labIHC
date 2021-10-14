@@ -82,175 +82,177 @@
         <div *ngIf="showEx1"> <!-- Solo se mostrará esta parte siempre y cuando showEx1 = true -->
             <div class="container">
                 <div class="card-body">
-                    <!-- * * * * * * PRIMERA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <h1>Articles</h1>
-                        <h2>Excercise 1</h2>
-                        <h3 class="text-center">a / an / the / x</h3>
+                    <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
+                        <!-- * * * * * * PRIMERA FILA * * * * * * -->
+                        <div class="row justify-content-center">
+                            <h1>Articles</h1>
+                            <h2>Excercise 1</h2>
+                            <h3 class="text-center">a / an / the / x</h3>
+                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>1. </b>I like  
+                                <!-- Opciones -->
+                                <select formControlName="pregunta1">
+                                    <option selected> </option>
+                                    <option value="a">a</option>
+                                    <option value="an">an</option>
+                                    <option value="the">the</option>
+                                    <option value="x">x</option>
+                                </select>
+                                blue T-shirt over there better than
+                                <select formControlName="pregunta1_1">
+                                    <option selected> </option>
+                                    <option value="a">a</option>
+                                    <option value="an">an</option>
+                                    <option value="the">the</option>
+                                    <option value="x">x</option>
+                                </select>
+                                red one.</p>
+                            </div>
+                            <div class="col-1"></div>
+                            <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>2. </b>Their car does 150 miles  
+                                    <select formControlName="pregunta2">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                hour.</p>
+                            </div>
+                        </div><br>
 
-                        <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>1. </b>I like  
-                            <!-- Opciones -->
-                            <select>
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="the">the</option>
-                                <option value="x">x</option>
-                            </select>
-                            blue T-shirt over there better than
-                            <select>
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="the">the</option>
-                                <option value="x">x</option>
-                            </select>
-                             red one.</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>2. </b>Their car does 150 miles  
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                             hour.</p>
-                        </div>
-                    </div><br>
+                        <!-- * * * * * * SEGUNDA FILA * * * * * * -->
+                        <div class="row justify-content-center">
+                            <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>3. </b>Where's  
+                                    <select formControlName="pregunta3">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                USB drive I lent you last week?.</p>
+                            </div>
+                            <div class="col-1"></div>
+                            <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>4. </b>Do you still live in 
+                                    <select formControlName="pregunta4">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                Bristol?</p>
+                            </div>
+                        </div><br>
+        
+                        <!-- * * * * * * TERCERA FILA * * * * * * -->
+                        <div class="row justify-content-center">
+                            <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>5. </b>Is your mother working in 
+                                    <select formControlName="pregunta5">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                old office building?</p>
+                            </div>
+                            <div class="col-1"></div>
+                            <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>6. </b>Carol's father work as 
+                                    <select formControlName="pregunta6">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                electrician.</p>
+                            </div>
+                        </div><br>
+        
+                        <!-- * * * * * * CUARTA FILA * * * * * * -->
+                        <div class="row justify-content-center">
+                            <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>7. </b>The tomatoes are 99 pence  
+                                    <select formControlName="pregunta7">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                kilo.</p>
+                            </div>
+                            <div class="col-1"></div>
+                            <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>8. </b>What do you usually have for 
+                                    <select formControlName="pregunta8">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                breakfast.</p>
+                            </div>
+                        </div><br>
 
-                    <!-- * * * * * * SEGUNDA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>3. </b>Where's  
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                             USB drive I lent you last week?.</p>
+                        <!-- * * * * * * QUINTA FILA * * * * * * -->
+                        <div class="row justify-content-center">
+                            <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>9. </b>Ben has 
+                                    <select formControlName="pregunta9">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                terrible headache.</p>
+                            </div>
+                            <div class="col-1"></div>
+                            <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
+                            <div class="col-4">
+                                <p><b>10. </b>After this tour you have 
+                                    <select formControlName="pregunta10">
+                                        <option selected> </option>
+                                        <option value="a">a</option>
+                                        <option value="an">an</option>
+                                        <option value="the">the</option>
+                                        <option value="x">x</option>
+                                    </select>
+                                whole afternoon free to explore the city.</p>
+                            </div>
+                        </div> 
+                        <br>
+                        <!-- Botones -->
+                        <div class="row justify-content-center">
+                            <div class="col-3 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                            </div>
+                            <div class="col-4">
+                                <img src="../../../assets/Imagenes/N1P3-study.png" class="img-fluid">
+                            </div>
+                            <div class="col-3 text-center">
+                                <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                            </div>
                         </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>4. </b>Do you still live in 
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                             Bristol?</p>
-                        </div>
-                    </div><br>
-    
-                    <!-- * * * * * * TERCERA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>5. </b>Is your mother working in 
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                             old office building?</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>6. </b>Carol's father work as 
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                            electrician.</p>
-                        </div>
-                    </div><br>
-    
-                    <!-- * * * * * * CUARTA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>7. </b>The tomatoes are 99 pence  
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                            kilo.</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>8. </b>What do you usually have for 
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                            breakfast.</p>
-                        </div>
-                    </div><br>
-
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>9. </b>Ben has 
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                            terrible headache.</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>10. </b>After this tour you have 
-                                <select>
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                            whole afternoon free to explore the city.</p>
-                        </div>
-                    </div> 
-                    <br>
-                    <!-- Botones -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                        </div>
-                        <div class="col-4">
-                            <img src="../../../assets/Imagenes/N1P3-study.png" class="img-fluid">
-                        </div>
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="next" (click)="checkResp1()">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
-                        </div>
-                    </div>  
+                    </form>  
                     <br>
                 </div>
             </div>
@@ -261,6 +263,8 @@
             <div class="container">
                 <div class="card-body">
                     <!-- Descripción del verb to be -->
+                    <form [formGroup]="ejercicio2" (ngSubmit)="checkResp2()">
+                        <!-- * * * * * * PRIMERA FILA * * * * * * -->
                     <div class="row justify-content-center">
                         <h1>Articles</h1>
                         <h2>Excercise 2</h2>
@@ -269,7 +273,7 @@
                         <div class="col-4">
                             <p><b>1. </b>I have   
                             <!-- Opciones -->
-                            <select>
+                            <select formControlName="pregunta1">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -281,7 +285,7 @@
                         <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>2. </b>That's   
-                            <select>
+                            <select formControlName="pregunta2">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -296,7 +300,7 @@
                         <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>3. </b>They have found  
-                            <select>
+                            <select formControlName="pregunta3">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -308,7 +312,7 @@
                         <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>4. </b>Do the Smiths have 
-                            <select>
+                            <select formControlName="pregunta4">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -323,7 +327,7 @@
                         <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>5. </b>Look! He's having 
-                            <select>
+                            <select formControlName="pregunta5">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -335,7 +339,7 @@
                         <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>6. </b>He always likes 
-                            <select>
+                            <select formControlName="pregunta6">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -350,7 +354,7 @@
                         <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>7. </b>I have 
-                            <select>
+                            <select formControlName="pregunta7">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -362,7 +366,7 @@
                         <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>8. </b>There's 
-                            <select>
+                            <select formControlName="pregunta8">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -372,11 +376,12 @@
                         </div>
                     </div><br>
 
+                    <!-- * * * * * * QUINTA FILA * * * * * * -->
                     <div class="row justify-content-center">
                         <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>9. </b>Would you like 
-                            <select>
+                            <select formControlName="pregunta9">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -388,7 +393,7 @@
                         <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
                         <div class="col-4">
                             <p><b>10. </b>How about 
-                            <select>
+                            <select formControlName="pregunta10">
                                 <option selected> </option>
                                 <option value="a">a</option>
                                 <option value="an">an</option>
@@ -406,9 +411,11 @@
                             <img src="../../../assets/Imagenes/N1P3-conv.gif" class="img-fluid">
                         </div>
                         <div class="col-3 text-center">
-                            <button type="button" class="btn" id="next">Continuar</button> <!--(click)="checkResp1()" Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                            <button type="submit" class="btn" id="next">Continuar</button> <!--(click)="checkResp1()" Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                         </div>
-                    </div><br>
+                    </div>
+                    </form>
+                    <br>
                 </div>
             </div>
         </div>
