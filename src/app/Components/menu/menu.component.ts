@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuarioService } from 'src/app/Services/usuario.service';
 
 @Component({
   selector: 'app-menu',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  nombreUsuario: string = "";
+  constructor(private _userService: UsuarioService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.datos();
+  }
+
+  datos()
+  {
+    this.nombreUsuario = this._userService.USER;
   }
 
 }
