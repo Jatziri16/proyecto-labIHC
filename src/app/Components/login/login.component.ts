@@ -59,6 +59,7 @@ export class LoginComponent implements OnInit
           this.loading = false;
           return;
         }
+        this._userService.GuardaNomUser(this.datosLogin.value.User); // Guarda el nombre de usuario para más adelante poder tener acceso a su id
         this.getInfo(snapshot.docs);
       })
     }
@@ -69,6 +70,7 @@ export class LoginComponent implements OnInit
     data.forEach((doc: { data: () => any; }) =>
     {
       let info = doc.data();
+      
       if(info.Contrasenia == this.datosLogin.value.Password)
       {
         this.toastr.success('Acceso concedido.', 'Éxito!');
@@ -95,7 +97,6 @@ export class LoginComponent implements OnInit
         }
       }
     });
-    
   }
 
   get datosLoginControl()

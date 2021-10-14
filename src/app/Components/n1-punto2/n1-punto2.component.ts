@@ -2,6 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { NivelesService } from 'src/app/Services/niveles.service';
+import { UsuarioService } from 'src/app/Services/usuario.service';
 
 @Component({
   selector: 'app-n1-punto2',
@@ -10,12 +12,14 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class N1Punto2Component implements OnInit 
 {
+  usuarioFirebase: any;
   ejercicio1: FormGroup;
   ejercicio2: FormGroup;
   ejercicio2_2: FormGroup;
   showTeoria: boolean = true;
   showEx1: boolean = false;
   showEx2: boolean = false;
+  puntaje: number = 0;
   pregunta1!: string; pregunta2!: string; pregunta3!: string;
   pregunta4!: string; pregunta5!: string; pregunta6!: string; 
   pregunta7!: string; pregunta8!: string; pregunta9!: string;
@@ -26,7 +30,9 @@ export class N1Punto2Component implements OnInit
   pregunta22!: string; pregunta23!: string; pregunta24!: string;
 
   constructor(private fb:FormBuilder,
-              private toastr: ToastrService,) 
+              private toastr: ToastrService,
+              private _nivelesService: NivelesService,
+              private _userService: UsuarioService) 
   {
     this.ejercicio1 = this.fb.group({
       pregunta1P1: ['', Validators.required],
@@ -104,7 +110,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = "question 1, ";
+      errores = "1, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
@@ -114,7 +120,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 2, ";
+      errores = errores + "2, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
@@ -124,7 +130,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 3, ";
+      errores = errores + "3, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
@@ -134,7 +140,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 4, ";
+      errores = errores + "4, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
@@ -144,7 +150,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 5, ";
+      errores = errores + "5, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
@@ -154,7 +160,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 6, ";
+      errores = errores + "6, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
@@ -164,7 +170,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 7, ";
+      errores = errores + "7, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
@@ -174,7 +180,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 8, ";
+      errores = errores + "8, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
@@ -184,7 +190,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 9, ";
+      errores = errores + "9, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
@@ -194,7 +200,7 @@ export class N1Punto2Component implements OnInit
     }
     else
     {
-      errores = errores + "question 10";
+      errores = errores + "10";
     }
     if(buenas == 10)
     {
@@ -202,13 +208,25 @@ export class N1Punto2Component implements OnInit
       {
         positionClass: 'toast-bottom-right',
       });
+      // console.log(this._userService.USER);
+      this.puntaje = 5;
+      this._nivelesService.accesoID(this._userService.USER);
+      this.usuarioFirebase = this._nivelesService.accesoID(this._userService.USER).then(snapshot =>
+        {
+          if(snapshot.empty) 
+          {
+            this.toastr.error('No se encontro registro', 'Error');
+            return;
+          }
+          this.getID(snapshot.docs);
+        })
       this.showTeoria = false;
       this.showEx1 = false;
       this.showEx2 = true;
     }
     else
     {
-      this.toastr.warning('You have some mistakes in: '+errores, 'Be carfull!',
+      this.toastr.warning('You have some mistakes in the question: '+errores, 'Be carfull!',
       {
         positionClass: 'toast-bottom-right',
       });
@@ -283,7 +301,7 @@ export class N1Punto2Component implements OnInit
     }
     if(buenas != 9)
     {
-      errores = "Pargraph 1."
+      errores = "Paragraph 1."
     }
 
     // SEGUNDO PARRAFO
@@ -354,18 +372,39 @@ export class N1Punto2Component implements OnInit
       {
         positionClass: 'toast-bottom-right',
       });
+      this.puntaje = 10;
+      this._nivelesService.accesoID(this._userService.USER);
+      this.usuarioFirebase = this._nivelesService.accesoID(this._userService.USER).then(snapshot =>
+        {
+          if(snapshot.empty) 
+          {
+            this.toastr.error('No se encontro registro', 'Error');
+            return;
+          }
+          this.getID(snapshot.docs);
+        })
       this.showTeoria = false;
       this.showEx1 = false;
       this.showEx2 = true;
     }
     else
     {
-      errores2 = "Pargraph 2."
+      errores2 = "Paragraph 2."
       this.toastr.warning('You have some mistakes in: '+errores+errores2, 'Be carfull!',
       {
         positionClass: 'toast-bottom-right',
       });
     }
+  }
+
+  getID(data: any)
+  {
+    data.forEach((doc: { data: () => any; }) =>
+    {
+      let info = doc.data();
+      this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
+      
+    });
   }
 
 }

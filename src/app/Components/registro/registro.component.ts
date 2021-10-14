@@ -100,16 +100,16 @@ export class RegistroComponent implements OnInit
 
   nuevoCajero()
   {
-    const registroU: any =
+    /*const registroU: any =
     {
-      //Se obtienen los valores de los campos del forms
+      // Se obtienen los valores de los campos del forms
       Nombre: this.nombre + this.apellido,
       Usuario: this.usuario,
       Correo: this.correo,
       Contrasenia: this.contra1
-    }
+    }*/
     
-    this._userService.registarUsuario(registroU).then(() => 
+    this._userService.registarUsuario(this.nombre, this.apellido, this.usuario, this.correo, this.contra1).then(() => 
     {
       this.toastr.success('El usuario fue capturado correctamente', 'Acción exitosa',
       {
