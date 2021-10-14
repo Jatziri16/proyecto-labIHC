@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Observable } from 'rxjs';
+import { CookiesServicesService } from 'src/app/Services/cookies-services.service';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 
 @Component({
@@ -25,7 +26,8 @@ export class LoginComponent implements OnInit
               private fb:FormBuilder,
               private toastr: ToastrService,
               private _userService: UsuarioService,
-              private router: Router,) 
+              private router: Router,
+              private _cookiesService: CookiesServicesService) 
   { 
     this.datosLogin = this.fb.group({
       User: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9_.-]*$")]],
@@ -35,7 +37,7 @@ export class LoginComponent implements OnInit
 
   ngOnInit(): void 
   {
-    // 
+    this._cookiesService.Logout();
   }
 
   //Funcion inicial

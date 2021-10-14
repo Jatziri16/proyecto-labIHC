@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { CookiesServicesService } from 'src/app/Services/cookies-services.service';
 import { NivelesService } from 'src/app/Services/niveles.service';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 
@@ -14,11 +15,21 @@ export class Nivel1Component implements OnInit
   puntajeTotal: number = 0;
   constructor(private _userService: UsuarioService,
               private _nivelesService: NivelesService,
-              private toastr: ToastrService,) { }
+              private toastr: ToastrService,
+              private _cookiesService: CookiesServicesService) 
+  { 
+    // 
+  }
 
   ngOnInit(): void 
   {
     this.habilitarTemas();
+    this.renovToken();  
+  }
+
+  renovToken()
+  {
+    this._cookiesService.checkToken();
   }
 
   habilitarTemas()

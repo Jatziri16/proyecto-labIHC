@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { CookiesServicesService } from 'src/app/Services/cookies-services.service';
 import { NivelesService } from 'src/app/Services/niveles.service';
 import { UsuarioService } from 'src/app/Services/usuario.service';
 
@@ -29,7 +30,8 @@ export class N1Punto3Component implements OnInit
               private toastr: ToastrService,
               private _userService: UsuarioService,
               private _nivelesService: NivelesService,
-              private router: Router,) 
+              private router: Router,
+              private _cookiesService: CookiesServicesService) 
   { 
     this.ejercicio1 = this.fb.group({
       pregunta1: ['', Validators.required],
@@ -61,7 +63,12 @@ export class N1Punto3Component implements OnInit
 
   ngOnInit(): void 
   {
-    // 
+    this.renovToken();  
+  }
+
+  renovToken()
+  {
+    this._cookiesService.checkToken();
   }
 
   // Función que controla si ya puede ver el primer ejercicio después de ver la teoría
