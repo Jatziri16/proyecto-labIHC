@@ -87,7 +87,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = "pregunta 1, ";
+      errores = "question 1, ";
     }
     if(this.pregunta1_1 == "the")
     {
@@ -95,7 +95,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = "pregunta 1.1, ";
+      errores = "question 1.1, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
@@ -105,7 +105,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 2, ";
+      errores = errores + "question 2, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
@@ -115,7 +115,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 3, ";
+      errores = errores + "question 3, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
@@ -125,7 +125,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 4, ";
+      errores = errores + "question 4, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
@@ -135,7 +135,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 5, ";
+      errores = errores + "question 5, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
@@ -145,7 +145,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 6, ";
+      errores = errores + "question 6, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
@@ -155,7 +155,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 7, ";
+      errores = errores + "question 7, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
@@ -165,7 +165,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 8, ";
+      errores = errores + "question 8, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
@@ -175,7 +175,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 9, ";
+      errores = errores + "question 9, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
@@ -185,7 +185,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 10";
+      errores = errores + "question 10";
     }
     if(buenas == 10)
     {
@@ -227,7 +227,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = "pregunta 1, ";
+      errores = "question 1, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
@@ -237,7 +237,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 2, ";
+      errores = errores + "question 2, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
@@ -247,7 +247,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 3, ";
+      errores = errores + "question 3, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
@@ -257,7 +257,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 4, ";
+      errores = errores + "question 4, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
@@ -267,7 +267,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 5, ";
+      errores = errores + "question 5, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
@@ -277,7 +277,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 6, ";
+      errores = errores + "question 6, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
@@ -287,7 +287,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 7, ";
+      errores = errores + "question 7, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
@@ -297,7 +297,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 8, ";
+      errores = errores + "question 8, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
@@ -307,7 +307,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 9, ";
+      errores = errores + "question 9, ";
     }
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
@@ -317,7 +317,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      errores = errores + "pregunta 10";
+      errores = errores + "question 10";
     }
     if(buenas == 10)
     {
@@ -331,7 +331,7 @@ export class N1Punto3Component implements OnInit
     }
     else
     {
-      this.toastr.warning('You have some mistakes in: '+errores, 'Very well!',
+      this.toastr.warning('You have some mistakes in: '+errores, 'Be carfull!',
       {
         positionClass: 'toast-bottom-right',
       });
