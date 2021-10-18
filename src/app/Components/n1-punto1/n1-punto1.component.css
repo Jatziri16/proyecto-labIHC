@@ -1,10 +1,9 @@
-.fondo
+#fondo
 {
-    background-image: url(../../../assets/Imagenes/VocabularyBG.png);
-    background-repeat: repeat;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(../../../assets/Imagenes/VocabularyBG.png) ;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
     background-attachment: fixed;
 }
 h5{
@@ -21,4 +20,8 @@ ul
 #back
 {
     background-color: rgb(177, 114, 55);
+}
+#title
+{
+    background-color: aliceblue;
 }
