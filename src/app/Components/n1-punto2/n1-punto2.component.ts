@@ -233,7 +233,6 @@ export class N1Punto2Component implements OnInit
       {
         positionClass: 'toast-bottom-right',
       });
-      this.submitted = false
       // console.log(this._userService.USER);
       this.puntaje = 5;
       this._nivelesService.accesoDatos(this._userService.USER);
@@ -246,6 +245,7 @@ export class N1Punto2Component implements OnInit
         }
         this.getID(snapshot.docs);
       })
+      this.submitted = false
       this.showTeoria = false;
       this.showEx1 = false;
       this.showEx2 = true;
