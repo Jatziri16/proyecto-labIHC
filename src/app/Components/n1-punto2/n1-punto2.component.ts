@@ -32,6 +32,11 @@ export class N1Punto2Component implements OnInit
   p8!: boolean; p7!: boolean; p6!: boolean; p5!: boolean;
   p10!: boolean; p9!: boolean;
 
+  p1_2!: boolean; p2_2!: boolean; p3_2!: boolean; p4_2!: boolean;
+  p8_2!: boolean; p7_2!: boolean; p6_2!: boolean; p5_2!: boolean;
+  p10_2!: boolean; p9_2!: boolean; p15_2!: boolean;
+  p11_2!: boolean; p12_2!: boolean; p13_2!: boolean; p14_2!: boolean;
+
   constructor(private fb:FormBuilder,
               private toastr: ToastrService,
               private _nivelesService: NivelesService,
@@ -277,39 +282,84 @@ export class N1Punto2Component implements OnInit
     // SE CHECAN LAS RESPUESTAS DE AMBOS TEXTOS
     if(this.pregunta1 == "is")
     {
+      this.p1 = false;
       buenas++;
+    }
+    else
+    {
+      this.p1 = true;
     }
     if(this.pregunta2 == "am")
     {
+      this.p2 = true;
       buenas++;
+    }
+    else
+    {
+      this.p2 = true;
     }
     if(this.pregunta3 == "am")
     {
+      this.p3 = false;
       buenas++;
+    }
+    else
+    {
+      this.p3 = true;
     }
     if(this.pregunta4 == "am")
     {
+      this.p4 = false;
       buenas++;
+    }
+    else
+    {
+      this.p4 = true;
     }
     if(this.pregunta5 == "are")
     {
+      this.p5 = false;
       buenas++;
+    }
+    else
+    {
+      this.p5 = true;
     }
     if(this.pregunta6 == "is")
     {
+      this.p6 = false;
       buenas++;
+    }
+    else
+    {
+      this.p6 = true;
     }
     if(this.pregunta7 == "are")
     {
+      this.p7 = false;
       buenas++;
+    }
+    else
+    {
+      this.p7 = true;
     }
     if(this.pregunta8 == "are")
     {
+      this.p8 = false;
       buenas++;
+    }
+    else
+    {
+      this.p8 = true;
     }
     if(this.pregunta9 == "are")
     {
+      this.p9 = false;
       buenas++;
+    }
+    else
+    {
+      this.p9 = true;
     }
     if(buenas != 9)
     {
@@ -319,63 +369,138 @@ export class N1Punto2Component implements OnInit
     // SEGUNDO PARRAFO
     if(this.ejercicio2_2.value.pregunta10P2 == "is")
     {
+      this.p1_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p1_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta11P2 == "are")
     {
+      this.p2_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p2_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta12P2 == "are")
     {
+      this.p3_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p3_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta13P2 == "is")
     {
+      this.p4_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p4_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta14P2 == "is")
     {
+      this.p5_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p5_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta15P2 == "are")
     {
+      this.p6_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p6_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta16P2 == "are")
     {
+      this.p7_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p7_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta17P2 == "are")
     {
+      this.p8_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p8_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta18P2 == "is")
     {
+      this.p9_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p9_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta19P2 == "is")
     {
+      this.p10_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p10_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta20P2 == "am")
     {
+      this.p11_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p11_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta21P2 == "is")
     {
+      this.p12_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p12_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta22P2 == "is")
     {
+      this.p13_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p13_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta23P2 == "are")
     {
+      this.p14_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p14_2 = true;
     }
     if(this.ejercicio2_2.value.pregunta24P2 == "am")
     {
+      this.p15_2 = false;
       buenas++;
+    }
+    else
+    {
+      this.p15_2 = true;
     }
 
     if(buenas == 24)
@@ -384,7 +509,6 @@ export class N1Punto2Component implements OnInit
         {
           positionClass: 'toast-bottom-right',
         });
-
       this.puntaje = 10;
       this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
         {
@@ -400,6 +524,7 @@ export class N1Punto2Component implements OnInit
         //   positionClass: 'toast-bottom-right',
         // });
 
+      this.submitted = false;
       // this.router.navigate(['/level1']);
       // this.showTeoria = false;
       // this.showEx1 = false;
