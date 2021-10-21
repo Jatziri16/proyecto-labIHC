@@ -25,12 +25,7 @@ export class N1Punto2Component implements OnInit
   pregunta1!: string; pregunta2!: string; pregunta3!: string;
   pregunta4!: string; pregunta5!: string; pregunta6!: string; 
   pregunta7!: string; pregunta8!: string; pregunta9!: string;
-  pregunta10!: string; 
-  // pregunta11!: string; pregunta12!: string;
-  // pregunta13!: string; pregunta14!: string; pregunta15!: string;
-  // pregunta16!: string; pregunta17!: string; pregunta18!: string; 
-  // pregunta19!: string; pregunta20!: string; pregunta21!: string; 
-  // pregunta22!: string; pregunta23!: string; pregunta24!: string;
+  pregunta10!: string;
 
   constructor(private fb:FormBuilder,
               private toastr: ToastrService,
@@ -258,21 +253,6 @@ export class N1Punto2Component implements OnInit
     this.pregunta7 = this.ejercicio2.value.pregunta7P2;
     this.pregunta8 = this.ejercicio2.value.pregunta8P2;
     this.pregunta9 = this.ejercicio2.value.pregunta9P2;
-    // this.pregunta10 = this.ejercicio2_2.value.pregunta10P2;
-    // this.pregunta11 = this.ejercicio2_2.value.pregunta11P2;
-    // this.pregunta12 = this.ejercicio2_2.value.pregunta12P2;
-    // this.pregunta13 = this.ejercicio2_2.value.pregunta13P2;
-    // this.pregunta14 = this.ejercicio2_2.value.pregunta14P2;
-    // this.pregunta15 = this.ejercicio2_2.value.pregunta15P2;
-    // this.pregunta16 = this.ejercicio2_2.value.pregunta16P2;
-    // this.pregunta17 = this.ejercicio2_2.value.pregunta17P2;
-    // this.pregunta18 = this.ejercicio2_2.value.pregunta18P2;
-    // this.pregunta19 = this.ejercicio2_2.value.pregunta19P2;
-    // this.pregunta20 = this.ejercicio2_2.value.pregunta20P2;
-    // this.pregunta21 = this.ejercicio2_2.value.pregunta21P2;
-    // this.pregunta22 = this.ejercicio2_2.value.pregunta22P2;
-    // this.pregunta23 = this.ejercicio2_2.value.pregunta23P2;
-    // this.pregunta24 = this.ejercicio2_2.value.pregunta24P2;
 
     // SE CHECAN LAS RESPUESTAS DE AMBOS TEXTOS
     if(this.pregunta1 == "is")

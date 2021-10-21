@@ -1,19 +1,14 @@
 #fondo
 {
-    /* background-image: url(../../../assets/Imagenes/menuBG.png); */
-    /* background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(../../../assets/Imagenes/VocabularyBG.png) ; */
-    /* background-repeat: no-repeat; */
-    /* background-position: center; */
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
-
     background-image: url(../../../assets/Imagenes/menuBG3.gif);
-
-    /* background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(../../../assets/Imagenes/VocabularyBG.png) ; */
     /* background-repeat: no-repeat; */
     /* background-position: center; */
     background-size: cover;
     background-attachment: fixed;
+}
+.levelFam
+{
+    font-family: Georgia, serif;
 }
 .centrado
 {
@@ -25,14 +20,15 @@
 }
 .der
 {
-    background-color:#FCD65E /*F4D75E;*/
+    background-color:#FCD65E;
 }
 #bg-white
 {
     background-color: white;
 }
 main, h1, h2, h3{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+    font-family: Georgia, serif;
 }
 #ancho
 {
