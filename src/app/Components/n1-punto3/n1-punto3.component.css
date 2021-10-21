@@ -6,32 +6,25 @@
     background-size: cover;
     background-attachment: fixed;
 }
+#fs-p{font-size: 120%;}
+h1,h2,h3
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 h1
 {
     text-align: center;
-    font-size: 180%;
+    font-size: 200%;
 }
 h2
 {
     text-align: center;
-    font-size: 130%;
+    font-size: 170%;
 }
 h3
 {
-    font-size: 120%
+    font-size: 130%
 }
-/* table{
-    margin: auto;
-    text-align: center;
-    background-color: #89949e3f;
-    border-radius: 10px;
-}
-td,th{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px
-} */
 select{
     margin-right: 5px;
     margin-left: 5px;
