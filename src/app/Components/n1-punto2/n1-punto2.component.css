@@ -70,3 +70,10 @@ td,th
     height:25%; 
     width:25%
 }
+.wrong
+{
+    font-size: 65%;
+    border-radius: 50%;
+    color: red;
+    margin-right: 3px;
+}

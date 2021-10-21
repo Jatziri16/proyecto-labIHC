@@ -23,10 +23,6 @@ export class N1Punto2Component implements OnInit
   showEx2: boolean = false;
   puntaje: number = 0;
   submitted = false;
-  pregunta1!: string; pregunta2!: string; pregunta3!: string;
-  pregunta4!: string; pregunta5!: string; pregunta6!: string; 
-  pregunta7!: string; pregunta8!: string; pregunta9!: string;
-  pregunta10!: string;
 
   p1!: boolean; p2!: boolean; p3!: boolean; p4!: boolean;
   p8!: boolean; p7!: boolean; p6!: boolean; p5!: boolean;
@@ -110,19 +106,9 @@ export class N1Punto2Component implements OnInit
   {
     this.submitted = true;
     let errores = "", buenas = 0;
-    this.pregunta1 = this.ejercicio1.value.pregunta1P1;
-    this.pregunta2 = this.ejercicio1.value.pregunta2P1;
-    this.pregunta3 = this.ejercicio1.value.pregunta3P1;
-    this.pregunta4 = this.ejercicio1.value.pregunta4P1;
-    this.pregunta5 = this.ejercicio1.value.pregunta5P1;
-    this.pregunta6 = this.ejercicio1.value.pregunta6P1;
-    this.pregunta7 = this.ejercicio1.value.pregunta7P1;
-    this.pregunta8 = this.ejercicio1.value.pregunta8P1;
-    this.pregunta9 = this.ejercicio1.value.pregunta9P1;
-    this.pregunta10 = this.ejercicio1.value.pregunta10P1;
     
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 1
-    if(this.pregunta1 == "is")
+    if(this.ejercicio1.value.pregunta1P1 == "is")
     {
       buenas++;
       this.p1 = false;
@@ -133,7 +119,7 @@ export class N1Punto2Component implements OnInit
       errores = "1, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
-    if(this.pregunta2 == "am")
+    if(this.ejercicio1.value.pregunta2P1 == "am")
     {
       this.p2 = false;
       buenas++;
@@ -144,7 +130,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "2, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
-    if(this.pregunta3 == "are")
+    if(this.ejercicio1.value.pregunta3P1 == "are")
     {
       this.p3 = false;
       buenas++;
@@ -155,7 +141,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "3, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
-    if(this.pregunta4 == "is")
+    if(this.ejercicio1.value.pregunta4P1 == "is")
     {
       this.p4 = false;
       buenas++;
@@ -166,7 +152,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "4, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
-    if(this.pregunta5 == "are")
+    if(this.ejercicio1.value.pregunta5P1 == "are")
     {
       this.p5 = false;
       buenas++;
@@ -177,7 +163,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "5, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
-    if(this.pregunta6 == "are")
+    if(this.ejercicio1.value.pregunta6P1 == "are")
     {
       this.p6 = false;
       buenas++;
@@ -188,7 +174,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "6, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
-    if(this.pregunta7 == "am")
+    if(this.ejercicio1.value.pregunta7P1 == "am")
     {
       this.p7 = false;
       buenas++;
@@ -199,7 +185,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "7, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
-    if(this.pregunta8 == "is")
+    if(this.ejercicio1.value.pregunta8P1 == "is")
     {
       this.p8 = false;
       buenas++;
@@ -210,7 +196,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "8, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
-    if(this.pregunta9 == "are")
+    if(this.ejercicio1.value.pregunta9P1 == "are")
     {
       this.p9 = false;
       buenas++;
@@ -221,7 +207,7 @@ export class N1Punto2Component implements OnInit
       errores = errores + "9, ";
     }
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
-    if(this.pregunta10 == "are")
+    if(this.ejercicio1.value.pregunta10P1 == "are")
     {
       this.p10 = false;
       buenas++;
@@ -238,7 +224,6 @@ export class N1Punto2Component implements OnInit
       {
         positionClass: 'toast-bottom-right',
       });
-      // console.log(this._userService.USER);
       this.puntaje = 5;
       this._nivelesService.accesoDatos(this._userService.USER);
       this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
@@ -269,18 +254,9 @@ export class N1Punto2Component implements OnInit
   {
     this.submitted = true;
     let buenas = 0, errores = "", errores2 = "";
-    this.pregunta1 = this.ejercicio2.value.pregunta1P2;
-    this.pregunta2 = this.ejercicio2.value.pregunta2P2;
-    this.pregunta3 = this.ejercicio2.value.pregunta3P2;
-    this.pregunta4 = this.ejercicio2.value.pregunta4P2;
-    this.pregunta5 = this.ejercicio2.value.pregunta5P2;
-    this.pregunta6 = this.ejercicio2.value.pregunta6P2;
-    this.pregunta7 = this.ejercicio2.value.pregunta7P2;
-    this.pregunta8 = this.ejercicio2.value.pregunta8P2;
-    this.pregunta9 = this.ejercicio2.value.pregunta9P2;
 
     // SE CHECAN LAS RESPUESTAS DE AMBOS TEXTOS
-    if(this.pregunta1 == "is")
+    if(this.ejercicio2.value.pregunta1P2 == "is")
     {
       this.p1 = false;
       buenas++;
@@ -289,16 +265,16 @@ export class N1Punto2Component implements OnInit
     {
       this.p1 = true;
     }
-    if(this.pregunta2 == "am")
+    if(this.ejercicio2.value.pregunta2P2 == "am")
     {
-      this.p2 = true;
+      this.p2 = false;
       buenas++;
     }
     else
     {
       this.p2 = true;
     }
-    if(this.pregunta3 == "am")
+    if(this.ejercicio2.value.pregunta3P2 == "am")
     {
       this.p3 = false;
       buenas++;
@@ -307,7 +283,7 @@ export class N1Punto2Component implements OnInit
     {
       this.p3 = true;
     }
-    if(this.pregunta4 == "am")
+    if(this.ejercicio2.value.pregunta4P2 == "am")
     {
       this.p4 = false;
       buenas++;
@@ -316,7 +292,7 @@ export class N1Punto2Component implements OnInit
     {
       this.p4 = true;
     }
-    if(this.pregunta5 == "are")
+    if(this.ejercicio2.value.pregunta5P2 == "are")
     {
       this.p5 = false;
       buenas++;
@@ -325,7 +301,7 @@ export class N1Punto2Component implements OnInit
     {
       this.p5 = true;
     }
-    if(this.pregunta6 == "is")
+    if(this.ejercicio2.value.pregunta6P2 == "is")
     {
       this.p6 = false;
       buenas++;
@@ -334,7 +310,7 @@ export class N1Punto2Component implements OnInit
     {
       this.p6 = true;
     }
-    if(this.pregunta7 == "are")
+    if(this.ejercicio2.value.pregunta7P2 == "are")
     {
       this.p7 = false;
       buenas++;
@@ -343,7 +319,7 @@ export class N1Punto2Component implements OnInit
     {
       this.p7 = true;
     }
-    if(this.pregunta8 == "are")
+    if(this.ejercicio2.value.pregunta8P2 == "are")
     {
       this.p8 = false;
       buenas++;
@@ -352,7 +328,7 @@ export class N1Punto2Component implements OnInit
     {
       this.p8 = true;
     }
-    if(this.pregunta9 == "are")
+    if(this.ejercicio2.value.pregunta9P2 == "are")
     {
       this.p9 = false;
       buenas++;
@@ -545,8 +521,17 @@ export class N1Punto2Component implements OnInit
     data.forEach((doc: { data: () => any; }) =>
     {
       let info = doc.data();
-      this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
-
+      if(info.Puntaje<10)
+      {
+        this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
+        if(this.puntaje==10)
+        {
+          this.toastr.info('Now the next level is available!', 'Excelent!!',
+          {
+            positionClass: 'toast-bottom-right',
+          });
+        }
+      }
       if(this.puntaje==10)
       {
         this.router.navigate(['/level1']);

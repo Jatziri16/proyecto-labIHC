@@ -44,11 +44,13 @@ export class LoginComponent implements OnInit
   inicioSesion()
   {
     this.loading = true;
+    this.bloqueo = true;
 
     if(this.datosLoginControl.Password.invalid || this.datosLoginControl.User.invalid)
     {
       this.toastr.error('Todos los datos son obligatorios', 'Error');
       this.loading = false;
+      this.bloqueo = false;
       return;
     }
     else
@@ -59,6 +61,7 @@ export class LoginComponent implements OnInit
         {
           this.toastr.error('No se encontro registro', 'Error');
           this.loading = false;
+          this.bloqueo = false
           return;
         }
         this._userService.GuardaNomUser(this.datosLogin.value.User); // Guarda el nombre de usuario para más adelante poder tener acceso a su id
@@ -79,6 +82,7 @@ export class LoginComponent implements OnInit
         this._cookiesService.setToken(this._cookiesService.getRandomToken(16), this._cookiesService.nuevaExpiracion(5));
         this.toastr.success('Acceso concedido.', 'Éxito!');
         this.loading = false;
+        this.bloqueo = false;
         this.router.navigate(['/menu']);
       }
       else
@@ -86,6 +90,7 @@ export class LoginComponent implements OnInit
         // console.log('Acceso rechazado');
         this.toastr.warning('Acceso Rechazado.', 'Error!');
         this.loading = false;
+        this.bloqueo = false;
         // A partir de aqui cuenta los intentos, si excedes de 3 intentos para ingresar tendrá que esperar 3min para volver a intentarlo
         this.intentos += 1;
         // console.log("Numero de intentos: " + this.intentos);

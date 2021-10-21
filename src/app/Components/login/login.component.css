@@ -1,4 +1,4 @@
-body 
+#fondo
 {
     background-image: url(../../../assets/Imagenes/loginBG.gif);
     background-repeat: no-repeat;
@@ -6,6 +6,7 @@ body
     background-size: cover;
     height: 100vh;
     background-attachment: fixed;
+    background-attachment: scroll;
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

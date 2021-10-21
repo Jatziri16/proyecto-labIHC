@@ -161,129 +161,149 @@
                             <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
                             <div class="col-4">
                                 <div class="mb-4">
-                                <p id="fs-p"><b>1. </b>Alex 
-                                    <!-- Opciones -->
-                                    <select formControlName="pregunta1P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select>
-                                        my new friend.</p>
-                                        <span *ngIf="submitted && p1" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span>
+                                        <b>1. </b>Alex 
+                                        <!-- Opciones -->
+                                        <select formControlName="pregunta1P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select>
+                                            my new friend.
+                                    </p>
                                 </div>
 
                                 <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>2. </b>I 
-                                    <select formControlName="pregunta2P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                    a very good driver.</p>
-                                    <span *ngIf="submitted && p2" class="badge bg-danger">Respuesta incorrecta</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span>
+                                        <b>2. </b>I 
+                                        <select formControlName="pregunta2P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                        a very good driver.
+                                    </p>
                                 </div>
                                 
                                 <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>3. </b>My neighbours 
-                                    <select formControlName="pregunta3P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                    very noisy.</p>
-                                    <span *ngIf="submitted && p3" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span>
+                                        <b>3. </b>My neighbours 
+                                        <select formControlName="pregunta3P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                        very noisy.
+                                    </p>
                                 </div>
                                 <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>4. </b>Your black cat 
-                                    <select formControlName="pregunta4P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                    in the garden.</p>
-                                    <span *ngIf="submitted && p4" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span>
+                                        <b>4. </b>Your black cat 
+                                        <select formControlName="pregunta4P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                        in the garden.
+                                    </p>
                                 </div>
                                 <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>5. </b>Susan and Mike 
-                                    <select formControlName="pregunta5P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                    my parents.</p>
-                                    <span *ngIf="submitted && p5" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>
+                                        <b>5. </b>Susan and Mike 
+                                        <select formControlName="pregunta5P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                        my parents.
+                                    </p>
                                 </div>
                             </div>
                             <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
                             <div class="col-4">
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>6. </b>They 
-                                    <select formControlName="pregunta6P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                        my best friends.</p>
-                                        <span *ngIf="submitted && p6" class="badge bg-danger">Wrong answer!</span>
-                                </div>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>
+                                        <b>6. </b>They 
+                                        <select formControlName="pregunta6P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                            my best friends.
+                                        </p>
+                                    </div>
                                 <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>7. </b>I 
-                                    <select formControlName="pregunta7P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                    sure.</p>
-                                    <span *ngIf="submitted && p7" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p7" class="wrong badge bg-danger">.</span>
+                                        <b>7. </b>I 
+                                        <select formControlName="pregunta7P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                        sure.
+                                    </p>
                                 </div>
                                 <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>8. </b>Your best friend 
-                                    <select formControlName="pregunta8P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select> 
-                                    at home.</p>
-                                    <span *ngIf="submitted && p8" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span>
+                                        <b>8. </b>Your best friend 
+                                        <select formControlName="pregunta8P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select> 
+                                        at home.
+                                    </p>
                                 </div>
 
                                 <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>9. </b>We 
-                                    <select formControlName="pregunta9P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select>     
-                                    from Spain.</p>
-                                    <span *ngIf="submitted && p9" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p9" class="wrong badge bg-danger">.</span>
+                                        <b>9. </b>We 
+                                        <select formControlName="pregunta9P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select>     
+                                        from Spain.
+                                    </p>
                                 </div>
                                 <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p id="fs-p"><b>10. </b>Luke and Tom 
-                                    <select formControlName="pregunta10P1">
-                                        <option selected> </option>
-                                        <option value="am">am</option>
-                                        <option value="is">is</option>
-                                        <option value="are">are</option>
-                                    </select>    
-                                    actors.</p>
-                                    <span *ngIf="submitted && p10" class="badge bg-danger">Wrong answer!</span>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p10" class="wrong badge bg-danger">.</span>
+                                        <b>10. </b>Luke and Tom 
+                                        <select formControlName="pregunta10P1">
+                                            <option selected> </option>
+                                            <option value="am">am</option>
+                                            <option value="is">is</option>
+                                            <option value="are">are</option>
+                                        </select>    
+                                        actors.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -312,15 +332,16 @@
                 <div class="col-5">
                     <h4>Complete the next paragraphs with <b>am/is/are</b>.</h4><br>
                     <form [formGroup]="ejercicio2">
-                        <p>
-                            <b>1. </b>Hello, my name <input type="text" class="txtField" formControlName="pregunta1P2" style="text-transform:lowercase;" maxlength="3"> Kim. I <input type="text" class="txtField" formControlName="pregunta2P2"style="text-transform:lowercase;" maxlength="3"> twelve years old and I <input type="text" class="txtField" formControlName="pregunta3P2" style="text-transform:lowercase;" maxlength="3"> from China.
-                            <span *ngIf="submitted && p1" class="badge bg-danger">Wrong answer!</span> <span *ngIf="submitted && p2" class="badge bg-danger">Wrong answer!</span> <span *ngIf="submitted && p3" class="badge bg-danger">Wrong answer!</span> <span *ngIf="(submitted && p1) || (submitted && p2) || (submitted && p3)"><br></span>
-                            I <input type="text" class="txtField" formControlName="pregunta4P2" style="text-transform:lowercase;" maxlength="3"> a student at Centennial Secondary School. My favorite subjects <input type="text" class="txtField" formControlName="pregunta5P2" style="text-transform:lowercase;" maxlength="3"> Maths and Art.
-                            <span *ngIf="submitted && p4" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p5" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p4) || (submitted && p5)"><br></span>
-                            My favorite sport <input type="text" class="txtField" formControlName="pregunta6P2" style="text-transform:lowercase;" maxlength="3"> baseball and my favorite colors <input type="text" class="txtField" formControlName="pregunta7P2" style="text-transform:lowercase;" maxlength="3"> blue and purple. 
-                            <span *ngIf="submitted && p6" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p7" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p6) || (submitted && p7)"><br></span>
-                            May and Joe <input type="text" class="txtField" formControlName="pregunta8P2" style="text-transform:lowercase;" maxlength="3"> my best friends. They <input type="text" class="txtField" formControlName="pregunta9P2" style="text-transform:lowercase;" maxlength="3"> great. <span *ngIf="(submitted && p8) || (submitted && p9)"><br></span>
-                            <span *ngIf="submitted && p8" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p9" class="badge bg-danger">Wrong answer!</span>
+                        <p id="fs-p">
+                            <b>1. </b>Hello, my name <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta1P2" style="text-transform:lowercase;" maxlength="3"> Kim. I 
+                            <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta2P2"style="text-transform:lowercase;" maxlength="3"> twelve years old and I 
+                            <span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta3P2" style="text-transform:lowercase;" maxlength="3"> from China.I 
+                            <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta4P2" style="text-transform:lowercase;" maxlength="3"> student at Centennial Secondary School. My favorite subjects 
+                            <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta5P2" style="text-transform:lowercase;" maxlength="3"> Maths and Art.My favorite sport 
+                            <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta6P2" style="text-transform:lowercase;" maxlength="3"> baseball and my favorite colors 
+                            <span *ngIf="submitted && p7" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta7P2" style="text-transform:lowercase;" maxlength="3"> blue and purple. May and Joe 
+                            <span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta8P2" style="text-transform:lowercase;" maxlength="3"> my best friends. They 
+                            <span *ngIf="submitted && p9" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta9P2" style="text-transform:lowercase;" maxlength="3"> great.
                         </p>
                     </form>
                     <br>
@@ -337,21 +358,22 @@
                 <!-- ~ ~ ~ ~ Segundo párrafo  ~ ~ ~ ~ -->
                 <div class="col-5">
                     <form [formGroup]="ejercicio2_2">
-                        <p>
-                            <b>2. </b>Peter Baker <input type="text" class="txtField" formControlName="pregunta10P2" style="text-transform:lowercase;" maxlength="3"> from Manchester, but Paul and John <input type="text" class="txtField" formControlName="pregunta11P2" style="text-transform:lowercase;" maxlength="3"> from London. 
-                            <span *ngIf="submitted && p1_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p2_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p1_2) || (submitted && p2_2)"><br></span>
-                            Manchester and London <input type="text" class="txtField" formControlName="pregunta12P2" style="text-transform:lowercase;" maxlength="3"> cities in England. Hamburg <input type="text" class="txtField" formControlName="pregunta13P2" style="text-transform:lowercase;" maxlength="3"> a city in Germany. 
-                            <span *ngIf="submitted && p3_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p4_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p3_2) || (submitted && p4_2)"><br></span>
-                            Sandra <input type="text" class="txtField" formControlName="pregunta14P2" style="text-transform:lowercase;" maxlength="3"> at school today. Jack and Peter <input type="text" class="txtField" formControlName="pregunta15P2" style="text-transform:lowercase;" maxlength="3"> her friends. 
-                            <span *ngIf="submitted && p5_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p6_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p7_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p5_2) || (submitted && p6_2) || (submitted && p7_2)"><br></span>
-                            They <input type="text" class="txtField" formControlName="pregunta16P2" style="text-transform:lowercase;" maxlength="3"> in the same class. Mr and Mrs Baker <input type="text" class="txtField" formControlName="pregunta17P2" style="text-transform:lowercase;" maxlength="3"> on a trip to the USA to visit their cousin Anne.
-                            <span *ngIf="submitted && p8_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p8_2"><br></span>
-                            She <input type="text" class="txtField" formControlName="pregunta18P2" style="text-transform:lowercase;" maxlength="3"> a nice girl. Peter says: "My grandfather <input type="text" class="txtField" formControlName="pregunta19P2" style="text-transform:lowercase;" maxlength="3"> in the hospital. 
-                            <span *ngIf="submitted && p9_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p10_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p11_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p9_2) || (submitted && p10_2) || (submitted && p11_2)"><br></span>
-                            I <input type="text" class="txtField" formControlName="pregunta20P2" style="text-transform:lowercase;" maxlength="3"> at home with my grandmother". What time <input type="text" class="txtField" formControlName="pregunta21P2" style="text-transform:lowercase;" maxlength="3"> it?. It <input type="text" class="txtField" formControlName="pregunta22P2" style="text-transform:lowercase;" maxlength="3"> 8 o'clock. 
-                            <span *ngIf="submitted && p12_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p13_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="submitted && p14_2" class="badge bg-danger">Wrong answer!</span><span *ngIf="(submitted && p12_2) || (submitted && p13_2) || (submitted && p14_2)"><br></span>
-                            <input type="text" class="txtField" formControlName="pregunta23P2" style="text-transform:lowercase;" maxlength="3"> you tired? No I <input type="text" class="txtField" formControlName="pregunta24P2" style="text-transform:lowercase;" maxlength="3"> not. <span *ngIf="submitted && p15_2"><br></span>
-                            <span *ngIf="submitted && p15_2" class="badge bg-danger">Wrong answer!</span>
+                        <p id="fs-p">
+                            <b>2. </b>Peter Baker <span *ngIf="submitted && p1_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta10P2" style="text-transform:lowercase;" maxlength="3"> from Manchester, but Paul and John 
+                            <span *ngIf="submitted && p2_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta11P2" style="text-transform:lowercase;" maxlength="3"> from London. 
+                            Manchester and London <span *ngIf="submitted && p3_2"class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta12P2" style="text-transform:lowercase;" maxlength="3"> cities in England. Hamburg 
+                            <span *ngIf="submitted && p4_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta13P2" style="text-transform:lowercase;" maxlength="3"> a city in Germany. 
+                            Sandra <span *ngIf="submitted && p5_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta14P2" style="text-transform:lowercase;" maxlength="3"> at school today. Jack and Peter 
+                            <span *ngIf="submitted && p6_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta15P2" style="text-transform:lowercase;" maxlength="3"> her friends. 
+                            They <span *ngIf="submitted && p7_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta16P2" style="text-transform:lowercase;" maxlength="3"> in the same class. Mr and Mrs Baker 
+                            <span *ngIf="submitted && p8_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta17P2" style="text-transform:lowercase;" maxlength="3"> on a trip to the USA to visit their cousin Anne.
+                            She <span *ngIf="submitted && p9_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta18P2" style="text-transform:lowercase;" maxlength="3"> a nice girl. Peter says: "My grandfather 
+                            <span *ngIf="submitted && p10_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta19P2" style="text-transform:lowercase;" maxlength="3"> in the hospital. 
+                            I <span *ngIf="submitted && p11_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta20P2" style="text-transform:lowercase;" maxlength="3"> at home with my grandmother". What time 
+                            <span *ngIf="submitted && p12_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta21P2" style="text-transform:lowercase;" maxlength="3"> it?. It 
+                            <span *ngIf="submitted && p13_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta22P2" style="text-transform:lowercase;" maxlength="3"> 8 o'clock. 
+                            <span *ngIf="submitted && p14_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta23P2" style="text-transform:lowercase;" maxlength="3"> you tired? No I 
+                            <span *ngIf="submitted && p15_2" class="wrong badge bg-danger">.</span><input type="text" class="txtField" formControlName="pregunta24P2" style="text-transform:lowercase;" maxlength="3"> not.
                         </p>
                     </form>
                 </div>

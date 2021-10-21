@@ -1,75 +1,95 @@
-body 
-{
+#fondo {
     background-image: url(../../../assets/Imagenes/level1BG.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* height: 100vh; */
+    height: 100vh;
     background-attachment: fixed;
 }
-table{
+table {
     background-color: #89949e3f;
     border-radius: 20px;
 }
-td{
-    padding-top: 25px;
-    padding-bottom: 25px;
+td {
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 50px;
     padding-right: 50px;
 }
-h1{
+h1 {
     text-align: center;
     font-family: cursive;
     font-size: 180%;
 }
-#titulo{
+#titulo {
     background-color: #E99069;
     border-radius: 30%;
     margin-left: 30%;
     margin-right: 30%;
     margin-bottom: 20px;
 }
-.col-4
-{
+.col-4 {
     border-collapse: collapse;
 }
-.btn1
+a {
+    font-size: 125%;
+}
+a:link {
+    color: rgb(24, 141, 24);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(129, 61, 218);
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(180, 22, 75);
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
+.disabled {
+    color: rgba(128, 128, 128, 0.829);
+}
+#back
 {
+    background-color: rgb(55, 173, 177);
+}
+.btn1 {
     border-radius: 50px;
     background-color: #E7DD4B;
 }
-.btn5
-{
+.btn5 {
     border-radius: 50px;
     background-color: #99DD7C;
 }
-.btn2
-{
+.btn2 {
     border-radius: 50px;
     background-color: #E99069;
 }
-.btn6
-{
+.btn6 {
     border-radius: 50px;
     background-color: #7295B5
 }
-.btn3
-{
+.btn3 {
     border-radius: 50px;
     background-color: #4399BB
 }
-.btn7
-{
+.btn7 {
     border-radius: 50px;
     background-color: #E7DD4B
 }
-.btn4
-{
+.btn4 {
     border-radius: 50px;
     background-color: #B1A8B1
 }
-.btn8
-{
+.btn8 {
     border-radius: 50px;
     background-color: #D38BE7
 }

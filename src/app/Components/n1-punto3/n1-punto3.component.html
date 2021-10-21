@@ -1,5 +1,5 @@
 <!-- <body> -->
-<div (click)="renovToken()">
+<div id="fondo" (click)="renovToken()">
     <!-- Componente que pertenece al punto 3 del nivel 1 "ARTICLES" (a/an/the) -->
     <header>
         <div class="container">
@@ -89,169 +89,183 @@
                             <h1>Articles</h1>
                             <h2>Excercise 1</h2>
                             <h3 class="text-center">a / an / the / x</h3>
-                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                            
                             <div class="col-4">
-                                <p><b>1. </b>I like  
-                                <!-- Opciones -->
-                                <select formControlName="pregunta1">
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                                blue T-shirt over there better than
-                                <select formControlName="pregunta1_1">
-                                    <option selected> </option>
-                                    <option value="a">a</option>
-                                    <option value="an">an</option>
-                                    <option value="the">the</option>
-                                    <option value="x">x</option>
-                                </select>
-                                red one.</p>
+                                <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>1. </b>I like  
+                                        <!-- Opciones -->
+                                        <span *ngIf="p1" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta1">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        blue T-shirt over there better than
+                                        <span *ngIf="p1_1" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta1_1">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        red one.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>2. </b>Their car does 150 miles 
+                                        <span *ngIf="p2" class="wrong badge bg-danger">.</span> 
+                                        <select formControlName="pregunta2">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        hour.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>3. </b>Where's 
+                                        <span *ngIf="p3" class="wrong badge bg-danger">.</span> 
+                                        <select formControlName="pregunta3">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        USB drive I lent you last week?.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>4. </b>Do you still live in 
+                                        <span *ngIf="p4" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta4">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        Bristol?
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>5. </b>Is your mother working in 
+                                        <span *ngIf="p5" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta5">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        old office building?
+                                    </p>
+                                </div>
                             </div>
-                            <div class="col-1"></div>
-                            <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
                             <div class="col-4">
-                                <p><b>2. </b>Their car does 150 miles  
-                                    <select formControlName="pregunta2">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                hour.</p>
+                                <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>6. </b>Carol's father work as 
+                                        <span *ngIf="p6" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta6">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        electrician.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>7. </b>The tomatoes are 99 pence  
+                                        <span *ngIf="p7" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta7">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        kilo.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>8. </b>What do you usually have for 
+                                        <span *ngIf="p8" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta8">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        breakfast.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>9. </b>Ben has 
+                                        <span *ngIf="p9" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta9">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        terrible headache.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>10. </b>After this tour you have 
+                                        <span *ngIf="p10" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta10">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="the">the</option>
+                                            <option value="x">x</option>
+                                        </select>
+                                        whole afternoon free to explore the city.
+                                    </p>
+                                </div>
                             </div>
                         </div><br>
 
-                        <!-- * * * * * * SEGUNDA FILA * * * * * * -->
-                        <div class="row justify-content-center">
-                            <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>3. </b>Where's  
-                                    <select formControlName="pregunta3">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                USB drive I lent you last week?.</p>
-                            </div>
-                            <div class="col-1"></div>
-                            <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>4. </b>Do you still live in 
-                                    <select formControlName="pregunta4">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                Bristol?</p>
-                            </div>
-                        </div><br>
-        
-                        <!-- * * * * * * TERCERA FILA * * * * * * -->
-                        <div class="row justify-content-center">
-                            <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>5. </b>Is your mother working in 
-                                    <select formControlName="pregunta5">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                old office building?</p>
-                            </div>
-                            <div class="col-1"></div>
-                            <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>6. </b>Carol's father work as 
-                                    <select formControlName="pregunta6">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                electrician.</p>
-                            </div>
-                        </div><br>
-        
-                        <!-- * * * * * * CUARTA FILA * * * * * * -->
-                        <div class="row justify-content-center">
-                            <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>7. </b>The tomatoes are 99 pence  
-                                    <select formControlName="pregunta7">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                kilo.</p>
-                            </div>
-                            <div class="col-1"></div>
-                            <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>8. </b>What do you usually have for 
-                                    <select formControlName="pregunta8">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                breakfast.</p>
-                            </div>
-                        </div><br>
-
-                        <!-- * * * * * * QUINTA FILA * * * * * * -->
-                        <div class="row justify-content-center">
-                            <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>9. </b>Ben has 
-                                    <select formControlName="pregunta9">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                terrible headache.</p>
-                            </div>
-                            <div class="col-1"></div>
-                            <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
-                            <div class="col-4">
-                                <p><b>10. </b>After this tour you have 
-                                    <select formControlName="pregunta10">
-                                        <option selected> </option>
-                                        <option value="a">a</option>
-                                        <option value="an">an</option>
-                                        <option value="the">the</option>
-                                        <option value="x">x</option>
-                                    </select>
-                                whole afternoon free to explore the city.</p>
-                            </div>
-                        </div> 
                         <br>
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-3 text-center">
+                            <div class="col-8 text-center">
                                 <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                            </div>
-                            <div class="col-4">
-                                <img src="../../../assets/Imagenes/N1P3-study.png" class="img-fluid">
-                            </div>
-                            <div class="col-3 text-center">
                                 <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                             </div>
+                            <!-- <div class="col-4">
+                                <img src="../../../assets/Imagenes/N1P3-study.png" class="img-fluid">
+                            </div> -->
                         </div>
                     </form>  
                     <br>
@@ -266,155 +280,166 @@
                     <!-- Descripción del verb to be -->
                     <form [formGroup]="ejercicio2" (ngSubmit)="checkResp2()">
                         <!-- * * * * * * PRIMERA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <h1>Articles</h1>
-                        <h2>Excercise 2</h2>
-                        <h3 class="text-center">a / an / some</h3>
-                        <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>1. </b>I have   
-                            <!-- Opciones -->
-                            <select formControlName="pregunta1">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            good idea.</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>2. </b>That's   
-                            <select formControlName="pregunta2">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                             interesting job.</p>
-                        </div>
-                    </div><br>
-    
-                    <!-- * * * * * * SEGUNDA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>3. </b>They have found  
-                            <select formControlName="pregunta3">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            gold in that old mine</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>4. </b>Do the Smiths have 
-                            <select formControlName="pregunta4">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            yellow van?</p>
-                        </div>
-                    </div><br>
-    
-                    <!-- * * * * * * TERCERA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>5. </b>Look! He's having 
-                            <select formControlName="pregunta5">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            water.</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>6. </b>He always likes 
-                            <select formControlName="pregunta6">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            piece of chocolate.</p>
-                        </div>
-                    </div><br>
-    
-                    <!-- * * * * * * CUARTA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>7. </b>I have 
-                            <select formControlName="pregunta7">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            homework to do for tomorrow.</p>
-                        </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>8. </b>There's 
-                            <select formControlName="pregunta8">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            nice girl in the red car.</p>
-                        </div>
-                    </div><br>
+                        <div class="row justify-content-center">
+                            <h1>Articles</h1>
+                            <h2>Excercise 2</h2>
+                            <h3 class="text-center">a / an / some</h3>
+                            
+                            <div class="col-4">
+                                <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>1. </b>I have   
+                                        <!-- Opciones -->
+                                        <span *ngIf="p1" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta1">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        good idea.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>2. </b>That's   
+                                        <span *ngIf="p2" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta2">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        interesting job.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>3. </b>They have found  
+                                        <span *ngIf="p3" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta3">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        gold in that old mine
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        
+                                        <b>4. </b>Do the Smiths have 
+                                        <span *ngIf="p4" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta4">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        yellow van?
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>5. </b>Look! He's having 
+                                        <span *ngIf="p5" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta5">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        water.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>6. </b>He always likes
+                                        <span *ngIf="p6" class="wrong badge bg-danger">.</span> 
+                                        <select formControlName="pregunta6">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        piece of chocolate.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>7. </b>I have 
+                                        <span *ngIf="p7" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta7">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        homework to do for tomorrow.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>8. </b>There's 
+                                        <span *ngIf="p8" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta8">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        nice girl in the red car.
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>9. </b>Would you like 
+                                        <span *ngIf="p9" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta9">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        milk with your cookies?
+                                    </p>
+                                </div>
+                                <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p>
+                                        <b>10. </b>How about 
+                                        <span *ngIf="p10" class="wrong badge bg-danger">.</span>
+                                        <select formControlName="pregunta10">
+                                            <option selected> </option>
+                                            <option value="a">a</option>
+                                            <option value="an">an</option>
+                                            <option value="some">some</option>
+                                        </select>
+                                        grapes?
+                                    </p>
+                                </div>
+                            </div>
+                        </div><br>
 
-                    <!-- * * * * * * QUINTA FILA * * * * * * -->
-                    <div class="row justify-content-center">
-                        <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>9. </b>Would you like 
-                            <select formControlName="pregunta9">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            milk with your cookies?</p>
+                        <!-- Botones -->
+                        <div class="row justify-content-center">
+                            <div class="col-8 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                                <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                            </div>
                         </div>
-                        <div class="col-1"></div>
-                        <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
-                        <div class="col-4">
-                            <p><b>10. </b>How about 
-                            <select formControlName="pregunta10">
-                                <option selected> </option>
-                                <option value="a">a</option>
-                                <option value="an">an</option>
-                                <option value="some">some</option>
-                            </select>
-                            grapes?</p>
-                        </div>
-                    </div><br>
-                    <!-- Botones -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                        </div>
-                        <div class="col-4">
-                            <img src="../../../assets/Imagenes/N1P3-conv.gif" class="img-fluid">
-                        </div>
-                        <div class="col-3 text-center">
-                            <button type="submit" class="btn" id="next">Continuar</button> <!--(click)="checkResp1()" Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
-                        </div>
-                    </div>
                     </form>
                     <br>
                 </div>

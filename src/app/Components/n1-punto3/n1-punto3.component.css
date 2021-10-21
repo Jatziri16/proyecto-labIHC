@@ -1,3 +1,11 @@
+#fondo
+{
+    background-image: url(../../../assets/Imagenes/N1P2-BG.png);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
 h1
 {
     text-align: center;
@@ -55,4 +63,12 @@ select{
     float: unset;
     height:25%; 
     width:25%
+}
+.wrong
+{
+    font-size: 65%;
+    border-radius: 50%;
+    color: red;
+    margin-right: 2px;
+    margin-left: 4px;
 }
