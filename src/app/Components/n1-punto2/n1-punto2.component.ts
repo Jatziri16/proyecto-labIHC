@@ -22,10 +22,15 @@ export class N1Punto2Component implements OnInit
   showEx1: boolean = false;
   showEx2: boolean = false;
   puntaje: number = 0;
+  submitted = false;
   pregunta1!: string; pregunta2!: string; pregunta3!: string;
   pregunta4!: string; pregunta5!: string; pregunta6!: string; 
   pregunta7!: string; pregunta8!: string; pregunta9!: string;
   pregunta10!: string;
+
+  p1!: boolean; p2!: boolean; p3!: boolean; p4!: boolean;
+  p8!: boolean; p7!: boolean; p6!: boolean; p5!: boolean;
+  p10!: boolean; p9!: boolean;
 
   constructor(private fb:FormBuilder,
               private toastr: ToastrService,
@@ -98,6 +103,7 @@ export class N1Punto2Component implements OnInit
   // Checa las respuestas del primer ejercicio, de ser correctas se mostrará el ejercicio 2
   checkResp1()
   {
+    this.submitted = true;
     let errores = "", buenas = 0;
     this.pregunta1 = this.ejercicio1.value.pregunta1P1;
     this.pregunta2 = this.ejercicio1.value.pregunta2P1;
@@ -114,107 +120,120 @@ export class N1Punto2Component implements OnInit
     if(this.pregunta1 == "is")
     {
       buenas++;
+      this.p1 = false;
     }
     else
     {
+      this.p1 = true;
       errores = "1, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 2
     if(this.pregunta2 == "am")
     {
+      this.p2 = false;
       buenas++;
     }
     else
     {
+      this.p2 = true;
       errores = errores + "2, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 3
     if(this.pregunta3 == "are")
     {
+      this.p3 = false;
       buenas++;
     }
     else
     {
+      this.p3 = true;
       errores = errores + "3, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 4
     if(this.pregunta4 == "is")
     {
+      this.p4 = false;
       buenas++;
     }
     else
     {
+      this.p4 = true;
       errores = errores + "4, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 5
     if(this.pregunta5 == "are")
     {
+      this.p5 = false;
       buenas++;
     }
     else
     {
+      this.p5 = true;
       errores = errores + "5, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 6
     if(this.pregunta6 == "are")
     {
+      this.p6 = false;
       buenas++;
     }
     else
     {
+      this.p6 = true;
       errores = errores + "6, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
     if(this.pregunta7 == "am")
     {
+      this.p7 = false;
       buenas++;
     }
     else
     {
+      this.p7 = true;
       errores = errores + "7, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 8
     if(this.pregunta8 == "is")
     {
+      this.p8 = false;
       buenas++;
     }
     else
     {
+      this.p8 = true;
       errores = errores + "8, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 9
     if(this.pregunta9 == "are")
     {
+      this.p9 = false;
       buenas++;
     }
     else
     {
+      this.p9 = true;
       errores = errores + "9, ";
     }
-
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 10
     if(this.pregunta10 == "are")
     {
+      this.p10 = false;
       buenas++;
     }
     else
     {
+      this.p10 = true;
       errores = errores + "10";
     }
+
     if(buenas == 10)
     {
       this.toastr.success('You are progressing very well', 'Very well!',
       {
         positionClass: 'toast-bottom-right',
       });
+      this.submitted = false
       // console.log(this._userService.USER);
       this.puntaje = 5;
       this._nivelesService.accesoDatos(this._userService.USER);
@@ -243,6 +262,7 @@ export class N1Punto2Component implements OnInit
   // Checa las respuestas del primer ejercicio, de ser correctas se mostrará el ejercicio 2
   checkResp2()
   {
+    this.submitted = true;
     let buenas = 0, errores = "", errores2 = "";
     this.pregunta1 = this.ejercicio2.value.pregunta1P2;
     this.pregunta2 = this.ejercicio2.value.pregunta2P2;

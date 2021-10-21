@@ -170,6 +170,7 @@
                                         <option value="are">are</option>
                                     </select>
                                         my new friend.</p>
+                                        <span *ngIf="submitted && p1" class="badge bg-danger">Wrong answer!</span>
                                 </div>
 
                                 <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
@@ -182,7 +183,9 @@
                                         <option value="are">are</option>
                                     </select> 
                                     a very good driver.</p>
+                                    <span *ngIf="submitted && p2" class="badge bg-danger">Respuesta incorrecta</span>
                                 </div>
+                                
                                 <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
                                 <div class="mb-4">
                                     <p id="fs-p"><b>3. </b>My neighbours 
@@ -193,6 +196,7 @@
                                         <option value="are">are</option>
                                     </select> 
                                     very noisy.</p>
+                                    <span *ngIf="submitted && p3" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                                 <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
@@ -204,6 +208,7 @@
                                         <option value="are">are</option>
                                     </select> 
                                     in the garden.</p>
+                                    <span *ngIf="submitted && p4" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                                 <!-- ~ ~ ~ ~ Quinta pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
@@ -215,6 +220,7 @@
                                         <option value="are">are</option>
                                     </select> 
                                     my parents.</p>
+                                    <span *ngIf="submitted && p5" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                             </div>
                             <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
@@ -228,6 +234,7 @@
                                         <option value="are">are</option>
                                     </select> 
                                         my best friends.</p>
+                                        <span *ngIf="submitted && p6" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                                 <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
@@ -239,6 +246,7 @@
                                         <option value="are">are</option>
                                     </select> 
                                     sure.</p>
+                                    <span *ngIf="submitted && p7" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                                 <!-- ~ ~ ~ ~ Octava pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
@@ -250,7 +258,10 @@
                                         <option value="are">are</option>
                                     </select> 
                                     at home.</p>
+                                    <span *ngIf="submitted && p8" class="badge bg-danger">Wrong answer!</span>
                                 </div>
+
+                                <!-- ~ ~ ~ ~ Novena pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
                                     <p id="fs-p"><b>9. </b>We 
                                     <select formControlName="pregunta9P1">
@@ -260,6 +271,7 @@
                                         <option value="are">are</option>
                                     </select>     
                                     from Spain.</p>
+                                    <span *ngIf="submitted && p9" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                                 <!-- ~ ~ ~ ~ Décima pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
@@ -271,6 +283,7 @@
                                         <option value="are">are</option>
                                     </select>    
                                     actors.</p>
+                                    <span *ngIf="submitted && p10" class="badge bg-danger">Wrong answer!</span>
                                 </div>
                             </div>
                         </div>
@@ -301,6 +314,7 @@
                     <form [formGroup]="ejercicio2">
                         <p>
                             <b>1. </b>Hello, my name <input type="text" class="txtField" formControlName="pregunta1P2" style="text-transform:lowercase;" maxlength="3"> Kim. I <input type="text" class="txtField" formControlName="pregunta2P2"style="text-transform:lowercase;" maxlength="3"> twelve years old and I <input type="text" class="txtField" formControlName="pregunta3P2" style="text-transform:lowercase;" maxlength="3"> from China.
+                            <span *ngIf="submitted && p1" class="badge bg-danger">Wrong answer!</span> <span *ngIf="submitted && p2" class="badge bg-danger">Wrong answer!</span> <span *ngIf="submitted && p3" class="badge bg-danger">Wrong answer!</span>
                             I <input type="text" class="txtField" formControlName="pregunta4P2" style="text-transform:lowercase;" maxlength="3"> a student at Centennial Secondary School. My favorite subjects <input type="text" class="txtField" formControlName="pregunta5P2" style="text-transform:lowercase;" maxlength="3"> Maths and Art.
                             My favorite sport <input type="text" class="txtField" formControlName="pregunta6P2" style="text-transform:lowercase;" maxlength="3"> baseball and my favorite colors <input type="text" class="txtField" formControlName="pregunta7P2" style="text-transform:lowercase;" maxlength="3"> blue and purple. 
                             May and Joe <input type="text" class="txtField" formControlName="pregunta8P2" style="text-transform:lowercase;" maxlength="3"> my best friends. They <input type="text" class="txtField" formControlName="pregunta9P2" style="text-transform:lowercase;" maxlength="3"> great.
