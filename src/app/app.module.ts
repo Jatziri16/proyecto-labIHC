@@ -33,6 +33,11 @@ import { N1Punto3Component } from './Components/n1-punto3/n1-punto3.component';
 
 //COOKIES
 import { CookieService } from 'ngx-cookie-service';
+import { N1Punto4Component } from './Components/n1-punto4/n1-punto4.component';
+import { N1Punto5Component } from './Components/n1-punto5/n1-punto5.component';
+import { N1Punto6Component } from './Components/n1-punto6/n1-punto6.component';
+import { N1Punto7Component } from './Components/n1-punto7/n1-punto7.component';
+import { N1Punto8Component } from './Components/n1-punto8/n1-punto8.component';
 
 //Rutas en el navegador para cada componente
 const appRoutes: Routes = [
@@ -63,7 +68,12 @@ const appRoutes: Routes = [
     Nivel3Component,
     N1Punto2Component,
     N1Punto3Component,
-    N1Punto1Component
+    N1Punto1Component,
+    N1Punto4Component,
+    N1Punto5Component,
+    N1Punto6Component,
+    N1Punto7Component,
+    N1Punto8Component
   ],
   imports: [
     BrowserModule,
