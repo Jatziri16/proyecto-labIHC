@@ -52,6 +52,11 @@ const appRoutes: Routes = [
   {path: 'L1P1', component: N1Punto1Component},
   {path: 'L1P2', component: N1Punto2Component},
   {path: 'L1P3', component: N1Punto3Component},
+  {path: 'L1P4', component: N1Punto4Component},
+  {path: 'L1P5', component: N1Punto5Component},
+  {path: 'L1P6', component: N1Punto6Component},
+  {path: 'L1P7', component: N1Punto7Component},
+  {path: 'L1P8', component: N1Punto8Component},
   {path:'**', redirectTo: 'login', pathMatch: 'full'} //Si se ingresa un complemento de liga esta redirecciona a la indicada
 ];
 
