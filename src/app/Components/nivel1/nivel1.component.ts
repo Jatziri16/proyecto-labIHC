@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CookiesServicesService } from 'src/app/Services/cookies-services.service';
 import { NivelesService } from 'src/app/Services/niveles.service';
@@ -13,18 +14,20 @@ export class Nivel1Component implements OnInit
 {
   usuarioFirebase: any;
   puntajeTotal: number = 0;
+  primeraVez = true;
   constructor(private _userService: UsuarioService,
               private _nivelesService: NivelesService,
               private toastr: ToastrService,
-              private _cookiesService: CookiesServicesService) 
+              private _cookiesService: CookiesServicesService,
+              private router: Router,) 
   { 
     // 
   }
 
   ngOnInit(): void 
   {
+    this.renovToken(); 
     this.habilitarTemas();
-    this.renovToken();  
   }
 
   renovToken()
@@ -36,14 +39,14 @@ export class Nivel1Component implements OnInit
   {
     this._userService.USER;
     this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
+    {
+      if(snapshot.empty) 
       {
-        if(snapshot.empty) 
-        {
-          this.toastr.error('No se encontro registro, vuelva a iniciar sesión.', 'Error');
-          return;
-        }
-        this.getPuntaje(snapshot.docs);
-      })
+        this.toastr.error('No se encontro registro, vuelva a iniciar sesión.', 'Error');
+        return;
+      }
+      this.getPuntaje(snapshot.docs);
+    })
   }
 
   getPuntaje(data: any)

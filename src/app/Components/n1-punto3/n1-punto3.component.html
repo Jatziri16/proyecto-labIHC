@@ -180,8 +180,8 @@
                             <div class="col-4">
                                 <!-- ~ ~ ~ ~ Sexta pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p>
-                                        <b id="fs-p">6. </b>Carol's father work as 
+                                    <p id="fs-p">
+                                        <b>6. </b>Carol's father work as 
                                         <span *ngIf="p6" class="wrong badge bg-danger">.</span>
                                         <select formControlName="pregunta6">
                                             <option selected> </option>
@@ -195,8 +195,8 @@
                                 </div>
                                 <!-- ~ ~ ~ ~ Séptima pregunta  ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                    <p>
-                                        <b id="fs-p">7. </b>The tomatoes are 99 pence  
+                                    <p id="fs-p">
+                                        <b>7. </b>The tomatoes are 99 pence  
                                         <span *ngIf="p7" class="wrong badge bg-danger">.</span>
                                         <select formControlName="pregunta7">
                                             <option selected> </option>
@@ -434,9 +434,17 @@
 
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-8 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                                <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                            <div *ngIf="!bloqueo">
+                                <div class="col-8 text-center">
+                                    <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                                    <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                                </div>
+                            </div>
+                            <div *ngIf="bloqueo">
+                                <div class="col-8 text-center">
+                                    <button type="button" class="btn" id="back" disabled>Cancelar</button>&nbsp;&nbsp; 
+                                    <button type="button" class="btn" id="next" disabled>Continuar</button> 
+                                </div>
                             </div>
                         </div>
                     </form>

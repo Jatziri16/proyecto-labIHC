@@ -20,6 +20,7 @@ export class N1Punto3Component implements OnInit
   showTeoria: boolean = true;
   showEx1: boolean = false;
   showEx2: boolean = false;
+  bloqueo = false;
 
   pregunta1!: string; pregunta2!: string; pregunta3!: string;
   pregunta4!: string; pregunta5!: string; pregunta6!: string; 
@@ -87,17 +88,6 @@ export class N1Punto3Component implements OnInit
   checkResp1()
   {
     let errores = "", buenas = 0;
-    // this.pregunta1 = this.ejercicio1.value.pregunta1;
-    // this.pregunta1_1 = this.ejercicio1.value.pregunta1_1;
-    // this.pregunta2 = this.ejercicio1.value.pregunta2;
-    // this.pregunta3 = this.ejercicio1.value.pregunta3;
-    // this.pregunta4 = this.ejercicio1.value.pregunta4;
-    // this.pregunta5 = this.ejercicio1.value.pregunta5;
-    // this.pregunta6 = this.ejercicio1.value.pregunta6;
-    // this.pregunta7 = this.ejercicio1.value.pregunta7;
-    // this.pregunta8 = this.ejercicio1.value.pregunta8;
-    // this.pregunta9 = this.ejercicio1.value.pregunta9;
-    // this.pregunta10 = this.ejercicio1.value.pregunta10;
 
     // SE CHECA LA RESPUESTA DE LA PREGUNTA 1
     if(this.ejercicio1.value.pregunta1 == "the")
@@ -436,13 +426,25 @@ export class N1Punto3Component implements OnInit
           {
             positionClass: 'toast-bottom-right',
           });
+
+          /* Se espera 1 segundo antes de dirigirse al menu del nivel, para dar tiempo
+            de que se realice la actualizacion de los puntos correctamente. */
+          this.bloqueo = true;
+          console.log("Espera 1 segundo");
+          setTimeout(()=>{    
+            console.log("Listo: Ruta al menu del nivel 1")
+            this.bloqueo = false;
+            this.router.navigate(['/level1']);      
+          }, 1000); // 180000 milisegundos = 3min
         }
       }
-      if(this.puntaje==20)
+      else
       {
-        this.router.navigate(['/level1']);
+        if(this.puntaje==20)
+        {
+          this.router.navigate(['/level1']);
+        }
       }
-      
     });
   }
 }

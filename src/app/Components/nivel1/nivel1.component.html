@@ -84,16 +84,16 @@
                                         <td>
                                             <!-- Por el momento esta parte no se activará ya que no está lista por ahora -->
                                             
-                                            <!-- <div *ngIf="puntajeTotal >= 20; else desactivar4">
+                                            <div *ngIf="puntajeTotal >= 20; else desactivar4">
                                                 <button type="button" class="btn btn4">4</button>&nbsp;
-                                            <a routerLink="/#">Articles</a>
+                                                <a routerLink="/#">Sentences</a>
                                             </div>
-                                            <ng-template #desactivar4> -->
+                                            <ng-template #desactivar4>
                                                 <div class="disabled">
                                                     <button type="button" class="btn btn4" disabled>4</button>&nbsp;
-                                                    <a>Articles</a>
+                                                    <a>Sentences</a>
                                                 </div>
-                                            <!-- </ng-template> -->
+                                            </ng-template>
                                         </td>
                                         <td>
                                             <div *ngIf="puntajeTotal >= 50; else desactivar8">

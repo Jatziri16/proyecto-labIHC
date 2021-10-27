@@ -23,6 +23,7 @@ export class N1Punto2Component implements OnInit
   showEx2: boolean = false;
   puntaje: number = 0;
   submitted = false;
+  bloqueo = false;
 
   p1!: boolean; p2!: boolean; p3!: boolean; p4!: boolean;
   p8!: boolean; p7!: boolean; p6!: boolean; p5!: boolean;
@@ -482,23 +483,19 @@ export class N1Punto2Component implements OnInit
     if(buenas == 24)
     {
       this.toastr.success('You are progressing very well', 'Very well!',
-        {
-          positionClass: 'toast-bottom-right',
-        });
+      {
+        positionClass: 'toast-bottom-right',
+      });
       this.puntaje = 10;
       this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
+      {
+        if(snapshot.empty) 
         {
-          if(snapshot.empty) 
-          {
-            this.toastr.error('No se encontro registro', 'Error');
-            return;
-          }
-          this.getID(snapshot.docs);
-        })
-        // this.toastr.success('You are progressing very well', 'Very well!',
-        // {
-        //   positionClass: 'toast-bottom-right',
-        // });
+          this.toastr.error('No se encontro registro', 'Error');
+          return;
+        }
+        this.getID(snapshot.docs);
+      })
 
       this.submitted = false;
       // this.router.navigate(['/level1']);
@@ -530,14 +527,25 @@ export class N1Punto2Component implements OnInit
           {
             positionClass: 'toast-bottom-right',
           });
+          
+          /* Se espera 1 segundo antes de dirigirse al menu del nivel, para dar tiempo
+            de que se realice la actualizacion de los puntos correctamente. */
+          this.bloqueo = true;
+          console.log("Espera 1 segundo");
+          setTimeout(()=>{    
+            console.log("Listo: Ruta al menu del nivel 1")
+            this.bloqueo = false;
+            this.router.navigate(['/level1']);      
+          }, 1000); 
         }
       }
-      if(this.puntaje==10)
+      else
       {
-        this.router.navigate(['/level1']);
+        if(this.puntaje==10)
+        {
+          this.router.navigate(['/level1']);
+        }
       }
-      
     });
   }
-
 }

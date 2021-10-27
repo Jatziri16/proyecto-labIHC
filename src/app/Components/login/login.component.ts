@@ -79,7 +79,7 @@ export class LoginComponent implements OnInit
       if(info.Contrasenia == this.datosLogin.value.Password)
       {
         // Se genera la cookie
-        this._cookiesService.setToken(this._cookiesService.getRandomToken(16), this._cookiesService.nuevaExpiracion(5));
+        this._cookiesService.setToken(this._cookiesService.getRandomToken(16), this._cookiesService.nuevaExpiracion(10));
         this.toastr.success('Acceso concedido.', 'Éxito!');
         this.loading = false;
         this.bloqueo = false;
@@ -87,7 +87,6 @@ export class LoginComponent implements OnInit
       }
       else
       {
-        // console.log('Acceso rechazado');
         this.toastr.warning('Acceso Rechazado.', 'Error!');
         this.loading = false;
         this.bloqueo = false;
@@ -101,9 +100,8 @@ export class LoginComponent implements OnInit
 
           setTimeout(()=>{            
             this.bloqueo = false;
-            // console.log("Listo, puedes seguir jeje")
             this.toastr.info('Listo, puede continuar.', 'Info!');
-          }, 3000); // 180000 milisegundos = 3min
+          }, 180000); // 180000 milisegundos = 3min
           this.intentos = 0;
         }
       }
