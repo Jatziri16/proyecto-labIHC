@@ -1,0 +1,37 @@
+#fondo
+{
+    background-image: url("../../../assets/Imagenes/N1P4-BG.png");
+    background-size: cover;
+    background-attachment: fixed;
+    /* background-position: center;
+    background-repeat: no-repeat; */
+}
+h1,h2
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1
+{
+    text-align: center;
+    font-size: 200%;
+}
+h2
+{
+    text-align: center;
+    font-size: 155%;
+}
+h3
+{
+    font-size: 120%
+}
+select{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    margin-top: 4px;
+}
+button{
+    margin-left: 40px;
+}
+#fs-p{font-size: 120%;}
+
