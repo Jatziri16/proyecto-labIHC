@@ -65,6 +65,8 @@ export class N1Punto4Component implements OnInit
 
   checkResp1()
   {
+    this.errores = "";
+    this.errores1 = "";
     this.submitted = true;
     let buenas = 0;
     // SE CHECAN LAS RESPUESTAS DE AMBOS TEXTOS
@@ -221,7 +223,7 @@ export class N1Punto4Component implements OnInit
         positionClass: 'toast-bottom-right',
       });
       // ************** CHECAR EL PUNTAJE ************** @Jatziri16
-      this.puntaje = 5;
+      this.puntaje = 30;
       // ***********************************************
       this._nivelesService.accesoDatos(this._userService.USER);
       this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
@@ -242,10 +244,10 @@ export class N1Punto4Component implements OnInit
     data.forEach((doc: { data: () => any; }) =>
     {
       let info = doc.data();
-      if(info.Puntaje<10)
+      if(info.Puntaje<30)
       {
         this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
-        if(this.puntaje==10)
+        if(this.puntaje==30)
         {
           this.toastr.info('Now the next level is available!', 'Excelent!!',
           {
@@ -265,7 +267,7 @@ export class N1Punto4Component implements OnInit
       }
       else
       {
-        if(this.puntaje==10)
+        if(this.puntaje==30)
         {
           this.router.navigate(['/level1']);
         }

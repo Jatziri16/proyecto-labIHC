@@ -1,0 +1,28 @@
+#fondo
+{
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)) ,url(../../../assets/Imagenes/VocabularyBG.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+h5
+{
+    font-size: 125%;
+}
+ul
+{
+    text-align: left;
+}
+#next
+{
+    background-color: rgb(63, 155, 101);
+}
+#back
+{
+    background-color: rgb(177, 114, 55);
+}
+#title
+{
+    background-color: aliceblue;
+}

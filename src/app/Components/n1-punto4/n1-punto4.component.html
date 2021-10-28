@@ -1,7 +1,7 @@
 <!-- 
     @Jatziri16 Checa los divs porque le moví para acomodarlo dentro de un form y no se 
     porque no se acomoda como antes jaja una disculpa :c
- -->
+-->
 
 <div id="fondo" (click)="renovToken()"> 
     <!-- Componente que pertenece al punto 4 del nivel 1 "oraciones" -->
@@ -25,94 +25,95 @@
                     
                     <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
                         <!-- * * * * * * * * E J E R C I C I O S - PRIMERA PARTE * * * * * * * * * * -->
-                        <div class="col-4"> 
-
-                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
-                            <div class="mb-4">
-                                <p id="fs-p">
-                                    <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span>
-                                    <b>1. </b>What time do you 
-                                    <select formControlName="pregunta1P1">
-                                        <option selected> </option>
-                                        <option value="going">going</option>
-                                        <option value="goes">goes</option>
-                                        <option value="go">go</option> <!--Correct answer-->
-                                    </select>
-                                    to work?
-                                </p>
-                            </div>
-
-                            <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
-                            <div class="mb-4">
-                                <p id="fs-p">
-                                    <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span>
-                                    <b>2. </b>I want to  
-                                    <select formControlName="pregunta2P1">
-                                        <option selected> </option>
-                                        <option value="visiting">visiting</option>
-                                        <option value="visit">visit</option> <!--Correct answer-->
-                                        <option value="visits">visits</option>
-                                    </select>
-                                    a new part of the world.
-                                </p>
-                            </div>
-                                
-                            <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
-                            <div class="mb-4">
-                                <p id="fs-p">
-                                    <span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span>
-                                    <b>3. </b>Tom 
-                                    <select formControlName="pregunta3P1">
-                                        <option selected> </option>
-                                        <option value="want">want</option> 
-                                        <option value="wants">wants</option> <!--Correct answer-->
-                                        <option value="wanting">wanting</option>
-                                    </select>
-                                    to call Anna.
-                                </p>
-                            </div>
+                        <div class="row justify-content-center">
                             <div class="col-5">
-                            <!-- ~ ~ ~ ~ Cuarta pregunta ~ ~ ~ ~ -->
-                            <div class="mb-4">
-                                <p id="fs-p">
-                                    <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span>
-                                    <b>4. </b>The government 
-                                    <select formControlName="pregunta4P1">
-                                        <option selected> </option>
-                                        <option value="knowing">knowing</option> 
-                                        <option value="knows">knows</option> <!--Correct answer-->
-                                        <option value="know">know</option>
-                                    </select>
-                                    a lot about this people.
-                                </p>
+                                <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span>
+                                        <b>1. </b>What time do you 
+                                        <select formControlName="pregunta1P1">
+                                            <option selected> </option>
+                                            <option value="going">going</option>
+                                            <option value="goes">goes</option>
+                                            <option value="go">go</option> <!--Correct answer-->
+                                        </select>
+                                        to work?
+                                    </p>
+                                </div>
+    
+                                <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span>
+                                        <b>2. </b>I want to  
+                                        <select formControlName="pregunta2P1">
+                                            <option selected> </option>
+                                            <option value="visiting">visiting</option>
+                                            <option value="visit">visit</option> <!--Correct answer-->
+                                            <option value="visits">visits</option>
+                                        </select>
+                                        a new part of the world.
+                                    </p>
+                                </div>
+                                    
+                                <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span>
+                                        <b>3. </b>Tom 
+                                        <select formControlName="pregunta3P1">
+                                            <option selected> </option>
+                                            <option value="want">want</option> 
+                                            <option value="wants">wants</option> <!--Correct answer-->
+                                            <option value="wanting">wanting</option>
+                                        </select>
+                                        to call Anna.
+                                    </p>
+                                </div>
                             </div>
+                            <div class="col-6">
+                                <!-- ~ ~ ~ ~ Cuarta pregunta ~ ~ ~ ~ -->
+                                <div class="mb-4">
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span>
+                                        <b>4. </b>The government 
+                                        <select formControlName="pregunta4P1">
+                                            <option selected> </option>
+                                            <option value="knowing">knowing</option> 
+                                            <option value="knows">knows</option> <!--Correct answer-->
+                                            <option value="know">know</option>
+                                        </select>
+                                        a lot about this people.
+                                    </p>
+                                </div>
                                 <!-- ~ ~ ~ ~ Quinta pregunta ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                <p id="fs-p">
-                                    <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>
-                                    <b>5. </b>Allie
-                                    <select formControlName="pregunta5P1">
-                                        <option selected> </option>
-                                        <option value="wanting">wanting</option>
-                                        <option value="wants">wants</option> <!--Correct answer-->
-                                        <option value="want">want</option> 
-                                    </select>
-                                    to try football.
-                                </p>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>
+                                        <b>5. </b>Allie
+                                        <select formControlName="pregunta5P1">
+                                            <option selected> </option>
+                                            <option value="wanting">wanting</option>
+                                            <option value="wants">wants</option> <!--Correct answer-->
+                                            <option value="want">want</option> 
+                                        </select>
+                                        to try football.
+                                    </p>
                                 </div>
                                 <!-- ~ ~ ~ ~ Sexta pregunta ~ ~ ~ ~ -->
                                 <div class="mb-4">
-                                <p id="fs-p">
-                                    <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>
-                                    <b>6. </b>I
-                                    <select formControlName="pregunta6P1">
-                                        <option selected> </option>
-                                        <option value="work">work</option> <!--Correct answer-->
-                                        <option value="works">works</option> 
-                                        <option value="working">working</option> 
-                                    </select>
-                                    with a small group of people.
-                                </p>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>
+                                        <b>6. </b>I
+                                        <select formControlName="pregunta6P1">
+                                            <option selected> </option>
+                                            <option value="work">work</option> <!--Correct answer-->
+                                            <option value="works">works</option> 
+                                            <option value="working">working</option> 
+                                        </select>
+                                        with a small group of people.
+                                    </p>
                                 </div>
                             </div>
                         </div>

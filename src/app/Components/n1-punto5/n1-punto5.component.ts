@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CookiesServicesService } from 'src/app/Services/cookies-services.service';
 
 @Component({
   selector: 'app-n1-punto5',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class N1Punto5Component implements OnInit {
 
-  constructor() { }
+  constructor(private _cookiesService: CookiesServicesService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.renovToken();
+  }
+
+  renovToken()
+  {
+    this._cookiesService.checkToken();
   }
 
 }
