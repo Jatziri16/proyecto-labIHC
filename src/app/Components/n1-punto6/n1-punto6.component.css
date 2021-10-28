@@ -5,7 +5,7 @@
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    padding: 20px;
+    /*padding: 20px;*/
 }
 .dosimg img
 {
@@ -23,7 +23,11 @@ img
     margin-top: 3%;
 }
 /*#fs-p{font-size: 120%;}*/
-
+.txtField
+{
+    width: 80px;
+    margin-top: 5px;
+}
 h1,h2,h3
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
