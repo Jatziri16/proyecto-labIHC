@@ -1,0 +1,57 @@
+#fondo
+{
+    
+    background-color: rgba(43, 174, 226, 0.274);
+    /*background-image: url(./Imagenes/N1P6-bg.jpg);*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1
+{
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.wordbank
+{
+    width: 70%;
+    height: 20%;
+    padding: 2%;
+    margin: 2% 10%;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    flex-direction: center;
+    text-align: center;
+    
+}
+.word
+{
+    float:left;
+    justify-content: center;
+    align-items:baseline;
+    flex-direction: center;
+    text-align: center;
+    width: 25%;
+    height: 60%;
+    padding: 2%;
+    margin: 3% 1.6%;
+    border: 1.5px dashed #111;
+    background-color: rgb(216, 216, 216);
+}
+.caja{
+    margin: 2%;
+    float:left;
+    width: 20.5%;
+    padding: 4%;
+    text-align: center;
+    background-color: rgba(174, 98, 224, 0.616);
+    border: 1px solid #111;
+}
+.caja h3{
+    font-size: 110%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: normal;
+}
