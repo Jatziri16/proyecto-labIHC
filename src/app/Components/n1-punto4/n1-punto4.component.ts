@@ -65,6 +65,8 @@ export class N1Punto4Component implements OnInit
 
   checkResp1()
   {
+    this.errores = "";
+    this.errores1 = "";
     this.submitted = true;
     let buenas = 0;
     // SE CHECAN LAS RESPUESTAS DE AMBOS TEXTOS
