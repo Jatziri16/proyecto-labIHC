@@ -33,5 +33,12 @@ select{
 button{
     margin-left: 40px;
 }
+.wrong
+{
+    font-size: 65%;
+    border-radius: 50%;
+    color: red;
+    margin-right: 3px;
+}
 #fs-p{font-size: 120%;}
 
