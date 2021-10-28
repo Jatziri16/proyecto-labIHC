@@ -1,5 +1,5 @@
-<!-- <div (click)="renovToken()"> -->
-    <!-- Componente que pertenece al punto 5 del nivel 1 "Vocabulary" -->
+<div id="fondo" (click)="renovToken()">
+    <!-- Componente que pertenece al punto 1 del nivel 1 "VOCABULARY" -->
     <header>
         <div class="container">
             <div>
@@ -11,57 +11,143 @@
     <!-- AQUI VA EL CUERPO -->
     <br>
     <main>
-        <!-- * * * * * * * * T E O R I A * * * * * * * * * * -->
-        <!--<div *ngIf="showTeoria">--> <!--Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio-->
-            <div class="container">
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div class="col-8">
-                            
-                            <!-- TEXTO -->
+        <!-- * * * * * * * * V O C A B U L A R Y * * * * * * * * * * -->
+        <div class="container">
+            <div class="card-body">
+                <div class="row justify-content-center">
 
+                    <div class="text-center pt-3 mb-3" id="title">
+                        <h1><b>VOCABULARY 2</b></h1>
+                    </div>
+                    
+                    <!-- * * * * * * Primera fila * * * * * *  -->
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Person</h5>
+                            <img src="../../../assets/Imagenes/N1P5-person.png" class="img-fluid" style="height: 40%; width: 100%;">
+                            <p class="card-text mt-2">A man, woman, or child.</p>
+                            <ul>
+                                <li>She is a very nice person.</li>
+                                <li>You are the only person I like here.</li>
+                                <li>Rooms cost 70 pounds per person.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">People</h5>
+                            <img src="../../../assets/Imagenes/N1P5-people.png" class="img-fluid" style="height: 30%; width: 80%;">
+                            <p class="card-text mt-2">Used to refer to everyone, or informally to the group that you are speaking to.</p>
+                            <ul>
+                                <li>How many people live in England.</li>
+                                <li>You can meetamazing people at that festival.</li>
+                                <li>Thousans of people marched in protest.</li>
+                                <li>Many people arrived before 8 PM.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Group</h5>
+                            <img src="../../../assets/Imagenes/N1P5-group.png" class="img-fluid" style="height: 35%; width: 90%;">
+                            <p class="card-text mt-2">A number of people or things that are put together or considered as a unit.</p>
+                            <ul>
+                                <li>My group is called 'the Fire'.</li>
+                                <li>She is the best student in the group.</li>
+                                <li>Each group should consist of 10 people.</li>
+                                <li>He is a member of a political group.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- * * * * * * Segunda fila * * * * * *  -->
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Part</h5>
+                            <img src="../../../assets/Imagenes/N1P5-part.png" class="img-fluid mb-2 mt-2" style="height: 30%; width: 60%;">
+                            <p class="card-text mt-2">Some but not all of a thing.</p>
+                            <ul>
+                                <li>The top part of the shoe is made of leather.</li>
+                                <li>You're parte of the family.</li>
+                                <li>Travelling is a part of my job.</li>
+                                <li>When one part of your car breaks down ypu should see a mechanic.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">City</h5>
+                            <img src="../../../assets/Imagenes/N1P1-city.png" class="img-fluid" style="height: 40%; width: 80%;">
+                            <p class="card-text mt-2">Is an area in which a large number of people live fairly close together.</p>
+                            <ul>
+                                <li>David is a city located in the west of Panama.</li>
+                                <li>The city was invaded and destroyed by pirates in 1642.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">T-shirt</h5>
+                            <img src="../../../assets/Imagenes/N1P1-playera.png" class="img-fluid" style="height: 35%; width: 70%;">
+                            <p class="card-text mt-2">A simple piece of clothing, usually with short sleeves and no collar, that covers the top part of the body.</p>
+                            <ul>
+                                <li>She was wearing jeans and a T-shirt.</li>
+                                <li>I was wearing a T-shirt under my jumper.</li>
+                            </ul>
                         </div>
                     </div>
                     
-                    <!-- Botones -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="#">Regresar </button>&nbsp;&nbsp; 
-                            <button type="button" class="btn" id="next">Continuar</button> 
-                        </div>
-                    </div>  
-                    <br>
-                </div>
-            </div>
-        <!-- </div> -->
-
-        <!-- * * * * * * * * E J E R C I C I O S * * * * * * * * * * -->
-        <!-- <div *ngIf="---"> --> <!-- Validación para que muestre los ejercicios -->
-            <div class="container">
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div class="col-8">
-                            
-                            <!-- TEXTO -->
-
+                    <!-- * * * * * * Tercera fila * * * * * *  -->
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Headache</h5>
+                            <img src="../../../assets/Imagenes/N1P1-head.png" class="img-fluid" style="height: 45%; width: 90%;">
+                            <p class="card-text mt-2">A pain you feel inside your head.</p>
+                            <ul>
+                                <li>It's an extremely effective cure for a headache.</li>
+                                <li>I had a terrible headache, but even so I went to the concert.</li>
+                            </ul>
                         </div>
                     </div>
-                    
-                    <!-- Botones -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="#">Regresar </button>&nbsp;&nbsp; 
-                            <button type="button" class="btn" id="next">Continuar</button> 
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Find</h5>
+                            <img src="../../../assets/Imagenes/N1P1-find.png" class="img-fluid" style="height: 40%; width: 80%;">
+                            <p class="card-text mt-2">To discover.</p>
+                            <ul>
+                                <li>I can't find my keys.</li>
+                                <li>I couldn't find Andrew's phone number.</li>
+                                <li>I want to find the answers to all these questions.</li>
+                            </ul>
                         </div>
-                    </div>  
-                    <br>
+                    </div>
+                    <div class="card text-center m-lg-4 mb-2" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Neighbour</h5>
+                            <img src="../../../assets/Imagenes/N1P1-vecino.png" class="img-fluid" style="height: 45%; width: 90%;">
+                            <p class="card-text mt-2">Someone who lives very close to you.</p>
+                            <ul>
+                                <li>I've asked my neighbour to water the plants while I'm away.</li>
+                                <li>Have you met Pat, my next-door neighbour?</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                
+                <!-- Botones -->
+                <div class="row justify-content-center">
+                    <div class="col-3 text-center">
+                        <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
+                        <button type="button" class="btn" id="next" routerLink="/L1P2">Continuar</button> <!--  Va a la función para validar que se debe de mostrar el primer ejercicio-->
+                    </div>
+                </div>  
+                <br>
             </div>
-        <!-- </div> -->
-
+        </div>
+        
         <!-- PIE DE LA PÁGINA -->
         <footer>
             <!--  -->
         </footer>
     </main>
-<!-- </div> -->
+</div>
