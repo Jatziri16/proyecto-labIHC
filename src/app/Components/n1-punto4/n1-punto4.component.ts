@@ -23,7 +23,6 @@ export class N1Punto4Component implements OnInit
   p7!: boolean; p8!: boolean; p9!: boolean;
   p10!: boolean;
   ejercicio1: FormGroup;
-  ejercicio2: FormGroup;
   pasar = 0;
   submitted = false;
   bloqueo = false;
@@ -46,10 +45,6 @@ export class N1Punto4Component implements OnInit
       pregunta2P2: ['', Validators.required],
       pregunta3P2: ['', Validators.required],
       pregunta4P2: ['', Validators.required],
-    });
-
-    this.ejercicio2 = this.fb.group({
-      
     });
   }
 
@@ -222,9 +217,7 @@ export class N1Punto4Component implements OnInit
       {
         positionClass: 'toast-bottom-right',
       });
-      // ************** CHECAR EL PUNTAJE ************** @Jatziri16
       this.puntaje = 30;
-      // ***********************************************
       this._nivelesService.accesoDatos(this._userService.USER);
       this.usuarioFirebase = this._nivelesService.accesoDatos(this._userService.USER).then(snapshot =>
       {
@@ -238,7 +231,6 @@ export class N1Punto4Component implements OnInit
       this.submitted = false
   }
 
-  // **************** CEHACAR LO DEL PUNTAJE *************** @Jatziri16
   getID(data: any)
   {
     data.forEach((doc: { data: () => any; }) =>
