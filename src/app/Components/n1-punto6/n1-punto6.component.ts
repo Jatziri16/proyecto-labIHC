@@ -54,7 +54,7 @@ export class N1Punto6Component implements OnInit
 
   ngOnInit(): void 
   {
-    // 
+    this.renovToken();
   }
 
   renovToken()
