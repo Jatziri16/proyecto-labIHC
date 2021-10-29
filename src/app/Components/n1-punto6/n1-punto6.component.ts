@@ -71,6 +71,7 @@ export class N1Punto6Component implements OnInit
   checkResp1()
   {
     let errores = "", buenas = 0;
+    this.submitted = true;
     if(this.ejercicio1.value.pregunta1 == "doctors")
     {
       this.p1 = false;
