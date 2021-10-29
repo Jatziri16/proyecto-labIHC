@@ -79,32 +79,130 @@
                                         <h2>A lot of</h2>
                                     </div>
                                 </div>
+                               <!-- primera pregunta  -->
                                 <div class="caja">
-                                    <h3>1. There isn't //much//coffee</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span>
+                                        <b>1. </b>There isn't 
+                                        <select formControlName="pregunta1P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option><!--respuesta -->
+                                            <option value="is">many</option>
+                                            <option value="are">a lot of</option>
+                                        </select>    
+                                        coffee.
+                                    </p>
                                 </div>
+                                <!-- segunda pregunta  -->
                                 <div class="caja">
-                                    <h3>2. I love you very //much//.</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span>
+                                        <b>2. </b>I love you very
+                                        <select formControlName="pregunta2P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option><!--respuesta -->
+                                            <option value="is">many</option>
+                                            <option value="are">a lot of</option>
+                                        </select>
+                                    </p>
                                 </div>
+                                <!-- tercera pregunta  -->
                                 <div class="caja">
-                                    <h3>3. There are //a lot of// fish.</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p3 class="wrong badge bg-danger">.</span>
+                                        <b>3. </b>There are
+                                        <select formControlName="pregunta3P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option>
+                                            <option value="is">many</option>
+                                            <option value="are">a lot of</option><!--respuesta -->
+                                        </select>
+                                        fish.
+                                    </p>
                                 </div>
+                                <!-- cuarta pregunta  -->
                                 <div class="caja">
-                                    <h3>4. Don't eat too //many// sweets.</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span>
+                                        <b>4. </b>Don't eat too
+                                        <select formControlName="pregunta4P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option>
+                                             <option value="is">many</option> <!--respuesta -->
+                                            <option value="are">a lot of</option>
+                                        </select>
+                                        sweets.
+                                    </p>
                                 </div>
+                                <!-- quinta pregunta  -->
                                 <div class="caja">
-                                    <h3>5. How //much// is it?</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>
+                                        <b>5. </b>How
+                                        <select formControlName="pregunta5P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option><!--respuesta -->
+                                             <option value="is">many</option> 
+                                            <option value="are">a lot of</option>
+                                        </select>
+                                        is it?
+                                    </p>
                                 </div>
+                                <!-- sexta pregunta  -->
                                 <div class="caja">
-                                    <h3>6. Peter drinks //a lot of// water.</h3> 
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>
+                                        <b>6. </b>Peter drinks
+                                        <select formControlName="pregunta6P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option>
+                                             <option value="is">many</option> 
+                                            <option value="are">a lot of</option><!--respuesta -->
+                                        </select>
+                                        water.
+                                    </p>
                                 </div>
+                                <!-- septima pregunta  -->
                                 <div class="caja">
-                                    <h3>7. We didn't hear //much// noise.</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p7" class="wrong badge bg-danger">.</span>
+                                        <b>7. </b>We didn't hear
+                                        <select formControlName="pregunta7P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option><!--respuesta -->
+                                             <option value="is">many</option> 
+                                            <option value="are">a lot of</option>
+                                        </select>
+                                        noise.
+                                    </p>
                                 </div>
+                                <!-- octava pregunta  -->
                                 <div class="caja">
-                                    <h3>8. There aren't //many// cars.</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span>
+                                        <b>8. </b>There aren't
+                                        <select formControlName="pregunta8P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option>
+                                             <option value="is">many</option> <!--respuesta -->
+                                            <option value="are">a lot of</option>
+                                        </select>
+                                        cars.
+                                    </p>
                                 </div>
+                                <!-- novena pregunta  -->
                                 <div class="caja">
-                                    <h3>9. She has //a lot of// books.</h3>
+                                    <p id="fs-p">
+                                        <span *ngIf="submitted && p9" class="wrong badge bg-danger">.</span>
+                                        <b>9. </b>She has
+                                        <select formControlName="pregunta9P7">
+                                            <option selected> </option>
+                                            <option value="am">much</option>
+                                             <option value="is">many</option> 
+                                            <option value="are">a lot of</option><!--respuesta -->
+                                        </select>
+                                        books.
+                                    </p>
                                 </div>
                             </div>
                         </div>

@@ -8,7 +8,7 @@
     background-size: cover;
     background-attachment: fixed;
 }
-
+#fs-p{font-size: 120%;}
 h1
 {
     font-size: 50px;
@@ -54,4 +54,19 @@ h1
     font-size: 110%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: normal;
+}
+#next
+{
+    background-color: rgb(63, 155, 101);
+}
+#back
+{
+    background-color: rgb(177, 114, 55);
+}
+.wrong
+{
+    font-size: 65%;
+    border-radius: 50%;
+    color: red;
+    margin-right: 3px;
 }
