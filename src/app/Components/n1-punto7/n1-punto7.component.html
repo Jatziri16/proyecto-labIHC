@@ -12,7 +12,7 @@
     <br>
     <main>
         <!-- * * * * * * * * T E O R I A * * * * * * * * * * -->
-        <!--<div *ngIf="showTeoria">--> <!--Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio-->
+        <div *ngIf="showTeoria"> <!--Teoria empieza con el valor de true, por lo que es lo que se muestra al inicio-->
             <div class="container">
                 <div class="card-body">
                     <div class="row justify-content-center">
@@ -59,10 +59,10 @@
                     <br>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
 
         <!-- * * * * * * * * E J E R C I C I O S * * * * * * * * * * -->
-        <div *ngIf="---"> <!-- Validación para que muestre los ejercicios -->
+        <div *ngIf="showEx1"> <!-- Validación para que muestre los ejercicios -->
             <div class="container">
                 <div class="card-body">
                     <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
