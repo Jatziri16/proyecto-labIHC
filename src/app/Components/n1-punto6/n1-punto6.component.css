@@ -53,3 +53,10 @@ td,th
     padding-left: 20px;
     padding-right: 20px
 }
+.wrong
+{
+    font-size: 65%;
+    border-radius: 50%;
+    color: red;
+    margin-right: 3px;
+}
