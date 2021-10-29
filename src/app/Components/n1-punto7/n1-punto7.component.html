@@ -62,9 +62,10 @@
         <!-- </div> -->
 
         <!-- * * * * * * * * E J E R C I C I O S * * * * * * * * * * -->
-        <!-- <div *ngIf="---"> --> <!-- Validación para que muestre los ejercicios -->
-                <div class="container">
-                    <div class="card-body">
+        <div *ngIf="---"> <!-- Validación para que muestre los ejercicios -->
+            <div class="container">
+                <div class="card-body">
+                    <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
                         <div class="row justify-content-center">
                             <div class="col-8">
                                 <p>Instructions: Use the most common words</p>
@@ -79,12 +80,12 @@
                                         <h2>A lot of</h2>
                                     </div>
                                 </div>
-                               <!-- primera pregunta  -->
+                                <!-- primera pregunta  -->
                                 <div class="caja">
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span>
                                         <b>1. </b>There isn't 
-                                        <select formControlName="pregunta1P7">
+                                        <select formControlName="pregunta1">
                                             <option selected> </option>
                                             <option value="am">much</option><!--respuesta -->
                                             <option value="is">many</option>
@@ -98,7 +99,7 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span>
                                         <b>2. </b>I love you very
-                                        <select formControlName="pregunta2P7">
+                                        <select formControlName="pregunta2">
                                             <option selected> </option>
                                             <option value="am">much</option><!--respuesta -->
                                             <option value="is">many</option>
@@ -111,7 +112,7 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p3"  class="wrong badge bg-danger">.</span>
                                         <b>3. </b>There are
-                                        <select formControlName="pregunta3P7">
+                                        <select formControlName="pregunta3">
                                             <option selected> </option>
                                             <option value="am">much</option>
                                             <option value="is">many</option>
@@ -125,10 +126,10 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span>
                                         <b>4. </b>Don't eat too
-                                        <select formControlName="pregunta4P7">
+                                        <select formControlName="pregunta4">
                                             <option selected> </option>
                                             <option value="am">much</option>
-                                             <option value="is">many</option> <!--respuesta -->
+                                                <option value="is">many</option> <!--respuesta -->
                                             <option value="are">a lot of</option>
                                         </select>
                                         sweets.
@@ -139,10 +140,10 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>
                                         <b>5. </b>How
-                                        <select formControlName="pregunta5P7">
+                                        <select formControlName="pregunta5">
                                             <option selected> </option>
                                             <option value="am">much</option><!--respuesta -->
-                                             <option value="is">many</option> 
+                                                <option value="is">many</option> 
                                             <option value="are">a lot of</option>
                                         </select>
                                         is it?
@@ -153,10 +154,10 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>
                                         <b>6. </b>Peter drinks
-                                        <select formControlName="pregunta6P7">
+                                        <select formControlName="pregunta6">
                                             <option selected> </option>
                                             <option value="am">much</option>
-                                             <option value="is">many</option> 
+                                                <option value="is">many</option> 
                                             <option value="are">a lot of</option><!--respuesta -->
                                         </select>
                                         water.
@@ -167,10 +168,10 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p7" class="wrong badge bg-danger">.</span>
                                         <b>7. </b>We didn't hear
-                                        <select formControlName="pregunta7P7">
+                                        <select formControlName="pregunta7">
                                             <option selected> </option>
                                             <option value="am">much</option><!--respuesta -->
-                                             <option value="is">many</option> 
+                                                <option value="is">many</option> 
                                             <option value="are">a lot of</option>
                                         </select>
                                         noise.
@@ -181,42 +182,29 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span>
                                         <b>8. </b>There aren't
-                                        <select formControlName="pregunta8P7">
+                                        <select formControlName="pregunta8">
                                             <option selected> </option>
                                             <option value="am">much</option>
-                                             <option value="is">many</option> <!--respuesta -->
+                                                <option value="is">many</option> <!--respuesta -->
                                             <option value="are">a lot of</option>
                                         </select>
                                         cars.
                                     </p>
                                 </div>
-                                <!-- novena pregunta  -->
-                                <div class="caja">
-                                    <p id="fs-p">
-                                        <span *ngIf="submitted && p9" class="wrong badge bg-danger">.</span>
-                                        <b>9. </b>She has
-                                        <select formControlName="pregunta9P7">
-                                            <option selected> </option>
-                                            <option value="am">much</option>
-                                             <option value="is">many</option> 
-                                            <option value="are">a lot of</option><!--respuesta -->
-                                        </select>
-                                        books.
-                                    </p>
-                                </div>
                             </div>
                         </div>
-                    <!-- Botones -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="#">Regresar </button>&nbsp;&nbsp; 
-                            <button type="button" class="btn" id="next">Continuar</button> 
+                        <!-- Botones -->
+                        <div class="row justify-content-center">
+                            <div class="col-3 text-center">
+                                <button type="button" class="btn" id="back" routerLink="#">Regresar </button>&nbsp;&nbsp; 
+                                <button type="button" class="btn" id="next">Continuar</button> 
+                            </div>
                         </div>
-                    </div>  
+                    </form>
                     <br>
                 </div>
             </div>
-        <!-- </div> -->
+        </div>
 
         <!-- PIE DE LA PÁGINA -->
         <footer>
