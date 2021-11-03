@@ -1,4 +1,4 @@
-<!-- <div (click)="renovToken()"> -->
+<div id="fondo"> <!--(click)="renovToken()"-->
     <!-- Componente que pertenece al punto 8 del nivel 1 "Present Simple" -->
     <header>
         <div class="container">
@@ -106,12 +106,13 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div><br>
                     
                     <!-- Botones -->
                     <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="#">Regresar </button>&nbsp;&nbsp; 
+                        <div class="col-10 text-center">
+                            <button type="button" class="btn" id="back" routerLink="#">Regresar </button>
+                            &nbsp;&nbsp;&nbsp; 
                             <button type="button" class="btn" id="next">Continuar</button> 
                         </div>
                     </div>  
@@ -120,28 +121,120 @@
             </div>
         <!-- </div> -->
 
-        <!-- * * * * * * * * E J E R C I C I O S * * * * * * * * * * -->
-        <!-- <div *ngIf="---"> --> <!-- Validación para que muestre los ejercicios -->
-            <div class="container">
-                <div class="card-body">
-                    <div class="row justify-content-center">
-                        <div class="col-8">
-                            
-                            <!-- TEXTO -->
 
+
+        <!-- * * * * * * * *   E J E R C I C I O S   * * * * * * * * * * -->
+        <!-- <div *ngIf="showEx1"> -->
+            <!-- <form [formGroup]="ejercicio" (ngSubmit)="checkResp()"> -->
+                <div class="container">
+                    <div class="card-body">
+                        <div class="row justify-content-center">
+                            <h1>Present Simple</h1>
+                            <h2 >Excercise 1</h2>
+                            <h4 class="mb-5 text-center">Conjugate verbs in parentheses in the present simple. </h4>
+
+                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                            <!-- <div class="col-6"> -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span> -->
+                                        <b>1. </b>Anne <i>(work)</i>
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- works -->
+                                        in a language school.
+                                    </p>
+                                </div>
+
+                                <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span> -->
+                                        <b>2. </b>She <i>(be)</i> 
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- is -->
+                                        a teacher.
+                                    </p>
+                                </div>
+
+                                <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span> -->
+                                        <b>3. </b>She <i>(teach)</i>
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- teaches -->
+                                        english.
+                                    </p>
+                                </div>
+
+                                <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span> -->
+                                        <b>4. </b>Anne usually <i>(go)</i>
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- goes -->
+                                        to school by bus.
+                                    </p>
+                                </div>
+                            <!-- </div> -->
                         </div>
+                        <br><hr>
+
+                        <div class="mt-4 row justify-content-center">
+                            <h2 >Excercise 2</h2>
+                            <h4 class="mb-5 text-center">Make negative sentences.</h4>
+
+                            <!-- ~ ~ ~ ~ Primera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span> -->
+                                        <b>1. </b>The children <i>(be/not)</i>
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!--are not / aren´t-->
+                                        tired.
+                                    </p>
+                                </div>
+
+                                <!-- ~ ~ ~ ~ Segunda pregunta ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span> -->
+                                        <b>2. </b>I <i>(drink/not)</i> 
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- do not drink / don't drink -->
+                                        milk.
+                                    </p>
+                                </div>
+                                
+                                <!-- ~ ~ ~ ~ Tercera pregunta ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span> -->
+                                        <b>3. </b>She <i>(like/not)</i>
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- does not like / doesn't like -->
+                                        maths.
+                                    </p>
+                                </div>
+
+                                <!-- ~ ~ ~ ~ Cuarta pregunta  ~ ~ ~ ~ -->
+                                <div class="mb-3 text-center">
+                                    <p id="fs-p">
+                                        <!-- <span *ngIf="submitted && p4" class="wrong badge bg-danger">.</span> -->
+                                        <b>4. </b>I <i>(be/not)</i>
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10"> <!-- am not -->
+                                        from England.
+                                    </p>
+                                </div>
+                        </div>
+                        
+                        <br><br><br>
+                        <!-- Botones -->
+                        <div class="row justify-content-center">
+                            <div class="col-10 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>
+                                &nbsp;&nbsp;&nbsp;
+                                <button type="submit" class="btn" id="next">Continuar</button>
+                            </div>
+                        </div>  
+                        <br>
                     </div>
-                    
-                    <!-- Botones -->
-                    <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="#">Regresar </button>&nbsp;&nbsp; 
-                            <button type="button" class="btn" id="next">Continuar</button> 
-                        </div>
-                    </div>  
-                    <br>
-                </div>
-            </div>
+                </div><br><br>
+            <!-- </form> -->
         <!-- </div> -->
 
         <!-- PIE DE LA PÁGINA -->

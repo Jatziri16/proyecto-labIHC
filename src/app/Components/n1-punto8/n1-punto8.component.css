@@ -1,3 +1,12 @@
+#fondo
+{
+    background-image: url(../../../assets/Imagenes/N1P8-BG.png) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#fs-p{font-size: 120%;}
 h1,h2,h3
 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -11,10 +20,27 @@ h2
 {
     text-align: center;
     font-size: 170%;
-    text-decoration-line: underline;
 }
 h3
 {
     font-size: 130%;
     text-decoration-line: underline;
+}
+h4
+{
+    font-size: 130%;
+}
+input
+{
+    margin-right: 8px;
+    margin-left: 8px;
+    margin-bottom: 2px;
+    width: 100px;
+}
+.wrong
+{
+    font-size: 65%;
+    border-radius: 50%;
+    color: red;
+    margin-right: 3px;
 }
