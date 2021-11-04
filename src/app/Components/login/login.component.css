@@ -16,3 +16,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width:100px;
     float: unset;
 }
+h1
+{
+    font-size: 150%;
+}

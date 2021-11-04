@@ -30,6 +30,9 @@ main, h1, h2, h3{
     /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
     font-family: Georgia, serif;
 }
+h3{
+    font-size: 120%;
+}
 #ancho
 {
     width: 50%;
@@ -41,4 +44,8 @@ main, h1, h2, h3{
 .btnout
 {
     background-color: #c2820b;
+}
+.txt-div
+{
+    font-size: 125%;
 }
