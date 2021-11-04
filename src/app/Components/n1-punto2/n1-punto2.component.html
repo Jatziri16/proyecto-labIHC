@@ -310,8 +310,8 @@
                         <br><br><br>
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-3 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                            <div class="col-10 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
                                 <button type="submit" class="btn" id="next">Continuar</button>
                             </div>
                         </div>  
@@ -378,24 +378,26 @@
                         </p>
                     </form>
                 </div>
-                
             </div>
-            <br>
+            <br><br><br>
             <!-- Botones -->
-            <div class="row justify-content-center">
-                <div *ngIf="!bloqueo">
-                    <div class="col-3 text-center">
-                        <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+            <div *ngIf="!bloqueo">
+                <div class="row justify-content-center">
+                    <div class="col-10 text-center">
+                        <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
                         <button type="button" class="btn" id="next" (click)="checkResp2()">Continuar</button> <!--Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                     </div>
                 </div>
-                <div *ngIf="bloqueo">
-                    <div class="col-3 text-center">
-                        <button type="button" class="btn" id="back" disabled>Cancelar</button>&nbsp;&nbsp; 
+            </div>
+            <div *ngIf="bloqueo">
+                <div class="justify-content-center">
+                    <div class="col-10 text-center">
+                        <button type="button" class="btn" id="back" disabled>Cancelar</button>&nbsp;&nbsp;&nbsp; 
                         <button type="button" class="btn" id="next" disabled>Continuar</button> 
                     </div>
-                </div>
-            </div>  
+                </div> 
+            </div>
+            <br><br>
         </div>
         <!-- PIE DE LA PÁGINA -->
         <footer>
