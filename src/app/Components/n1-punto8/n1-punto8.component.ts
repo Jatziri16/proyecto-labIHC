@@ -62,7 +62,7 @@ export class N1Punto8Component implements OnInit
   checkResp1()
   {
     this.submitted = true;
-    let errores = "", buenas = 0;
+    let errores = "", buenas = 0, errores1 = "";
     
     if(this.ejercicio1.value.pregunta1 == "works")
     {
@@ -115,7 +115,7 @@ export class N1Punto8Component implements OnInit
     }
     else
     {
-      errores = errores + "5, ";
+      errores1 = errores1 + "5, ";
       this.p5 = true;
     }
 
@@ -126,11 +126,10 @@ export class N1Punto8Component implements OnInit
     }
     else
     {
-      errores = errores + "6, ";
+      errores1 = errores1 + "6, ";
       this.p6 = true;
     }
 
-    // SE CHECA LA RESPUESTA DE LA PREGUNTA 7
     if(this.ejercicio1.value.pregunta7 == "does not like" || this.ejercicio1.value.pregunta7 == "doesn´t like")
     {
       this.p7 = false;
@@ -138,7 +137,7 @@ export class N1Punto8Component implements OnInit
     }
     else
     {
-      errores = errores + "7, ";
+      errores1 = errores1 + "7, ";
       this.p7 = true;
     }
 
@@ -150,7 +149,7 @@ export class N1Punto8Component implements OnInit
     }
     else
     {
-      errores = errores + "8";
+      errores1 = errores1 + "8";
       this.p8 = true;
     }
 
@@ -176,10 +175,30 @@ export class N1Punto8Component implements OnInit
     }
     else
     {
-      this.toastr.warning('You have some mistakes in the question: '+errores, 'Be carfull!',
+      if(errores && errores1) 
       {
-        positionClass: 'toast-bottom-right',
-      });
+        this.toastr.warning('You have some mistakes in both Excersices ', 'Be carfull!',
+        {
+          positionClass: 'toast-bottom-right',
+        }); 
+      }
+      else
+      {
+        if (errores) 
+        {
+          this.toastr.warning('You have some mistakes in the Exersice 1', 'Be carfull!',
+          {
+            positionClass: 'toast-bottom-right',
+          }); 
+        }
+        else
+        {
+          this.toastr.warning('You have some mistakes in the Exersice 2', 'Be carfull!',
+          {
+            positionClass: 'toast-bottom-right',
+          });
+        }
+      }
     }
   }
 
