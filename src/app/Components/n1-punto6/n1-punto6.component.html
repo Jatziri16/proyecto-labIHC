@@ -1,4 +1,4 @@
-<div (click)="renovToken()">
+<div id="fondo" (click)="renovToken()">
     <!-- Componente que pertenece al punto 6 del nivel 1 "Plural" -->
     <header>
         <div class="container" id="fondo">
@@ -31,6 +31,7 @@
                                     <div>
                                         <img src="../../../assets/Imagenes/N1P6-teeth.png">
                                     </div>
+                                    <br><br>
                                 <h2>Spelling of plurals:</h2>
                                 <p>The plural form of most nouns is created simply by adding the letter "s".</p>
                                 <div class="tablaplural">
@@ -72,12 +73,12 @@
                                     </table>
                                 </div>
                             </div>
-                        </div>
+                        </div><br>
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-3 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; 
-                                <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button> 
+                            <div class="col-10 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Back</button>&nbsp;&nbsp;&nbsp; 
+                                <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Next</button> 
                             </div>
                         </div>  
                         <br>
@@ -91,12 +92,17 @@
                 <div class="card-body">
                     <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
                         <div class="row justify-content-center">
-                            <div class="col-8">
-                            <p>
+                            <h1>Plural</h1>
+                            <h2 >Excercise 1</h2>
+                            <p class="text-center" id="fs-p">
                                 Instructions: Write the correct plural for each word
                             </p>
+                            <div class="col-5">
+                                <img src="../../../assets/Imagenes/N1P6-man.gif">
+                            </div>
+                            <div class="col-3">
                                 <div id="ejercicio6">
-                                    <p>
+                                    <p id="fs-p">
                                         <span *ngIf="submitted && p1" class="wrong badge bg-danger">.</span>1. Doctor <input type="text" class="txtField" formControlName="pregunta1"style="text-transform:lowercase;" maxlength="10"><!-- Doctors -->
                                         <br><span *ngIf="submitted && p2" class="wrong badge bg-danger">.</span>2. Farm <input type="text" class="txtField" formControlName="pregunta2"style="text-transform:lowercase;" maxlength="10"><!-- Farms -->
                                         <br><span *ngIf="submitted && p3" class="wrong badge bg-danger">.</span>3. Church <input type="text" class="txtField" formControlName="pregunta3"style="text-transform:lowercase;" maxlength="10"><!-- Churches -->
@@ -104,27 +110,32 @@
                                         <br><span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>5. Beach <input type="text" class="txtField" formControlName="pregunta5"style="text-transform:lowercase;" maxlength="10"><!-- Beaches-->
                                         <br><span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>6. Tax <input type="text" class="txtField" formControlName="pregunta6"style="text-transform:lowercase;" maxlength="10"><!-- Taxes -->
                                         <br><span *ngIf="submitted && p7" class="wrong badge bg-danger">.</span>7. Day <input type="text" class="txtField" formControlName="pregunta7"style="text-transform:lowercase;" maxlength="10"><!-- Days -->
-                                        <br><span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span>8. Story <input type="text" class="txtField" formControlName="pregunta8"style="text-transform:lowercase;" maxlength="10"><!-- Stories -->
-                                        <br><span *ngIf="submitted && p9" class="wrong badge bg-danger">.</span>9. Watch <input type="text" class="txtField" formControlName="pregunta9"style="text-transform:lowercase;" maxlength="10"><!-- Watches -->
-                                        <br><span *ngIf="submitted && p10" class="wrong badge bg-danger">.</span>10. Year <input type="text" class="txtField" formControlName="pregunta10"style="text-transform:lowercase;" maxlength="10"><!-- Years -->
-                                        <br><span *ngIf="submitted && p11" class="wrong badge bg-danger">.</span>11. Tomatoe <input type="text" class="txtField" formControlName="pregunta11"style="text-transform:lowercase;" maxlength="10"><!-- Tomatoes -->
-                                        <br><span *ngIf="submitted && p12" class="wrong badge bg-danger">.</span>12. Wife <input type="text" class="txtField" formControlName="pregunta12"style="text-transform:lowercase;" maxlength="10"><!-- Wives -->
-                                        <br><span *ngIf="submitted && p13" class="wrong badge bg-danger">.</span>13. Party <input type="text" class="txtField" formControlName="pregunta13"style="text-transform:lowercase;" maxlength="10"><!-- Parties -->
-                                        <br><span *ngIf="submitted && p14" class="wrong badge bg-danger">.</span>14. Eye <input type="text" class="txtField" formControlName="pregunta14"style="text-transform:lowercase;" maxlength="10"><!-- Eyes -->
-                                        <br><span *ngIf="submitted && p15" class="wrong badge bg-danger">.</span>15. Dress <input type="text" class="txtField" formControlName="pregunta15"style="text-transform:lowercase;" maxlength="10"><!-- Dresses -->
+                                        <br><span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span>8. Story <input type="text" class="txtField" formControlName="pregunta8"style="text-transform:lowercase;" maxlength="10"><!-- Stories -->  
                                     </p>
                                 </div>
                             </div>
+                            <div class="col-3">
+                                <p id="fs-p">
+                                    <br><span *ngIf="submitted && p9" class="wrong badge bg-danger">.</span>9. Watch <input type="text" class="txtField" formControlName="pregunta9"style="text-transform:lowercase;" maxlength="10"><!-- Watches -->
+                                <br><span *ngIf="submitted && p10" class="wrong badge bg-danger">.</span>10. Year <input type="text" class="txtField" formControlName="pregunta10"style="text-transform:lowercase;" maxlength="10"><!-- Years -->
+                                <br><span *ngIf="submitted && p11" class="wrong badge bg-danger">.</span>11. Tomatoe <input type="text" class="txtField" formControlName="pregunta11"style="text-transform:lowercase;" maxlength="10"><!-- Tomatoes -->
+                                <br><span *ngIf="submitted && p12" class="wrong badge bg-danger">.</span>12. Wife <input type="text" class="txtField" formControlName="pregunta12"style="text-transform:lowercase;" maxlength="10"><!-- Wives -->
+                                <br><span *ngIf="submitted && p13" class="wrong badge bg-danger">.</span>13. Party <input type="text" class="txtField" formControlName="pregunta13"style="text-transform:lowercase;" maxlength="10"><!-- Parties -->
+                                <br><span *ngIf="submitted && p14" class="wrong badge bg-danger">.</span>14. Eye <input type="text" class="txtField" formControlName="pregunta14"style="text-transform:lowercase;" maxlength="10"><!-- Eyes -->
+                                <br><span *ngIf="submitted && p15" class="wrong badge bg-danger">.</span>15. Dress <input type="text" class="txtField" formControlName="pregunta15"style="text-transform:lowercase;" maxlength="10"><!-- Dresses -->
+                                </p>
+                            </div>
+                            
                         </div>
-                        
+                        <br><br><br>
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-3 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; 
-                                <button type="submit" class="btn" id="next">Continuar</button> 
+                            <div class="col-10 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Back to menu</button>&nbsp;&nbsp; &nbsp; 
+                                <button type="submit" class="btn" id="next">Check answers</button> 
                             </div>
                         </div>  
-                        <br>
+                        <br><br>
                     </form>
                 </div>
             </div>

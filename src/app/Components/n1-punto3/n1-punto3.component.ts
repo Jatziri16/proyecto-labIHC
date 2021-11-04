@@ -420,6 +420,7 @@ export class N1Punto3Component implements OnInit
       if(info.Puntaje<20)
       {
         this._nivelesService.actualizacionPuntaje(info.ID, this.puntaje)
+        
         if(this.puntaje==20)
         {
           this.toastr.info('Now the next level is available!', 'Excelent!!',

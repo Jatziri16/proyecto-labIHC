@@ -1,19 +1,14 @@
 #fondo
 {
-    
-    background-color: rgba(43, 174, 226, 0.274);
-    /*background-image: url(./Imagenes/N1P6-bg.jpg);*/
+    background-image: url(../../../assets/Imagenes/N1P8-BG.png) ;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+#fs-pt{font-size: 110%;}
 #fs-p{font-size: 120%;}
-h1
-{
-    font-size: 50px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
+
 .wordbank
 {
     width: 70%;
@@ -58,10 +53,13 @@ h1
 #next
 {
     background-color: rgb(63, 155, 101);
+    width: 150px;
 }
 #back
 {
     background-color: rgb(177, 114, 55);
+    width: 150px;
+    margin-right: 20px;
 }
 .wrong
 {
@@ -69,4 +67,28 @@ h1
     border-radius: 50%;
     color: red;
     margin-right: 3px;
+}
+select{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+h1,h2
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1
+{
+    text-align: center;
+    font-size: 200%;
+}
+h2
+{
+    text-align: center;
+    font-size: 155%;
+}
+h3
+{
+    font-size: 120%
 }

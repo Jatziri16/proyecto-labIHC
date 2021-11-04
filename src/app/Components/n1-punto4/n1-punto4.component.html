@@ -176,25 +176,19 @@
                         <div *ngIf="!bloqueo">
                             <div class="row justify-content-center">
                                 <div class="col-10 text-center">
-                                    <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                                    <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                                    <button type="button" class="btn" id="back" routerLink="/level1">Back to menu</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                                    <button type="submit" class="btn" id="next">Check answers</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                                 </div>
                             </div>
                         </div>
                         <div *ngIf="bloqueo">
                             <div class="justify-content-center">
                                 <div class="col-10 text-center">
-                                    <button type="button" class="btn" id="back" disabled>Cancelar</button>&nbsp;&nbsp; 
-                                    <button type="button" class="btn" id="next" disabled>Continuar</button> 
+                                    <button type="button" class="btn" id="back" disabled>Back to menu</button>&nbsp;&nbsp; 
+                                    <button type="button" class="btn" id="next" disabled>Check answers</button> 
                                 </div>
                             </div> 
                         </div>
-                        <!-- <div class="row justify-content-center">
-                            <div class="col-6 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>
-                                <button type="submit" class="btn" id="next">Continuar</button> 
-                            </div>
-                        </div>     -->
                     </form><br><br>
                 </div>
             </div>

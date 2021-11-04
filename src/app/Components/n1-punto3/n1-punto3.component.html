@@ -69,9 +69,9 @@
                     
                     <!-- Botones -->
                     <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
-                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button> <!--  Va a la función para validar que se debe de mostrar el primer ejercicio-->
+                        <div class="col-10 text-center">
+                            <button type="button" class="btn" id="back" routerLink="/level1">Back</button>&nbsp;&nbsp; <!--Regresa al menú del nivel 1-->
+                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Next</button> <!--  Va a la función para validar que se debe de mostrar el primer ejercicio-->
                         </div>
                     </div>  
                     <br>
@@ -259,13 +259,10 @@
                         <br>
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-8 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                                <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                            <div class="col-10 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Back to menu</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                                <button type="submit" class="btn" id="next">Check answers</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                             </div>
-                            <!-- <div class="col-4">
-                                <img src="../../../assets/Imagenes/N1P3-study.png" class="img-fluid">
-                            </div> -->
                         </div>
                     </form>  
                     <br>
@@ -436,16 +433,16 @@
                         <div *ngIf="!bloqueo">
                             <div class="row justify-content-center">
                                 <div class="col-10 text-center">
-                                    <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
-                                    <button type="submit" class="btn" id="next">Continuar</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
+                                    <button type="button" class="btn" id="back" routerLink="/level1">Back to menu</button>&nbsp;&nbsp; <!--Si da cancelar ya iniciando el ejercicio lo redirecciona al menu del nivel 1-->
+                                    <button type="submit" class="btn" id="next">Check answers</button> <!-- Checa las respuestas de este primer ejercicio, de ser correctas se mostrará el ejercicio 2-->
                                 </div>
                             </div>
                         </div>
                         <div *ngIf="bloqueo">
                             <div class="justify-content-center">
                                 <div class="col-10 text-center">
-                                    <button type="button" class="btn" id="back" disabled>Cancelar</button>&nbsp;&nbsp; 
-                                    <button type="button" class="btn" id="next" disabled>Continuar</button> 
+                                    <button type="button" class="btn" id="back" disabled>Back to menu</button>&nbsp;&nbsp; 
+                                    <button type="button" class="btn" id="next" disabled>Check answers</button> 
                                 </div>
                             </div> 
                         </div>

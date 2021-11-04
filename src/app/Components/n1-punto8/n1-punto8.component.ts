@@ -108,7 +108,7 @@ export class N1Punto8Component implements OnInit
       this.p4 = true;
     }
 
-    if(this.ejercicio1.value.pregunta5 == "are not" || this.ejercicio1.value.pregunta5 == "aren´t")
+    if(this.ejercicio1.value.pregunta5 == "are not" || this.ejercicio1.value.pregunta5 == "aren´t" || this.ejercicio1.value.pregunta5 == "aren't")
     {
       this.p5 = false;
       buenas++;
@@ -119,7 +119,7 @@ export class N1Punto8Component implements OnInit
       this.p5 = true;
     }
 
-    if(this.ejercicio1.value.pregunta6 == "do not drink" || this.ejercicio1.value.pregunta6 == "don´t drink")
+    if(this.ejercicio1.value.pregunta6 == "do not drink" || this.ejercicio1.value.pregunta6 == "don´t drink"|| this.ejercicio1.value.pregunta6 == "don't drink")
     {
       this.p6 = false;
       buenas++;
@@ -130,7 +130,7 @@ export class N1Punto8Component implements OnInit
       this.p6 = true;
     }
 
-    if(this.ejercicio1.value.pregunta7 == "does not like" || this.ejercicio1.value.pregunta7 == "doesn´t like")
+    if(this.ejercicio1.value.pregunta7 == "does not like" || this.ejercicio1.value.pregunta7 == "doesn´t like" || this.ejercicio1.value.pregunta7 == "doesn't like")
     {
       this.p7 = false;
       buenas++;

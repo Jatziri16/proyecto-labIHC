@@ -1,4 +1,4 @@
-<!-- <div (click)="renovToken()"> -->
+<div id="fondo" (click)="renovToken()">
     <!-- Componente que pertenece al punto 7 del nivel 1 "Much vs Many" -->
     <header>
         <div class="container">
@@ -19,41 +19,57 @@
                         <div class="col-8">
                             <h1>Much, many and a lot</h1>
                             <br>
-                            <p>"Much", "many", and "a lot of" indicate a large quantity of something, 
-                            <br>for example "I have a lot of friends " means I have a large quantity of friends.
-                            <br>
-                            Much, many, and a lot are quantifiers. 
-                            <br>
-                            <br>In the interrogative forms we use:
-                            <br>much with uncountable nouns. (money, bread, water...)
-                            <br>Example:
-                            <br>How much money/bread/water...is there?
-                            <br>many with countable nouns. (students, desks, windows...)
-                            <br>Example:
-                            <br>How many students/teachers/desks... are there?
-                            <br>In the negative forms we use:
-                            <br>much with uncountable nouns. (money, bread, water...)
-                            <br>Example:
-                            <br>I haven't got much money/bread/water...
-                            <br>many with countable nouns. (students, desks, windows...)
-                            <br>Example:
-                            <br>There aren't many students/teachers/desks...
-                            <br>In the affirmative forms:
-                            <br>In spoken English and informal writing we tend to use:
-                            <br>a lot, a lot of, lots of with countable and uncountable nouns.
-                            <br>Example:
-                            <br>"How many students are there in the classroom?"
-                            <br>"There are a lot."
-                            <br>"How many students are there in the classroom?"
-                            <br>"There are a lot of / lots of students"..
+                            <p id="fs-pt">
+                                "Much", "many", and "a lot of" indicate a large quantity of something, 
+                                <br>for example "I have a lot of friends " means I have a large quantity of friends.
+                                <br>
+                                Much, many, and a lot are quantifiers. 
+                                <br>
+                                <br>In the interrogative forms we use:
+                                <br>much with uncountable nouns. (money, bread, water...)
+                                <br>
+                                <li>
+                                    Example 1:
+                                    <br>How much money/bread/water...is there?
+                                    <br>many with countable nouns. (students, desks, windows...)
+                                </li>
+                                <br>
+                                <li>
+                                    Example:
+                                    <br>How many students/teachers/desks... are there?
+                                    <br>In the negative forms we use:
+                                    <br>much with uncountable nouns. (money, bread, water...)
+                                </li>
+                                <br>
+                                <li>
+                                    Example:
+                                    <br>I haven't got much money/bread/water...
+                                    <br>many with countable nouns. (students, desks, windows...)
+                                </li>
+                                <br>
+                                <li>
+                                    Example:
+                                    <br>There aren't many students/teachers/desks...
+                                    <br>In the affirmative forms:
+                                    <br>In spoken English and informal writing we tend to use:
+                                    <br>a lot, a lot of, lots of with countable and uncountable nouns.
+                                </li>
+                                <br>
+                                <li>
+                                    Example:
+                                    <br>"How many students are there in the classroom?"
+                                    <br>"There are a lot."
+                                    <br>"How many students are there in the classroom?"
+                                    <br>"There are a lot of / lots of students"..
+                                </li>
                             </p>
                         </div>
-                    </div>
+                    </div><br>
                     <!-- Botones -->
                     <div class="row justify-content-center">
-                        <div class="col-3 text-center">
-                            <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; 
-                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button> 
+                        <div class="col-10 text-center">
+                            <button type="button" class="btn" id="back" routerLink="/level1">Back</button>&nbsp;&nbsp;&nbsp; 
+                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Next</button> 
                         </div>
                     </div>  
                     <br>
@@ -68,7 +84,11 @@
                     <form [formGroup]="ejercicio1" (ngSubmit)="checkResp1()">
                         <div class="row justify-content-center">
                             <div class="col-8">
-                                <p>Instructions: Use the most common words</p>
+                                <h1>Much, many and a lot</h1>
+                                <h2 >Excercise 1</h2>
+                                <p class="text-center" id="fs-p">
+                                    Instructions: Use the most common words
+                                </p>
                                 <div class="wordbank">
                                     <div class="word">
                                         <h2>Much</h2>
@@ -193,15 +213,16 @@
                                 </div>
                             </div>
                         </div>
+                        <br><br>
                         <!-- Botones -->
                         <div class="row justify-content-center">
-                            <div class="col-3 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>&nbsp;&nbsp; 
-                                <button type="submit" class="btn" id="next">Continuar</button> 
+                            <div class="col-10 text-center">
+                                <button type="button" class="btn" id="back" routerLink="/level1">Back to menu </button>&nbsp;&nbsp; &nbsp; 
+                                <button type="submit" class="btn" id="next">Check answers</button> 
                             </div>
                         </div>
                     </form>
-                    <br>
+                    <br><br>
                 </div>
             </div>
         </div>
@@ -211,4 +232,4 @@
             <!--  -->
         </footer>
     </main>
-<!-- </div> -->
+</div>

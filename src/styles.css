@@ -10,9 +10,14 @@ body {
 }
 #next
 {
-    background-color: rgb(63, 155, 101);
+    background-color: rgb(57, 168, 90);
+    width: 150px;
+    font-size: 120%;
 }
 #back
 {
-    background-color: rgb(177, 114, 55);
+    background-color: rgb(194, 120, 50);
+    width: 150px;
+    margin-right: 20px;
+    font-size: 120%;
 }

@@ -1,11 +1,14 @@
 #fondo
 {
-    background-color:rgb(190, 190, 197);
-    /* background-repeat: no-repeat; */
+    background-image: url(../../../assets/Imagenes/N1P8-BG.png) ;
+    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-    /*padding: 20px;*/
+}
+#fs-p
+{
+    font-size: 120%;
 }
 .dosimg img
 {
@@ -22,7 +25,6 @@ img
     margin-right: 10%;
     margin-top: 3%;
 }
-/*#fs-p{font-size: 120%;}*/
 .txtField
 {
     width: 80px;

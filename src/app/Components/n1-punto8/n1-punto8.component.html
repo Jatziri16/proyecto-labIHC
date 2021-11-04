@@ -111,9 +111,9 @@
                     <!-- Botones -->
                     <div class="row justify-content-center">
                         <div class="col-10 text-center">
-                            <button type="button" class="btn" id="back" routerLink="/level1">Regresar </button>
+                            <button type="button" class="btn" id="back" routerLink="/level1">Back</button>
                             &nbsp;&nbsp;&nbsp; 
-                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Continuar</button>
+                            <button type="button" class="btn" id="next" (click)="controlEjercicio1()">Next</button>
                         </div>
                     </div>  
                     <br>
@@ -184,7 +184,7 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p5" class="wrong badge bg-danger">.</span>
                                         <b>1. </b>The children <i>(be/not)</i>
-                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10" formControlName="pregunta5"> <!--are not / aren´t-->
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="15" formControlName="pregunta5"> <!--are not / aren´t-->
                                         tired.
                                     </p>
                                 </div>
@@ -194,7 +194,7 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p6" class="wrong badge bg-danger">.</span>
                                         <b>2. </b>I <i>(drink/not)</i> 
-                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10" formControlName="pregunta6"> <!-- do not drink / don't drink -->
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="15" formControlName="pregunta6"> <!-- do not drink / don't drink -->
                                         milk.
                                     </p>
                                 </div>
@@ -204,7 +204,7 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p7" class="wrong badge bg-danger">.</span>
                                         <b>3. </b>She <i>(like/not)</i>
-                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10" formControlName="pregunta7"> <!-- does not like / doesn't like -->
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="15" formControlName="pregunta7"> <!-- does not like / doesn't like -->
                                         maths.
                                     </p>
                                 </div>
@@ -214,7 +214,7 @@
                                     <p id="fs-p">
                                         <span *ngIf="submitted && p8" class="wrong badge bg-danger">.</span>
                                         <b>4. </b>I <i>(be/not)</i>
-                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="10" formControlName="pregunta8"> <!-- am not -->
+                                        <input type="text" class="txtField" style="text-transform:lowercase;" maxlength="15" formControlName="pregunta8"> <!-- am not -->
                                         from England.
                                     </p>
                                 </div>
@@ -224,9 +224,9 @@
                         <!-- Botones -->
                         <div class="row justify-content-center">
                             <div class="col-10 text-center">
-                                <button type="button" class="btn" id="back" routerLink="/level1">Cancelar</button>
+                                <button type="button" class="btn" id="back" routerLink="/level1">Back to menu</button>
                                 &nbsp;&nbsp;&nbsp;
-                                <button type="submit" class="btn" id="next">Continuar</button>
+                                <button type="submit" class="btn" id="next">Check answers</button>
                             </div>
                         </div>  
                         <br>
