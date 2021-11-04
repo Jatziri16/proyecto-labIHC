@@ -60,6 +60,7 @@ export class N1Punto4Component implements OnInit
 
   checkResp1()
   {
+    this.pasar = 0;
     this.errores = "";
     this.errores1 = "";
     this.submitted = true;
